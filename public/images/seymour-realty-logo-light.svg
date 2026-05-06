@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Light (softwhite) variant for use on dark backgrounds. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Seymour Realty Group">
+  <style>
+    .display { font-family: 'Playfair Display', 'Cormorant Garamond', serif; }
+    .sans { font-family: 'Inter', 'Montserrat', sans-serif; letter-spacing: 0.32em; }
+  </style>
+  <g fill="#F4F4F2">
+    <text x="300" y="140" text-anchor="middle" class="display" font-size="92" font-weight="600">SEYMOUR</text>
+    <line x1="120" y1="180" x2="480" y2="180" stroke="#F4F4F2" stroke-width="1.4"/>
+    <text x="300" y="230" text-anchor="middle" class="sans" font-size="22" font-weight="500">REALTY GROUP</text>
+  </g>
+</svg>
