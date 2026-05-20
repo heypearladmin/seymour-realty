@@ -128,13 +128,21 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-7">
-              <figure className="relative aspect-[4/3] overflow-hidden bg-navy/5 border border-charcoal/10">
+              <figure className="relative w-full bg-softwhite border border-charcoal/10">
+                {/*
+                  Editorial map is 1672×941 (≈16:9). Render it at its natural
+                  aspect ratio so nothing is cropped, and use object-contain as
+                  a safety net in case the image is later swapped for one with
+                  slightly different proportions.
+                */}
                 <Image
                   src="/images/austin-micro-markets-editorial-map.jpg"
                   alt="Editorial map of central Austin showing Zilker, Bouldin, Clarksville, Tarrytown, Rollingwood, Barton Hills, South Congress, East Austin, and Westlake"
-                  fill
-                  sizes="(min-width: 768px) 58vw, 100vw"
-                  className="object-cover"
+                  width={1672}
+                  height={941}
+                  sizes="(min-width: 1024px) 720px, (min-width: 768px) 58vw, 100vw"
+                  className="block h-auto w-full object-contain"
+                  priority={false}
                 />
               </figure>
               <figcaption className="mt-4 text-[0.72rem] tracking-editorial uppercase text-charcoal/55">
