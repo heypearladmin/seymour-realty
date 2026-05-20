@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface CTASectionProps {
@@ -7,6 +8,8 @@ interface CTASectionProps {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   background?: "navy" | "beige" | "softwhite";
+  backgroundImage?: string;
+  backgroundImageAlt?: string;
 }
 
 export default function CTASection({
@@ -16,22 +19,46 @@ export default function CTASection({
   primaryCta,
   secondaryCta,
   background = "navy",
+  backgroundImage,
+  backgroundImageAlt = "",
 }: CTASectionProps) {
-  const bg =
-    background === "navy"
-      ? "bg-navy text-softwhite"
-      : background === "beige"
-      ? "bg-beige/40 text-charcoal"
-      : "bg-softwhite text-charcoal";
+  const hasBgImage = Boolean(backgroundImage);
 
-  const isDark = background === "navy";
+  // When a background image is provided, treat the section as a dark editorial
+  // panel (image + navy scrim) regardless of the `background` prop.
+  const isDark = hasBgImage || background === "navy";
+
+  const bg = hasBgImage
+    ? "text-softwhite"
+    : background === "navy"
+    ? "bg-navy text-softwhite"
+    : background === "beige"
+    ? "bg-beige/40 text-charcoal"
+    : "bg-softwhite text-charcoal";
 
   return (
-    <section className={`${bg} py-24 md:py-32`}>
-      <div className="max-w-editorial mx-auto px-6 lg:px-10 text-center">
+    <section className={`relative overflow-hidden ${bg} py-24 md:py-32`}>
+      {hasBgImage && (
+        <>
+          <Image
+            src={backgroundImage as string}
+            alt={backgroundImageAlt}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority={false}
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/75 to-navy/85"
+            aria-hidden="true"
+          />
+        </>
+      )}
+
+      <div className="relative max-w-editorial mx-auto px-6 lg:px-10 text-center">
         <p
           className={`eyebrow ${
-            isDark ? "text-softwhite/60" : "text-charcoal/55"
+            isDark ? "text-softwhite/65" : "text-charcoal/55"
           }`}
         >
           {eyebrow}
@@ -46,7 +73,7 @@ export default function CTASection({
         {body && (
           <p
             className={`mt-7 max-w-xl mx-auto leading-relaxed text-lg ${
-              isDark ? "text-softwhite/80" : "text-charcoal/80"
+              isDark ? "text-softwhite/85" : "text-charcoal/80"
             }`}
           >
             {body}
@@ -71,7 +98,7 @@ export default function CTASection({
                 href={secondaryCta.href}
                 className={`inline-block border px-7 py-3.5 text-[0.78rem] tracking-wider uppercase transition-colors duration-300 ${
                   isDark
-                    ? "border-softwhite/40 text-softwhite hover:bg-softwhite hover:text-navy"
+                    ? "border-softwhite/50 text-softwhite hover:bg-softwhite hover:text-navy"
                     : "border-charcoal/30 text-charcoal hover:bg-charcoal hover:text-softwhite"
                 }`}
               >

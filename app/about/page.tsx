@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata = {
   title: "About Laurel Seymour",
   description:
-    "Laurel Seymour is an Austin-native real estate authority with deep expertise in micro-market intelligence, relocation strategy, and editorial-grade neighborhood guidance.",
+    "Laurel Seymour is an Austin-native real estate advisor offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,27 +22,30 @@ export default function AboutPage() {
             </p>
             <h1 className="font-display text-5xl md:text-7xl text-navy leading-[1.04] tracking-tight">
               Austin native. <br />
-              Quiet authority. <br />
+              Strategic advisor. <br />
               <span className="italic text-terracotta">Long view.</span>
             </h1>
             <p className="mt-8 max-w-xl text-charcoal/85 text-lg leading-relaxed">
               I&apos;ve spent my life in Austin and a career studying it. Every
-              part of how I work — calm, strategic, and deeply local — comes
-              from that.
+              part of how I work — grounded, strategic, and deeply local —
+              comes from that.
             </p>
           </div>
 
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-beige/40">
               <Image
-                src={site.agent.headshot}
-                alt={site.agent.headshotAlt}
+                src={site.agent.editorialPortrait}
+                alt={site.agent.editorialPortraitAlt}
                 fill
                 priority
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
               />
             </div>
+            <p className="mt-5 text-[0.72rem] tracking-editorial uppercase text-charcoal/60">
+              Laurel Seymour · Founder, Seymour Realty Group
+            </p>
           </div>
         </div>
       </section>
@@ -77,7 +80,7 @@ export default function AboutPage() {
             <p>
               I built Seymour Realty Group to do this work the way it deserves
               to be done: editorially, strategically, and with the patience to
-              get it right.
+              get it right the first time.
             </p>
           </div>
         </div>
@@ -90,7 +93,8 @@ export default function AboutPage() {
           <p className="font-display text-3xl md:text-5xl leading-[1.15] tracking-tight max-w-4xl mx-auto">
             &ldquo;You won&apos;t just get a Realtor.
             <br className="hidden md:block" />
-            You&apos;ll get Austin <span className="italic text-terracotta">decoded</span>.&rdquo;
+            You&apos;ll get Austin{" "}
+            <span className="italic text-terracotta">decoded</span>.&rdquo;
           </p>
         </div>
       </section>
@@ -99,14 +103,14 @@ export default function AboutPage() {
       <Section
         eyebrow="In Practice"
         title="What strategy-driven real estate actually looks like."
-        intro="The work happens before any contract is signed. It happens in conversations, neighborhood walks, and the small details that make the difference between a transaction and a long-term decision."
+        intro="The work happens before any contract is signed. It happens in conversations, neighborhood walks, and the small details that decide whether a move was a good one a decade from now."
       >
         <div className="grid md:grid-cols-3 gap-10 md:gap-12">
           {[
             {
               n: "01",
-              title: "Listen first.",
-              body: "Before any property comes up, the conversation is about how you want your day to feel. The home follows from that.",
+              title: "Plan with clarity.",
+              body: "Before any property comes up, the conversation is about how you want your day to feel and what a smart move looks like a year, three years, ten years out.",
             },
             {
               n: "02",
@@ -142,11 +146,11 @@ export default function AboutPage() {
           {[
             {
               title: "Relocation Buyers",
-              body: "Professionals and families moving to Austin from major metros who need the city translated, not just toured.",
+              body: "Professionals and families moving to Austin from major metros who need the city translated, not just toured — and a plan that matches their timeline.",
             },
             {
               title: "Lifelong Austinites",
-              body: "Local clients buying their next home — often a more considered one — and looking for guidance that respects the long view.",
+              body: "Local clients buying their next home — often a more considered one — and looking for an advisor who respects the long view.",
             },
             {
               title: "Sellers Who Care",
@@ -165,8 +169,8 @@ export default function AboutPage() {
 
       <CTASection
         eyebrow="Begin a Conversation"
-        title="When the timing is right, I'd love to hear from you."
-        body="Whether you're a year out or actively looking, the best decisions tend to start with a slower conversation."
+        title="The best outcomes come from thoughtful beginnings."
+        body="Whether you're a year out or actively looking, a clear conversation now sets up the smarter decision later. I'd love to hear what you're planning."
         primaryCta={{ label: "Contact Laurel", href: "/contact" }}
         secondaryCta={{ label: "Read the Journal", href: "/blog" }}
       />

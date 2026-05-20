@@ -6,6 +6,9 @@ export const site = {
     title: "Austin Real Estate Authority",
     headshot: "/images/laurel-seymour-headshot.jpg",
     headshotAlt: "Portrait of Laurel Seymour, founder of Seymour Realty Group",
+    editorialPortrait: "/images/laurel-about-editorial.jpg",
+    editorialPortraitAlt:
+      "Editorial portrait of Laurel Seymour at home in Austin",
   },
   logo: {
     dark: "/images/seymour-realty-logo.svg",
@@ -19,13 +22,7 @@ export const site = {
     phoneHref: "tel:+15122003427",
     email: "laurel@seymourrealtygroup.com",
     emailHref: "mailto:laurel@seymourrealtygroup.com",
-    address: {
-      street: "1808 Brookhaven Dr",
-      city: "Austin",
-      state: "Texas",
-      zip: "78704",
-      country: "US",
-    },
+    serviceArea: "Austin, Texas",
     website: "https://seymourrealtygroup.com",
   },
   social: {
@@ -41,4 +38,15 @@ export const site = {
     { label: "Journal", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
+  legal: [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "SMS Consent", href: "/sms-consent" },
+  ],
+  compliance: {
+    smsConsent:
+      "I agree to receive text messages from Laurel Seymour regarding real estate inquiries and related services. Message frequency varies. Message and data rates may apply. Reply STOP to opt out.",
+    formDisclosure:
+      "By submitting your information, you agree to receive conversational text messages from Laurel Seymour and Seymour Realty Group regarding real estate inquiries, appointments, and related services. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance.",
+  },
 };

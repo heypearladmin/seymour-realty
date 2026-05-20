@@ -155,7 +155,8 @@ export default async function BlogPostPage({ params }: Props) {
 
       <CTASection
         eyebrow="When You're Ready"
-        title="Austin is a long conversation. Let's begin one."
+        title="A better move starts with a better plan."
+        body="Whether you're months out or already in motion, a clear conversation now changes everything later."
         primaryCta={{ label: "Contact Laurel", href: "/contact" }}
         secondaryCta={{ label: "Explore Neighborhoods", href: "/neighborhoods" }}
       />

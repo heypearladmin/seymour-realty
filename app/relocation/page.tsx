@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "Austin Relocation Intelligence",
   description:
-    "A trusted advisor for relocation buyers moving to Austin. Micro-market analysis, lifestyle mapping, school guidance, and long-term value strategy from Laurel Seymour.",
+    "A trusted advisor for relocation buyers moving to Austin. Thoughtful planning, micro-market analysis, lifestyle mapping, school guidance, and long-term value strategy from Laurel Seymour.",
   alternates: { canonical: "/relocation" },
 };
 
@@ -16,10 +16,10 @@ export default function RelocationPage() {
     <>
       <Hero
         eyebrow="Austin Relocation Intelligence"
-        headline="Moving to Austin starts with the right question."
-        subheadline="Most relocation buyers begin by asking what to buy. The better question is how you want to live. From there, the right part of Austin becomes obvious."
-        image="/images/relocation-hero.jpg"
-        imageAlt="Aerial view of Austin neighborhoods at golden hour"
+        headline="Planning early changes everything."
+        subheadline="Most relocation buyers begin by asking what to buy. The better question is how you want to live. A thoughtful plan turns that question into the right part of Austin — and the right home inside it."
+        image="/images/austin-relocation-thoughtful.jpg"
+        imageAlt="A central Austin street in late-afternoon light — the kind of block a thoughtful relocation buyer learns to read before making a move"
         primaryCta={{ label: "Begin a Conversation", href: "/contact" }}
         secondaryCta={{ label: "About Laurel", href: "/about" }}
         height="standard"
@@ -28,8 +28,8 @@ export default function RelocationPage() {
       {/* Moving to Austin */}
       <Section
         eyebrow="Moving to Austin"
-        title="A city that rewards careful research and local guidance."
-        intro="Austin attracts buyers from across the country for good reason — but the city is more layered than the headlines suggest. Relocation buyers who take the time to understand its micro-markets consistently make better long-term decisions."
+        title="A city that rewards careful research and grounded guidance."
+        intro="Austin draws buyers from across the country for good reason — but the city is more layered than the headlines suggest. Relocation buyers who take the time to understand its micro-markets consistently make better long-term decisions."
       >
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-7 space-y-5 text-charcoal/85 leading-relaxed text-[1.0625rem]">
@@ -37,20 +37,20 @@ export default function RelocationPage() {
               Living ten miles away in Austin doesn&apos;t always mean a quick
               drive. School zones don&apos;t always follow zip-code intuition.
               Two streets in the same neighborhood can sit in completely
-              different price brackets — and behave differently when the
-              market shifts.
+              different price brackets — and behave differently when the market
+              shifts.
             </p>
             <p>
               That kind of nuance doesn&apos;t show up in online estimates.
               It&apos;s the work of someone who has walked these streets for
-              decades.
+              decades and can translate them into a clear, informed plan.
             </p>
           </div>
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-beige/40">
               <Image
-                src="/images/relocation-moving.jpg"
-                alt="A quiet, tree-lined Austin street"
+                src="/images/austin-neighborhood-lifestyle-authentic.jpg"
+                alt="A walkable, tree-lined Austin neighborhood — the kind of block that defines daily life here"
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
@@ -91,7 +91,7 @@ export default function RelocationPage() {
             },
             {
               title: "By Pace",
-              body: "Some neighborhoods feel central and active. Others are quiet by design. Both are valid — what matters is the match.",
+              body: "Some neighborhoods feel central and active. Others are more residential by design. Both are valid — what matters is the match.",
             },
           ].map((item) => (
             <div key={item.title} className="border-t border-charcoal/20 pt-6">
@@ -110,14 +110,14 @@ export default function RelocationPage() {
       <Section
         eyebrow="Lifestyle Considerations"
         title="The smallest details often decide the right neighborhood."
-        intro="Coffee shops you actually walk to. Trails you can reach without a car. Whether the morning sun hits the kitchen. These are the things that decide whether a place feels like home."
+        intro="Coffee shops you actually walk to. Trails you can reach without a car. Whether the morning sun hits the kitchen. These are the things that decide whether a place feels like home — and whether the plan was a good one."
       >
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 text-charcoal/85">
           {[
             "Daily routines and walkability",
             "Outdoor access — parks, trails, water",
             "Food, coffee, and neighborhood culture",
-            "Quiet vs. central energy",
+            "Central energy vs. residential pace",
             "Family rhythms and school proximity",
             "Home-office and work-from-home flow",
             "Long-term plans and life stage",
@@ -192,7 +192,7 @@ export default function RelocationPage() {
           </div>
           <div className="space-y-5 text-charcoal/85 leading-relaxed text-[1.0625rem]">
             <p>
-              I help relocation families think through this with patience —
+              I help relocation families think through this with intention —
               including connecting them to school admissions, neighborhood
               parents, and the kinds of details you don&apos;t find on a
               listing site.
@@ -223,11 +223,11 @@ export default function RelocationPage() {
             },
             {
               src: "/images/culture-greenbelt.jpg",
-              alt: "Austin greenbelt trail through trees",
+              alt: "Barton Creek Greenbelt trail running through Austin",
             },
             {
               src: "/images/culture-streetart.jpg",
-              alt: "Austin street art and walkable corridor",
+              alt: "Austin street art on a walkable east-side corridor",
             },
           ].map((img, i) => (
             <div key={i} className="relative aspect-[3/4] overflow-hidden">
@@ -264,9 +264,9 @@ export default function RelocationPage() {
               two streets over is about to redevelop.
             </p>
             <p>
-              That&apos;s the work of an actual local. And when you&apos;re
-              moving across the country, that translation is worth more than
-              anything else in the process.
+              That&apos;s the work of an actual local advisor. And when
+              you&apos;re moving across the country, that translation is worth
+              more than anything else in the process.
             </p>
             <Link
               href="/contact"
@@ -280,8 +280,8 @@ export default function RelocationPage() {
 
       <CTASection
         eyebrow="Begin a Relocation Conversation"
-        title="The slower the start, the better the move."
-        body="Whether you're a year out or weeks away, a quiet conversation now will save months later. I'd love to hear what you're imagining."
+        title="Thoughtful starts lead to better moves."
+        body="Whether you're a year out or weeks away, a clear conversation now will save months later. I'd love to hear what you're planning."
         primaryCta={{ label: "Reach Out", href: "/contact" }}
         secondaryCta={{ label: "Explore Neighborhoods", href: "/neighborhoods" }}
       />

@@ -147,7 +147,7 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
       <CTASection
         eyebrow={`Considering ${n.name}?`}
         title={`Let's talk about ${n.name} the way it deserves.`}
-        body="Every neighborhood has nuances that don't show up in a listing photo or an online estimate. The conversation starts there."
+        body="Every neighborhood has nuances that don't show up in a listing photo or an online estimate. A thoughtful conversation is where the right plan starts."
         primaryCta={{ label: "Reach Out", href: "/contact" }}
         secondaryCta={{ label: "Other Neighborhoods", href: "/neighborhoods" }}
       />

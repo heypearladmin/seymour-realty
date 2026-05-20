@@ -20,8 +20,9 @@ export default function Footer() {
           </h2>
           <p className="mt-7 max-w-md text-softwhite/70 leading-relaxed">
             You won&apos;t just get a Realtor. You&apos;ll get Austin decoded —
-            from a lifelong local who has spent a career mapping the city&apos;s
-            micro-markets one street at a time.
+            an Austin-native advisor offering thoughtful planning, strategic
+            guidance, and hyperlocal intelligence across the city&apos;s
+            micro-markets.
           </p>
         </div>
 
@@ -43,13 +44,8 @@ export default function Footer() {
 
         <div className="md:col-span-4">
           <p className="eyebrow text-softwhite/60 mb-5">Contact</p>
-          <address className="not-italic text-sm leading-relaxed text-softwhite/85 space-y-1">
-            <div>{site.company.address.street}</div>
+          <div className="not-italic text-sm leading-relaxed text-softwhite/85 space-y-2">
             <div>
-              {site.company.address.city}, {site.company.address.state}{" "}
-              {site.company.address.zip}
-            </div>
-            <div className="pt-3">
               <a href={site.company.phoneHref} className="link-underline">
                 {site.company.phone}
               </a>
@@ -59,9 +55,12 @@ export default function Footer() {
                 {site.company.email}
               </a>
             </div>
-          </address>
+            <div className="pt-2 text-softwhite/60">
+              Serving {site.company.serviceArea}
+            </div>
+          </div>
 
-          <ul className="flex gap-5 mt-6 text-[0.72rem] tracking-editorial uppercase">
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-[0.72rem] tracking-editorial uppercase">
             <li>
               <a
                 href={site.social.instagram}
@@ -107,13 +106,24 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-softwhite/10">
-        <div className="max-w-editorial mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-softwhite/55">
+        <div className="max-w-editorial mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-softwhite/55">
           <p>
-            © {new Date().getFullYear()} Seymour Realty Group. All rights reserved.
+            © {new Date().getFullYear()} Seymour Realty Group. All rights
+            reserved.
           </p>
-          <p className="tracking-editorial uppercase">
-            Austin, Texas — by way of every street in it.
-          </p>
+
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 tracking-editorial uppercase">
+            {site.legal.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-softwhite/70 hover:text-terracotta transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

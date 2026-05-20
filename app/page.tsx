@@ -12,9 +12,21 @@ import { site } from "@/lib/site";
 export const metadata = {
   title: "Austin. Understood. — Laurel Seymour",
   description:
-    "An Austin-native real estate authority. Hyperlocal neighborhood intelligence, relocation strategy, and editorial market insight from Laurel Seymour and Seymour Realty Group.",
+    "An Austin-native real estate authority offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets. Laurel Seymour, founder of Seymour Realty Group.",
   alternates: { canonical: "/" },
 };
+
+const microMarketsOnMap = [
+  "Zilker",
+  "Bouldin",
+  "Clarksville",
+  "Tarrytown",
+  "Rollingwood",
+  "Barton Hills",
+  "South Congress",
+  "East Austin",
+  "Westlake",
+];
 
 export default function HomePage() {
   const featuredPosts = blogPosts.slice(0, 3);
@@ -25,9 +37,9 @@ export default function HomePage() {
       <Hero
         eyebrow="Laurel Seymour · Seymour Realty Group"
         headline="Austin. Understood."
-        subheadline="An Austin-native authority on relocation, neighborhood strategy, and the city's quietly distinct micro-markets. You won't just get a Realtor — you'll get Austin decoded."
-        image="/images/hero-austin-skyline.jpg"
-        imageAlt="Cinematic view of Austin skyline at dusk with Lady Bird Lake in the foreground"
+        subheadline="An Austin-native advisor offering thoughtful planning, strategic guidance, and hyperlocal intelligence across the city's distinct micro-markets. You won't just get a Realtor — you'll get Austin decoded."
+        image="/images/austin-skyline-town-lake-realistic.jpg"
+        imageAlt="Downtown Austin skyline rising above Lady Bird Lake at golden hour, with the Pennybacker Bridge and Hill Country in the distance"
         primaryCta={{ label: "Work With Laurel", href: "/contact" }}
         secondaryCta={{ label: "Explore Neighborhoods", href: "/neighborhoods" }}
       />
@@ -56,22 +68,21 @@ export default function HomePage() {
 
           <div className="md:col-span-7 md:pt-10">
             <p className="font-display text-3xl md:text-[2.6rem] leading-[1.18] text-navy tracking-tight">
-              Austin isn&apos;t one market. It&apos;s thirty micro-markets,
-              quietly operating at once.
+              The best moves start with clarity, not urgency.
             </p>
             <div className="mt-8 space-y-5 text-charcoal/85 leading-relaxed text-[1.0625rem]">
               <p>
-                I&apos;ve spent a career mapping this city block by block —
-                learning how Tarrytown lives differently than Barton Hills,
-                how Westlake school zones shape generations of decisions, how
-                East Austin moves on a different rhythm than the corridor that
-                runs through it.
+                I&apos;ve spent a career mapping Austin block by block —
+                learning how Tarrytown lives differently than Barton Hills, how
+                Westlake school zones shape generations of decisions, how East
+                Austin moves on a different rhythm than the corridor that runs
+                through it.
               </p>
               <p>
-                My approach is calm, strategic, and grounded in local
+                My approach is grounded, strategic, and informed by local
                 intelligence rather than market hype. I work with relocation
-                buyers, lifelong Austinites, and sellers who want their home
-                positioned with the care it deserves.
+                buyers, lifelong Austinites, and sellers who want a clear plan
+                and a thoughtful advisor in their corner.
               </p>
             </div>
             <div className="mt-9 flex flex-wrap gap-4">
@@ -92,12 +103,84 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Austin Micro-Markets */}
+      {/* Austin Micro-Markets Editorial Map */}
+      <section
+        id="micro-markets"
+        className="bg-beige/40 py-28 md:py-36"
+        aria-labelledby="micro-markets-heading"
+      >
+        <div className="max-w-editorial mx-auto px-6 lg:px-10">
+          <div className="max-w-3xl mb-14 md:mb-20">
+            <p className="eyebrow mb-5">Austin Micro-Markets</p>
+            <h2
+              id="micro-markets-heading"
+              className="font-display text-4xl md:text-5xl leading-[1.08] tracking-tight text-navy"
+            >
+              One city, mapped one micro-market at a time.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-charcoal/85">
+              Austin reads as a single skyline and behaves as thirty distinct
+              neighborhoods. Each one prices, paces, and appreciates on its own
+              terms. A clear plan starts with knowing exactly which one fits
+              your life.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+            <div className="md:col-span-7">
+              <figure className="relative aspect-[4/3] overflow-hidden bg-navy/5 border border-charcoal/10">
+                <Image
+                  src="/images/austin-micro-markets-editorial-map.jpg"
+                  alt="Editorial map of central Austin showing Zilker, Bouldin, Clarksville, Tarrytown, Rollingwood, Barton Hills, South Congress, East Austin, and Westlake"
+                  fill
+                  sizes="(min-width: 768px) 58vw, 100vw"
+                  className="object-cover"
+                />
+              </figure>
+              <figcaption className="mt-4 text-[0.72rem] tracking-editorial uppercase text-charcoal/55">
+                Central Austin micro-markets · editorial reference
+              </figcaption>
+            </div>
+
+            <div className="md:col-span-5">
+              <p className="eyebrow text-terracotta mb-5">On the Map</p>
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-3 text-charcoal/85">
+                {microMarketsOnMap.map((name) => (
+                  <li
+                    key={name}
+                    className="border-l border-terracotta/70 pl-3 text-sm md:text-[0.95rem] tracking-tight"
+                  >
+                    {name}
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-9 text-charcoal/80 leading-relaxed">
+                Each of these places operates on its own logic — by school
+                zone, walkability, architecture, and long-term value. The work
+                is matching the right one to the life you&apos;re planning, not
+                the headlines you&apos;ve read.
+              </p>
+
+              <div className="mt-8">
+                <Link
+                  href="/neighborhoods"
+                  className="inline-block border border-charcoal/30 px-6 py-3 text-[0.76rem] tracking-wider uppercase hover:bg-navy hover:text-softwhite hover:border-navy transition-colors duration-300"
+                >
+                  Explore Each Neighborhood
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Neighborhood Cards */}
       <Section
-        eyebrow="Austin Micro-Markets"
-        title="A city understood one neighborhood at a time."
-        intro="Six places that show how layered Austin really is. Each one operates by its own rules — pricing, lifestyle, and long-term value all behave differently."
-        background="beige"
+        eyebrow="Six Places to Start"
+        title="Distinct neighborhoods, distinct strategies."
+        intro="Six of the most layered micro-markets in central Austin. Each one rewards a different kind of buyer — and a different plan."
+        background="softwhite"
         padding="spacious"
       >
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
@@ -120,7 +203,7 @@ export default function HomePage() {
       <Section
         eyebrow="The Journal"
         title="Editorial intelligence on Austin real estate."
-        intro="Field notes, market analysis, and relocation guidance — written for thoughtful buyers and sellers who want substance over noise."
+        intro="Field notes, market analysis, and relocation strategy — written for thoughtful buyers and sellers who want substance over noise."
       >
         <div className="grid md:grid-cols-3 gap-x-8 gap-y-14">
           {featuredPosts.map((post) => (
@@ -146,21 +229,20 @@ export default function HomePage() {
               Austin Relocation Intelligence
             </p>
             <h2 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight">
-              Moving to Austin is exciting. Choosing where to live is
-              everything.
+              Good moves take thoughtful planning.
             </h2>
             <p className="mt-7 max-w-xl text-softwhite/80 leading-relaxed text-lg">
               Most relocation buyers begin with the wrong question. Instead of
-              asking what to buy, they should be asking how they want to live.
-              I help buyers translate lifestyle into the exact part of Austin
-              that fits.
+              asking what to buy, the better question is how you want to live
+              here. I help buyers translate lifestyle into the exact part of
+              Austin that fits — with a clear plan, not a guess.
             </p>
             <ul className="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-softwhite/85 text-sm">
               <li className="border-l border-terracotta pl-4">
                 Micro-market analysis
               </li>
               <li className="border-l border-terracotta pl-4">
-                Commute & lifestyle mapping
+                Commute &amp; lifestyle mapping
               </li>
               <li className="border-l border-terracotta pl-4">
                 School district guidance
@@ -181,8 +263,8 @@ export default function HomePage() {
           <div className="md:col-span-5 md:pl-6">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/home-relocation-feature.jpg"
-                alt="Quiet Austin neighborhood street with mature oaks at golden hour"
+                src="/images/austin-relocation-thoughtful.jpg"
+                alt="A tree-lined central Austin street in soft afternoon light — the kind of block a relocation buyer learns to read"
                 fill
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
@@ -196,26 +278,26 @@ export default function HomePage() {
       <Section
         eyebrow="The Austin Lifestyle"
         title="A city built around how it feels to live in it."
-        intro="Coffee shops on quiet corners. Greenbelts a few blocks from anywhere. Architecture that listens to the trees. Austin rewards people who pay attention to the small things."
+        intro="Independent coffee shops on tree-lined corners. Lady Bird Lake a few blocks from anywhere downtown. Architecture that listens to the oaks. Austin rewards buyers who pay attention to the small details."
         background="softwhite"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {[
             {
-              src: "/images/lifestyle-coffee.jpg",
+              src: "/images/austin-coffee-shop-editorial.jpg",
               alt: "Independent Austin coffee shop interior with warm natural light",
             },
             {
-              src: "/images/lifestyle-hill-country.jpg",
-              alt: "Hill Country landscape outside Austin at dusk",
+              src: "/images/town-lake-lifestyle-authentic.jpg",
+              alt: "Lady Bird Lake (Town Lake) in central Austin with the downtown skyline behind",
+            },
+            {
+              src: "/images/austin-neighborhood-lifestyle-authentic.jpg",
+              alt: "A walkable Austin neighborhood street with mature oaks and a craftsman home",
             },
             {
               src: "/images/lifestyle-architecture.jpg",
-              alt: "Architectural detail of a modern Austin home",
-            },
-            {
-              src: "/images/lifestyle-walkable.jpg",
-              alt: "Walkable neighborhood street with restaurants and trees",
+              alt: "Architectural detail of a modern Austin home tucked among oaks",
             },
           ].map((img, i) => (
             <div
@@ -294,13 +376,15 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Soft CTA */}
+      {/* Evening Editorial CTA */}
       <CTASection
         eyebrow="When You're Ready"
-        title="A quiet conversation goes a long way."
-        body="Whether you're months away from buying or just beginning to think about Austin, I'd love to hear what you're imagining. No pressure. No pitch. Just clarity."
+        title="A better move starts with a better plan."
+        body="Whether you're months out from buying or already deep in the process, a clear conversation now changes everything later. No pressure. No pitch. Just direction."
         primaryCta={{ label: "Reach Out", href: "/contact" }}
         secondaryCta={{ label: "About Laurel", href: "/about" }}
+        backgroundImage="/images/austin-evening-editorial.jpg"
+        backgroundImageAlt="Austin in the evening, looking out across the city as the lights come on"
       />
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Laurel Seymour",
   },
   description:
-    "Laurel Seymour is an Austin-native real estate authority. Hyperlocal neighborhood intelligence, relocation strategy, and editorial market insight from Seymour Realty Group.",
+    "Laurel Seymour is an Austin-native real estate advisor offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets. Seymour Realty Group.",
   keywords: [
     "Laurel Seymour",
     "Seymour Realty Group",
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
     "South Congress",
     "East Austin",
     "Zilker",
+    "Bouldin",
+    "Clarksville",
+    "Rollingwood",
     "Austin micro-markets",
   ],
   authors: [{ name: "Laurel Seymour" }],
@@ -46,13 +50,13 @@ export const metadata: Metadata = {
     siteName: "Laurel Seymour | Seymour Realty Group",
     title: "Austin. Understood.",
     description:
-      "An Austin-native real estate authority. Hyperlocal neighborhood intelligence, relocation strategy, and editorial market insight.",
+      "An Austin-native real estate advisor. Thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Laurel Seymour | Austin Real Estate Authority",
     description:
-      "Hyperlocal Austin intelligence. Relocation strategy. Neighborhood expertise.",
+      "Hyperlocal Austin intelligence. Relocation strategy. Thoughtful planning for better moves.",
   },
   robots: {
     index: true,
@@ -66,6 +70,32 @@ export const metadata: Metadata = {
   },
 };
 
+// Site-wide RealEstateAgent JSON-LD — address intentionally omitted; service
+// area signals GEO without exposing a physical street address.
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: site.company.name,
+  url: site.company.website,
+  telephone: site.company.phone,
+  email: site.company.email,
+  image: `https://seymourrealtygroup.com${site.agent.headshot}`,
+  areaServed: {
+    "@type": "City",
+    name: "Austin",
+    containedInPlace: {
+      "@type": "State",
+      name: "Texas",
+    },
+  },
+  sameAs: [
+    site.social.facebook,
+    site.social.instagram,
+    site.social.linkedin,
+    site.social.youtube,
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -74,6 +104,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-sans bg-softwhite text-charcoal antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

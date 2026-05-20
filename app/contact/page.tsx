@@ -1,28 +1,32 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/lib/site";
 
 export const metadata = {
   title: "Contact Laurel Seymour",
   description:
-    "Begin a conversation with Laurel Seymour, Austin-native real estate authority and founder of Seymour Realty Group.",
+    "Begin a conversation with Laurel Seymour, Austin-native real estate advisor and founder of Seymour Realty Group. Thoughtful planning, strategic guidance, and clear direction.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   const { company, social, agent } = site;
 
-  const localBusinessSchema = {
+  // RealEstateAgent schema — address intentionally omitted per the brand's
+  // private-practice setup. Service area is signaled via `areaServed` so GEO
+  // signals remain strong without exposing a physical street address.
+  const realEstateAgentSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: company.name,
     image: agent.headshot,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: company.address.street,
-      addressLocality: company.address.city,
-      addressRegion: company.address.state,
-      postalCode: company.address.zip,
-      addressCountry: company.address.country,
+    areaServed: {
+      "@type": "City",
+      name: "Austin",
+      containedInPlace: {
+        "@type": "State",
+        name: "Texas",
+      },
     },
     telephone: company.phone,
     email: company.email,
@@ -34,7 +38,9 @@ export default function ContactPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(realEstateAgentSchema),
+        }}
       />
 
       <section className="pt-40 pb-20 md:pt-48 md:pb-28 bg-softwhite">
@@ -42,12 +48,13 @@ export default function ContactPage() {
           <div className="md:col-span-7">
             <p className="eyebrow text-charcoal/60 mb-6">Contact</p>
             <h1 className="font-display text-5xl md:text-7xl text-navy leading-[1.04] tracking-tight">
-              Begin a quiet conversation.
+              Clarity first. Move second.
             </h1>
             <p className="mt-8 max-w-xl text-charcoal/85 text-lg leading-relaxed">
-              Whether you&apos;re months away from buying, just thinking about
-              Austin, or considering selling a home you love — I&apos;d be
-              glad to hear what you&apos;re imagining. No pressure, no pitch.
+              Whether you&apos;re months away from buying, just beginning to
+              think about Austin, or considering selling a home you love —
+              I&apos;d be glad to hear what you&apos;re planning. No pressure,
+              no pitch. Just a clear, informed conversation.
             </p>
 
             <div className="mt-14 grid sm:grid-cols-2 gap-y-10 gap-x-12">
@@ -70,13 +77,10 @@ export default function ContactPage() {
                 </a>
               </div>
               <div>
-                <p className="eyebrow text-terracotta mb-3">Office</p>
-                <address className="not-italic font-display text-2xl text-navy leading-snug">
-                  {company.address.street}
-                  <br />
-                  {company.address.city}, {company.address.state}{" "}
-                  {company.address.zip}
-                </address>
+                <p className="eyebrow text-terracotta mb-3">Service Area</p>
+                <p className="font-display text-2xl text-navy leading-snug">
+                  {company.serviceArea}
+                </p>
               </div>
               <div>
                 <p className="eyebrow text-terracotta mb-3">Website</p>
@@ -156,7 +160,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Simple contact form (non-functional placeholder, no fake testimonials) */}
+      {/* Contact form — TCPA / A2P compliant */}
       <section className="py-20 md:py-28 bg-beige/40">
         <div className="max-w-3xl mx-auto px-6 lg:px-10">
           <p className="eyebrow text-terracotta mb-5 text-center">
@@ -167,46 +171,73 @@ export default function ContactPage() {
           </h2>
           <p className="mt-6 text-charcoal/80 leading-relaxed text-center max-w-xl mx-auto">
             Share what&apos;s on your mind. I read every message personally
-            and will respond within one business day.
+            and respond within one business day.
           </p>
 
-          <form className="mt-14 grid gap-6" aria-label="Contact form">
+          <form
+            className="mt-14 grid gap-6"
+            aria-label="Contact form"
+            method="post"
+            action="mailto:laurel@seymourrealtygroup.com"
+          >
             <div className="grid sm:grid-cols-2 gap-6">
               <label className="block">
                 <span className="eyebrow text-charcoal/60 block mb-2">
-                  Name
+                  First name <span className="text-terracotta">*</span>
                 </span>
                 <input
                   type="text"
-                  name="name"
+                  name="firstName"
+                  required
+                  autoComplete="given-name"
                   className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                  placeholder="Your name"
+                  placeholder="First name"
                 />
               </label>
               <label className="block">
                 <span className="eyebrow text-charcoal/60 block mb-2">
-                  Email
+                  Last name <span className="text-terracotta">*</span>
                 </span>
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="lastName"
+                  required
+                  autoComplete="family-name"
                   className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                  placeholder="you@email.com"
+                  placeholder="Last name"
                 />
               </label>
             </div>
             <label className="block">
-              <span className="eyebrow text-charcoal/60 block mb-2">Phone</span>
+              <span className="eyebrow text-charcoal/60 block mb-2">
+                Email <span className="text-terracotta">*</span>
+              </span>
               <input
-                type="tel"
-                name="phone"
+                type="email"
+                name="email"
+                required
+                autoComplete="email"
                 className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                placeholder="Optional"
+                placeholder="you@email.com"
               />
             </label>
             <label className="block">
               <span className="eyebrow text-charcoal/60 block mb-2">
-                What&apos;s on your mind
+                Phone number <span className="text-terracotta">*</span>
+              </span>
+              <input
+                type="tel"
+                name="phone"
+                required
+                autoComplete="tel"
+                inputMode="tel"
+                className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
+                placeholder="(512) 000-0000"
+              />
+            </label>
+            <label className="block">
+              <span className="eyebrow text-charcoal/60 block mb-2">
+                Message
               </span>
               <textarea
                 name="message"
@@ -215,13 +246,69 @@ export default function ContactPage() {
                 placeholder="A few sentences is plenty."
               />
             </label>
+
+            {/* SMS consent — NOT pre-checked, per TCPA / A2P 10DLC */}
+            <fieldset className="mt-2 border-t border-charcoal/15 pt-6">
+              <legend className="sr-only">SMS messaging consent</legend>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="smsConsent"
+                  value="yes"
+                  defaultChecked={false}
+                  className="mt-1 h-4 w-4 border border-charcoal/40 text-terracotta focus:ring-terracotta accent-terracotta"
+                />
+                <span className="text-sm leading-relaxed text-charcoal/85">
+                  I agree to receive text messages from Laurel Seymour and
+                  Seymour Realty Group at the phone number provided regarding
+                  real estate inquiries and related services. Message
+                  frequency varies. Message &amp; data rates may apply. Reply
+                  STOP to unsubscribe. Reply HELP for help. By submitting this
+                  form, you agree to our{" "}
+                  <Link
+                    href="/terms-of-service"
+                    className="underline hover:text-terracotta"
+                  >
+                    Terms of Service
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    href="/privacy-policy"
+                    className="underline hover:text-terracotta"
+                  >
+                    Privacy Policy
+                  </Link>
+                  .
+                </span>
+              </label>
+
+              <p className="mt-5 text-xs leading-relaxed text-charcoal/65">
+                By providing your phone number, you consent to receive calls
+                and text messages from Laurel Seymour and Seymour Realty
+                Group regarding your inquiry and related real estate services.
+                See our{" "}
+                <Link
+                  href="/sms-consent"
+                  className="underline hover:text-terracotta"
+                >
+                  SMS Consent
+                </Link>{" "}
+                page for full details. No mobile information will be shared
+                with third parties/affiliates for marketing/promotional
+                purposes.
+              </p>
+            </fieldset>
+
             <div className="pt-4">
               <button
                 type="submit"
                 className="inline-block bg-navy text-softwhite px-7 py-3.5 text-[0.78rem] tracking-wider uppercase hover:bg-terracotta transition-colors duration-300"
               >
-                Send Note
+                Send Message
               </button>
+              <p className="mt-4 text-xs text-charcoal/55">
+                By submitting, you confirm the consent above.
+              </p>
             </div>
           </form>
         </div>
