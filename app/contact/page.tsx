@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { localBusinessSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
 export const metadata = {
   title: "Contact Laurel Seymour",
@@ -12,36 +14,10 @@ export const metadata = {
 export default function ContactPage() {
   const { company, social, agent } = site;
 
-  // RealEstateAgent schema — address intentionally omitted per the brand's
-  // private-practice setup. Service area is signaled via `areaServed` so GEO
-  // signals remain strong without exposing a physical street address.
-  const realEstateAgentSchema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: company.name,
-    image: agent.headshot,
-    areaServed: {
-      "@type": "City",
-      name: "Austin",
-      containedInPlace: {
-        "@type": "State",
-        name: "Texas",
-      },
-    },
-    telephone: company.phone,
-    email: company.email,
-    url: company.website,
-    sameAs: [social.facebook, social.instagram, social.linkedin, social.youtube],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(realEstateAgentSchema),
-        }}
-      />
+      <JsonLd schema={localBusinessSchema()} />
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: company.website }, { name: "Contact", url: `${company.website}/contact` }])} />
 
       <section className="pt-40 pb-20 md:pt-48 md:pb-28 bg-softwhite">
         <div className="max-w-editorial mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12 md:gap-20 items-start">

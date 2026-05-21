@@ -1,6 +1,9 @@
 import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/lib/blog-data";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/seo/schema";
+import { site } from "@/lib/site";
 
 export const metadata = {
   title: "The Journal — Austin Real Estate Intelligence",
@@ -14,6 +17,7 @@ export default function BlogIndexPage() {
 
   return (
     <>
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Journal", url: `${site.company.website}/blog` }])} />
       {/* Editorial header with hero image */}
       <header className="relative w-full min-h-[58vh] md:min-h-[68vh] flex items-end overflow-hidden">
         <Image

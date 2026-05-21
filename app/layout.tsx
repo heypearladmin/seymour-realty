@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { site } from "@/lib/site";
+import { realEstateAgentSchema, webSiteSchema, personSchema } from "@/lib/seo/schema";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -51,12 +51,21 @@ export const metadata: Metadata = {
     title: "Austin. Understood.",
     description:
       "An Austin-native real estate advisor. Thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets.",
+    images: [
+      {
+        url: "/images/austin-skyline-town-lake-realistic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Downtown Austin skyline — Seymour Realty Group",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Laurel Seymour | Austin Real Estate Authority",
     description:
       "Hyperlocal Austin intelligence. Relocation strategy. Thoughtful planning for better moves.",
+    images: ["/images/austin-skyline-town-lake-realistic.jpg"],
   },
   robots: {
     index: true,
@@ -70,32 +79,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Site-wide RealEstateAgent JSON-LD — address intentionally omitted; service
-// area signals GEO without exposing a physical street address.
-const siteSchema = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  name: site.company.name,
-  url: site.company.website,
-  telephone: site.company.phone,
-  email: site.company.email,
-  image: `https://seymourrealtygroup.com${site.agent.headshot}`,
-  areaServed: {
-    "@type": "City",
-    name: "Austin",
-    containedInPlace: {
-      "@type": "State",
-      name: "Texas",
-    },
-  },
-  sameAs: [
-    site.social.facebook,
-    site.social.instagram,
-    site.social.linkedin,
-    site.social.youtube,
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -103,11 +86,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="font-sans bg-softwhite text-charcoal antialiased">
+      <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              realEstateAgentSchema(),
+              webSiteSchema(),
+              personSchema(),
+            ]),
+          }}
         />
+      </head>
+      <body className="font-sans bg-softwhite text-charcoal antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

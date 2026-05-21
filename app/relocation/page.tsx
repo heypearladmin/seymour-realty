@@ -3,6 +3,9 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import CTASection from "@/components/CTASection";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { site } from "@/lib/site";
 
 export const metadata = {
   title: "Austin Relocation Intelligence",
@@ -14,6 +17,8 @@ export const metadata = {
 export default function RelocationPage() {
   return (
     <>
+      <JsonLd schema={serviceSchema({ name: "Austin Relocation Intelligence", url: `${site.company.website}/relocation`, description: "A trusted advisor for relocation buyers moving to Austin. Thoughtful planning, micro-market analysis, lifestyle mapping, school guidance, and long-term value strategy." })} />
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Relocation", url: `${site.company.website}/relocation` }])} />
       <Hero
         eyebrow="Austin Relocation Intelligence"
         headline="Planning early changes everything."

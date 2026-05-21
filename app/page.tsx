@@ -8,6 +8,8 @@ import CTASection from "@/components/CTASection";
 import { blogPosts } from "@/lib/blog-data";
 import { neighborhoods } from "@/lib/neighborhood-data";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { localBusinessSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
 export const metadata = {
   title: "Austin. Understood. — Laurel Seymour",
@@ -34,6 +36,8 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd schema={localBusinessSchema()} />
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }])} />
       <Hero
         eyebrow="Laurel Seymour · Seymour Realty Group"
         headline="Austin. Understood."

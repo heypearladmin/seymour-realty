@@ -7,6 +7,8 @@ import BlogCard from "@/components/BlogCard";
 import CTASection from "@/components/CTASection";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -59,8 +61,12 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = getRelatedPosts(slug, 3);
 
+  const pageUrl = `${site.company.website}/blog/${post.slug}`;
+
   return (
     <>
+      <JsonLd schema={blogPostingSchema({ title: post.title, description: post.excerpt, url: pageUrl, image: post.image, datePublished: post.publishedAt })} />
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Journal", url: `${site.company.website}/blog` }, { name: post.title, url: pageUrl }])} />
       {/* Hero image + title block */}
       <section className="pt-32 md:pt-40 bg-softwhite">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
