@@ -3,12 +3,12 @@ import Section from "@/components/Section";
 import CTASection from "@/components/CTASection";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { personSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { personSchema, breadcrumbSchema, speakableSchema, faqPageSchema } from "@/lib/seo/schema";
 
 export const metadata = {
-  title: "About Laurel Seymour",
+  title: "About Laurel Seymour — Austin Realtor & Local Market Expert",
   description:
-    "Laurel Seymour is an Austin-native real estate advisor offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets.",
+    "Meet Laurel Seymour, Austin-native Realtor and founder of Seymour Realty Group. Hyperlocal expertise across Austin's micro-markets — buyers, sellers, and relocation clients.",
   alternates: { canonical: "/about" },
 };
 
@@ -17,6 +17,13 @@ export default function AboutPage() {
     <>
       <JsonLd schema={personSchema()} />
       <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "About", url: `${site.company.website}/about` }])} />
+      <JsonLd schema={speakableSchema(`${site.company.website}/about`, ["h1", "h2", "p"])} />
+      <JsonLd schema={faqPageSchema([
+        { question: "What is Laurel Seymour's real estate license number in Texas?", answer: "Laurel Seymour holds Texas Real Estate License #617201, operating under Seymour Realty Group." },
+        { question: "What types of clients does Laurel Seymour work with?", answer: "Laurel Seymour works with relocation buyers moving to Austin, lifelong Austinites buying or selling, and sellers who want their home positioned with precision and strategy." },
+        { question: "How long has Laurel Seymour worked in Austin real estate?", answer: "Laurel Seymour is an Austin native with years of experience mapping the city's micro-markets block by block — including Tarrytown, Barton Hills, Westlake, and East Austin." },
+        { question: "What makes Seymour Realty Group different from other Austin real estate agents?", answer: "Seymour Realty Group is founded on hyperlocal intelligence rather than market hype. Laurel Seymour provides strategic, grounded advice based on deep neighborhood expertise — not just MLS access." },
+      ])} />
       {/* Editorial header */}
       <section className="pt-40 pb-20 md:pt-48 md:pb-28 bg-softwhite">
         <div className="max-w-editorial mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12 md:gap-16 items-end">

@@ -9,12 +9,12 @@ import { blogPosts } from "@/lib/blog-data";
 import { neighborhoods } from "@/lib/neighborhood-data";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { localBusinessSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { localBusinessSchema, breadcrumbSchema, speakableSchema, itemListSchema, faqPageSchema } from "@/lib/seo/schema";
 
 export const metadata = {
-  title: "Austin. Understood. — Laurel Seymour",
+  title: "Austin Real Estate Agent — Laurel Seymour | Seymour Realty Group",
   description:
-    "An Austin-native real estate authority offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets. Laurel Seymour, founder of Seymour Realty Group.",
+    "Austin-native Realtor helping buyers, sellers & relocation clients navigate Austin's distinct neighborhoods with hyperlocal expertise. Seymour Realty Group · TX License #617201.",
   alternates: { canonical: "/" },
 };
 
@@ -38,6 +38,18 @@ export default function HomePage() {
     <>
       <JsonLd schema={localBusinessSchema()} />
       <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }])} />
+      <JsonLd schema={speakableSchema(site.company.website, ["h1", "h2", ".hero-headline", ".hero-subheadline", "p"])} />
+      <JsonLd schema={itemListSchema(
+        featuredPosts.map(p => ({ name: p.title, url: `${site.company.website}/blog/${p.slug}`, description: p.excerpt })),
+        "Featured Austin Real Estate Articles by Laurel Seymour"
+      )} />
+      <JsonLd schema={faqPageSchema([
+        { question: "Who is Laurel Seymour?", answer: "Laurel Seymour is an Austin-native Realtor and founder of Seymour Realty Group. She specializes in helping buyers, sellers, and relocation clients navigate Austin's distinct micro-markets with hyperlocal expertise." },
+        { question: "What areas does Laurel Seymour serve?", answer: "Laurel Seymour serves all of Austin, TX — with deep expertise in Tarrytown, Westlake, Zilker, Barton Hills, Bouldin, South Congress, East Austin, Clarksville, and Rollingwood." },
+        { question: "Is Laurel Seymour a licensed real estate agent in Texas?", answer: "Yes. Laurel Seymour holds Texas Real Estate License #617201 and operates under Seymour Realty Group." },
+        { question: "Does Laurel Seymour help with Austin relocation?", answer: "Yes. Laurel Seymour specializes in relocation buyers moving to Austin, providing neighborhood analysis, school district guidance, commute mapping, and long-term market strategy." },
+        { question: "How do I contact Laurel Seymour?", answer: "You can reach Laurel Seymour through the contact form at seymourrealtygroup.com/contact, or call or email directly through the Seymour Realty Group website." },
+      ])} />
       <Hero
         eyebrow="Laurel Seymour · Seymour Realty Group"
         headline="Austin. Understood."
@@ -120,7 +132,7 @@ export default function HomePage() {
               id="micro-markets-heading"
               className="font-display text-4xl md:text-5xl leading-[1.08] tracking-tight text-navy"
             >
-              One city, mapped one micro-market at a time.
+              Which Austin micro-market fits your life?
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-charcoal/85">
               Austin reads as a single skyline and behaves as thirty distinct
@@ -241,7 +253,7 @@ export default function HomePage() {
               Austin Relocation Intelligence
             </p>
             <h2 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight">
-              Good moves take thoughtful planning.
+              What does a thoughtful Austin relocation actually look like?
             </h2>
             <p className="mt-7 max-w-xl text-softwhite/80 leading-relaxed text-lg">
               Most relocation buyers begin with the wrong question. Instead of
@@ -329,6 +341,7 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+
 
       {/* Video Authority */}
       <Section

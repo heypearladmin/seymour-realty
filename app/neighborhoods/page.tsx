@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/lib/seo/schema";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "Austin Neighborhoods — A Micro-Market Directory",
+  title: "Best Austin Neighborhoods to Live In — 2026 Buyer's Guide",
   description:
-    "An editorial directory of Austin's most distinctive neighborhoods — Tarrytown, Westlake, Barton Hills, Zilker, South Congress, East Austin, Bouldin, Clarksville, and Rollingwood — by lifestyle, architecture, and long-term value.",
+    "Compare Austin's top neighborhoods — Tarrytown, Zilker, Westlake, South Congress, East Austin & more — by lifestyle, schools, and home prices. Expert guidance from local Realtor Laurel Seymour.",
   alternates: { canonical: "/neighborhoods" },
 };
 

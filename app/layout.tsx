@@ -3,7 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { realEstateAgentSchema, webSiteSchema, personSchema } from "@/lib/seo/schema";
+import { realEstateAgentSchema, webSiteSchema, personSchema, profilePageSchema } from "@/lib/seo/schema";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -21,11 +21,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://seymourrealtygroup.com"),
   title: {
-    default: "Laurel Seymour | Austin Real Estate Authority",
-    template: "%s | Laurel Seymour",
+    default: "Laurel Seymour — Austin Real Estate Agent | Seymour Realty Group",
+    template: "%s | Seymour Realty Group",
   },
   description:
-    "Laurel Seymour is an Austin-native real estate advisor offering thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets. Seymour Realty Group.",
+    "Austin-native Realtor helping buyers, sellers & relocation clients navigate Austin's micro-markets. Seymour Realty Group · TX License #617201.",
   keywords: [
     "Laurel Seymour",
     "Seymour Realty Group",
@@ -95,6 +95,7 @@ export default function RootLayout({
               realEstateAgentSchema(),
               webSiteSchema(),
               personSchema(),
+              profilePageSchema(),
             ]),
           }}
         />

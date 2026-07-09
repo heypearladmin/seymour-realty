@@ -4,13 +4,13 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import CTASection from "@/components/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { serviceSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { serviceSchema, breadcrumbSchema, faqPageSchema } from "@/lib/seo/schema";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "Austin Relocation Intelligence",
+  title: "Moving to Austin? Austin Relocation Guidance — Laurel Seymour",
   description:
-    "A trusted advisor for relocation buyers moving to Austin. Thoughtful planning, micro-market analysis, lifestyle mapping, school guidance, and long-term value strategy from Laurel Seymour.",
+    "Relocating to Austin? Get expert guidance on neighborhoods, school districts, commute mapping, and market strategy from Austin-native Realtor Laurel Seymour at Seymour Realty Group.",
   alternates: { canonical: "/relocation" },
 };
 
@@ -19,6 +19,13 @@ export default function RelocationPage() {
     <>
       <JsonLd schema={serviceSchema({ name: "Austin Relocation Intelligence", url: `${site.company.website}/relocation`, description: "A trusted advisor for relocation buyers moving to Austin. Thoughtful planning, micro-market analysis, lifestyle mapping, school guidance, and long-term value strategy." })} />
       <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Relocation", url: `${site.company.website}/relocation` }])} />
+      <JsonLd schema={faqPageSchema([
+        { question: "How do I find the right Austin neighborhood when relocating?", answer: "The best starting point is mapping how you want to live — commute distance, school district, walkability, and pace of the neighborhood. Laurel Seymour specializes in translating lifestyle priorities into specific Austin micro-markets, from Tarrytown and Westlake to South Congress and East Austin." },
+        { question: "What should I know about Austin school districts before buying?", answer: "Austin ISD, Eanes ISD, and Lake Travis ISD are the three most commonly evaluated districts. School zone boundaries in Austin are block-specific and directly impact home values. Working with a local Realtor who knows the exact boundary lines is essential before making an offer." },
+        { question: "How long does Austin relocation typically take?", answer: "Most out-of-state buyers benefit from beginning the search process 3–6 months before their target move date. Starting earlier allows time to research neighborhoods, understand the market, and make a confident offer without urgency-driven decisions." },
+        { question: "How is Austin's real estate market different from other major cities?", answer: "Austin operates in distinct micro-markets — each neighborhood prices, paces, and appreciates on its own terms. What's true in Tarrytown is not true in East Austin. A hyperlocal advisor is essential to navigate the city effectively." },
+        { question: "Does Laurel Seymour work with relocation buyers from out of state?", answer: "Yes. Laurel Seymour works extensively with buyers relocating to Austin from other states, providing virtual consultations, neighborhood tours, and guided strategy sessions tailored to buyers making decisions from a distance." },
+      ])} />
       <Hero
         eyebrow="Austin Relocation Intelligence"
         headline="Planning early changes everything."

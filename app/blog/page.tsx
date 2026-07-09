@@ -6,9 +6,9 @@ import { breadcrumbSchema } from "@/lib/seo/schema";
 import { site } from "@/lib/site";
 
 export const metadata = {
-  title: "The Journal — Austin Real Estate Intelligence",
+  title: "Austin Real Estate Blog — Neighborhood Guides & Market Advice",
   description:
-    "Editorial market intelligence, neighborhood guides, and relocation strategy. Field notes from Laurel Seymour on Austin's real estate landscape.",
+    "Expert Austin real estate advice, neighborhood guides, market trends, and relocation strategy from Austin-native Realtor Laurel Seymour of Seymour Realty Group.",
   alternates: { canonical: "/blog" },
 };
 
