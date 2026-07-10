@@ -195,3 +195,113 @@ export function neighborhoodPageSchema(params: {
     mainEntityOfPage: { "@type": "WebPage", "@id": params.url },
   });
 }
+
+// ─── AI Discoverability Schemas ──────────────────────────────────────────────
+
+export function speakableSchema(url: string, cssSelectors: string[] = ["h1", "h2", "h3", "p"]): SchemaObject {
+  return withContext({
+    "@type": "WebPage",
+    "@id": url,
+    url,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: cssSelectors,
+    },
+  });
+}
+
+export function faqPageSchema(faqs: { question: string; answer: string }[]): SchemaObject {
+  return withContext({
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  });
+}
+
+export function profilePageSchema(): SchemaObject {
+  return withContext({
+    "@type": "ProfilePage",
+    "@id": `${base}/#profile`,
+    url: `${base}/about`,
+    name: `${site.agent.fullName} — Austin Real Estate Advisor`,
+    description: `${site.agent.fullName} is an Austin-native real estate advisor and founder of ${site.company.name}. She specializes in hyperlocal market intelligence, buyer and seller strategy, and relocation guidance across Austin's distinct micro-markets.`,
+    mainEntity: {
+      "@type": "Person",
+      "@id": `${base}/#person`,
+      name: site.agent.fullName,
+      jobTitle: site.agent.title,
+      url: `${base}/about`,
+      image: `${base}${site.agent.headshot}`,
+      worksFor: {
+        "@type": "RealEstateAgent",
+        "@id": `${base}/#agent`,
+        name: site.company.name,
+      },
+      knowsAbout: [
+        "Austin real estate",
+        "Austin neighborhoods",
+        "Austin micro-markets",
+        "Home buying strategy",
+        "Home selling strategy",
+        "Austin relocation",
+        "Tarrytown real estate",
+        "Westlake real estate",
+        "Barton Hills real estate",
+        "East Austin real estate",
+        "South Congress real estate",
+        "Zilker real estate",
+      ],
+      sameAs: [
+        site.social.facebook,
+        site.social.instagram,
+        site.social.linkedin,
+        site.social.youtube,
+      ],
+    },
+  });
+}
+
+export function itemListSchema(
+  items: { name: string; url: string; description: string }[],
+  listName: string
+): SchemaObject {
+  return withContext({
+    "@type": "ItemList",
+    name: listName,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url,
+      description: item.description,
+    })),
+  });
+}
+
+export function howToSchema(params: {
+  name: string;
+  description: string;
+  url: string;
+  steps: { name: string; text: string }[];
+}): SchemaObject {
+  return withContext({
+    "@type": "HowTo",
+    "@id": `${params.url}#howto`,
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    author: { "@id": `${base}/#person` },
+    step: params.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  });
+}
