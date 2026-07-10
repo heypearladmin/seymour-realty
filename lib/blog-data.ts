@@ -226,6 +226,12 @@ export const blogPosts: BlogPost[] = [
       "There is no single formula. Austin is too layered for that. But the buyers and sellers who consistently end up with the best outcomes tend to do the same thing: they start earlier, ask the better question, and let a clear plan do the heavy lifting.",
       "Clarity first. Move second.",
     ],
+    faqs: [
+      { question: "When should I start planning a home purchase in Austin?", answer: "Most buyers benefit from beginning the planning process 3–6 months before they intend to buy. Starting earlier allows time to research neighborhoods, understand the market, clarify lifestyle priorities, and be in position when the right home appears — rather than making rushed decisions under pressure." },
+      { question: "What does thoughtful planning look like for Austin sellers?", answer: "For sellers, planning typically involves evaluating the home's condition 3–6 months before listing, prioritizing improvements that meaningfully affect buyer perception, coordinating staging and photography, and choosing a launch window that aligns with buyer demand cycles in their specific micro-market." },
+      { question: "Why does starting early matter so much in Austin real estate?", answer: "Austin's market operates in micro-markets where buyer demand, inventory, and pricing shift at the neighborhood level. Buyers and sellers who have researched their specific target area in advance are able to act with clarity and speed when conditions are right — a significant advantage over those reacting without context." },
+      { question: "How do I figure out what I actually want before buying in Austin?", answer: "The most effective approach is to start with lifestyle rather than listings. Ask: how do you want your day to feel? What does your commute need to look like? Do schools matter? How important is walkability? Once those priorities are clear, a local advisor can translate them into specific Austin micro-markets and price ranges." },
+    ],
   },
   {
     slug: "austin-real-estate-market-trends-2026",
@@ -256,6 +262,12 @@ export const blogPosts: BlogPost[] = [
       "As Austin continues to grow, the opportunities remain strong for buyers and sellers who approach the market strategically and work with an advisor who understands how Austin's micro-markets truly operate.",
       "Austin is changing. But thoughtful strategy still wins.",
     ],
+    faqs: [
+      { question: "Is Austin still a good real estate market in 2026?", answer: "Yes. Austin in 2026 rewards preparation and local knowledge more than ever. Well-priced, well-presented homes in desirable micro-markets continue to attract strong buyer interest. The market has matured from peak frenzy, which means buyers have more options and sellers need stronger strategy — both are positive developments for informed participants." },
+      { question: "Which Austin neighborhoods are most in demand in 2026?", answer: "Tarrytown, Barton Hills, Westlake, and Zilker continue to attract premium buyers seeking schools, lifestyle, and long-term value. East Austin and parts of South Austin remain active for buyers prioritizing walkability and culture. Each micro-market behaves differently — generalizing across all of Austin misses the local dynamics that actually drive decisions." },
+      { question: "Are relocation buyers still moving to Austin in 2026?", answer: "Yes — professionals and families from California, New York, Seattle, and Chicago continue relocating to Austin for lifestyle, business opportunity, and relative affordability compared to other major metros. Relocation buyers in 2026 are taking more time to research neighborhoods and commute patterns before committing, which makes a local advisor more valuable, not less." },
+      { question: "What do Austin sellers need to know about the 2026 market?", answer: "Presentation and pricing strategy matter more than they did during peak seller years. Buyers have more inventory to compare, and poorly prepared or overpriced homes sit longer. Homes that are staged, professionally photographed, and launched at the right price in the right window are still performing well — the standard for 'well-prepared' has simply risen." },
+    ],
   },
   {
     slug: "best-neighborhoods-in-austin-by-lifestyle",
@@ -283,6 +295,12 @@ export const blogPosts: BlogPost[] = [
       "- your pace of life\n- your priorities\n- your future plans\n- your routines\n- your sense of community",
       "Austin offers an incredible variety of lifestyles within a single city, which is part of what makes the market so unique.",
       "The key is understanding which micro-market aligns best with the life you actually want to build.",
+    ],
+    faqs: [
+      { question: "What is the best Austin neighborhood for families?", answer: "Families most commonly prioritize Westlake (Eanes ISD), Tarrytown (desirable Austin ISD elementaries), Zilker, and Barton Hills. Each offers strong schools, residential pace, parks, and community feel. The right choice depends on commute, budget, and lifestyle — all three areas behave differently and price differently." },
+      { question: "What is the best Austin neighborhood for young professionals?", answer: "South Congress, East Austin, and the Rainey Street corridor attract young professionals for walkability, food and music culture, and proximity to downtown employers. East Austin in particular continues to be one of Austin's most dynamic neighborhoods for buyers who prioritize urban energy and modern architecture." },
+      { question: "Is Westlake worth the price premium over Austin neighborhoods?", answer: "For buyers with school-age children, Westlake's location in Eanes ISD — consistently rated among Texas's top districts — makes the premium defensible from both a lifestyle and resale perspective. For buyers without school priorities, other Austin micro-markets may offer better value per square foot with comparable lifestyle." },
+      { question: "How do I choose between Austin neighborhoods when relocating?", answer: "Start with lifestyle priorities rather than listing prices. Map your actual commute, not the Google Maps estimate. Research the specific elementary school zone for each address you consider (boundaries are block-specific in Austin). Then drive the neighborhood at different times of day. A local Realtor who specializes in hyperlocal Austin knowledge can translate your priorities into the right two or three neighborhoods to focus your search." },
     ],
   },
   {
@@ -318,6 +336,12 @@ export const blogPosts: BlogPost[] = [
       "The goal is not simply finding a house.",
       "It is finding the part of Austin that feels like home.",
     ],
+    faqs: [
+      { question: "What should relocation buyers know before moving to Austin?", answer: "Three things matter most: Austin operates in micro-markets, so neighborhood choice is far more specific than zip code. School zone boundaries are block-specific and directly affect both lifestyle and resale value. And commute realities in Austin differ significantly from Google Maps estimates — drive your actual route at actual times before committing to a location." },
+      { question: "How long does it take to buy a home in Austin when relocating from out of state?", answer: "Most out-of-state buyers benefit from a 3–6 month runway before their target move date. That time allows for neighborhood research, virtual consultations, an in-person visit or two, and enough market understanding to make a confident offer when the right home appears. Buyers who compress this timeline often feel pressure that leads to regrettable decisions." },
+      { question: "Can I buy an Austin home without visiting in person?", answer: "Yes, and many relocation buyers do. Virtual consultations, neighborhood video tours, and a trusted local advisor can carry most of the process. That said, an in-person visit — even one or two days — dramatically improves the quality of the decision. Experiencing the neighborhood firsthand answers questions that photographs and video cannot." },
+      { question: "What is the property tax rate in Austin?", answer: "Austin property tax rates vary by location and the taxing entities assigned to the property, but buyers should generally budget 2–2.5% of assessed value annually. Travis County, the city of Austin, the school district, and special utility or municipal utility district (MUD) fees all contribute to the total rate. A local Realtor can walk through the specific tax breakdown for any property before you make an offer." },
+    ],
   },
   {
     slug: "why-local-market-knowledge-matters-in-austin",
@@ -349,6 +373,11 @@ export const blogPosts: BlogPost[] = [
       "Today, successful real estate decisions are driven by local context, not broad assumptions.",
       "That is especially true in a city where every neighborhood tells a different story.",
     ],
+    faqs: [
+      { question: "Why does hyperlocal knowledge matter in Austin real estate?", answer: "Because two neighborhoods minutes apart can price, pace, and appreciate very differently. A buyer relying on citywide market data may overpay or miss a better-valued micro-market. A seller relying on generic comps may underprice or overprice relative to their specific block. Austin's layered geography rewards specific knowledge and penalizes broad assumptions." },
+      { question: "How do Austin micro-markets differ from each other?", answer: "Each Austin micro-market is shaped by its school district assignment, walkability, architectural character, proximity to green space or downtown, and the type of buyer it attracts. Tarrytown and Barton Hills operate very differently from East Austin or the Domain area — in pricing, buyer motivation, inventory levels, and what sellers need to do to compete." },
+      { question: "What mistakes do Austin buyers make by ignoring local market knowledge?", answer: "The most common: treating all Austin neighborhoods as interchangeable when pricing a home search, underestimating the importance of school zone boundaries, and failing to account for commute realities that only emerge from local experience. Buyers who enter Austin's market without local context often write offers without understanding whether a price is fair, a location is strong, or a neighborhood is shifting." },
+    ],
   },
   {
     slug: "how-to-prepare-your-home-for-sale-in-austin",
@@ -377,6 +406,12 @@ export const blogPosts: BlogPost[] = [
       "Professional photography, cinematic video, neighborhood storytelling, and digital exposure all shape how buyers perceive value.",
       "Selling a home is not just about listing it. It is about positioning it correctly.",
       "The goal is to create a property experience that feels polished, inviting, and memorable from the first click to the final showing.",
+    ],
+    faqs: [
+      { question: "How do I prepare my Austin home for sale?", answer: "Start 2–3 months before your target list date. Focus first on decluttering, deep cleaning, and any deferred maintenance that buyers will flag during inspection. Then evaluate cosmetic improvements — paint, lighting, landscaping — that have high visual impact for low cost. Professional staging and photography should follow once the home is ready. Timing the launch to align with buyer demand in your specific micro-market is the final strategic layer." },
+      { question: "Does staging actually help Austin home sales?", answer: "Yes — consistently. Staged homes photograph better, show better, and create stronger emotional connections with buyers in person. In competitive Austin neighborhoods where buyers are comparing multiple properties, a staged home typically stands out in both showing traffic and final offer quality. The return on staging investment is well-documented across Austin's active neighborhoods." },
+      { question: "How important is professional photography when selling an Austin home?", answer: "Extremely important. The majority of buyers form their initial impression of a home through online photography before they ever schedule a showing. Professionally photographed homes receive significantly more showing requests than comparable homes with amateur photos. In Austin's visually-driven market, photography is not an optional marketing extra — it is a core part of how a home performs." },
+      { question: "When is the best time to sell a home in Austin?", answer: "Austin's peak buyer activity traditionally runs from late February through early June, when families are positioning for a summer move and new job relocations are highest. That said, individual micro-markets vary — some neighborhoods see strong fall activity as well. The right launch window should be calibrated to your specific neighborhood's demand patterns, not just the citywide seasonality average." },
     ],
   },
   {
@@ -407,6 +442,11 @@ export const blogPosts: BlogPost[] = [
       "Austin's continued growth has made local expertise more important than ever.",
       "The reality is simple: there is no single \"Austin market.\" There are dozens of smaller markets operating simultaneously across the city.",
       "The buyers and sellers who succeed are usually the ones who understand the difference.",
+    ],
+    faqs: [
+      { question: "What is a micro-market in Austin real estate?", answer: "A micro-market is a distinct neighborhood or sub-area within Austin that prices, paces, and behaves differently from its surroundings. Austin has dozens of them — Tarrytown, Barton Hills, East Austin, Westlake, South Congress, and many others — each shaped by school district, lifestyle, architecture, walkability, and buyer demand. Understanding which micro-market you are buying or selling in is more useful than understanding the broad 'Austin market.'" },
+      { question: "Why don't Austin-wide market statistics apply to every neighborhood?", answer: "Because Austin's micro-markets operate independently. When one area sees rising inventory, another may be tightening. When one neighborhood attracts strong relocation demand, another may be experiencing more local move-up buyers. A statistic averaged across all of Travis County can be accurate for the county and still meaningfully wrong for any specific neighborhood within it." },
+      { question: "How do I know which Austin micro-market is right for me as a buyer?", answer: "Start with your lifestyle priorities — commute, schools, walkability, pace — and let those filter the micro-markets worth considering. Then research how those specific neighborhoods have priced and performed over the past 12–24 months. A local advisor who operates in those micro-markets can tell you what the data doesn't: what the block actually feels like, how competitive the typical offer situation is, and what long-term value drivers are at work." },
     ],
   },
   {
