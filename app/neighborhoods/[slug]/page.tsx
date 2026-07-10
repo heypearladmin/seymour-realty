@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import NeighborhoodCard from "@/components/NeighborhoodCard";
 import { neighborhoods, getNeighborhoodBySlug } from "@/lib/neighborhood-data";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { neighborhoodPageSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { neighborhoodPageSchema, breadcrumbSchema, faqPageSchema, speakableSchema } from "@/lib/seo/schema";
 import { site } from "@/lib/site";
 
 interface PageProps {
@@ -45,6 +45,13 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
     <>
       <JsonLd schema={neighborhoodPageSchema({ title: `${n.name} — An Austin Micro-Market Guide`, description: n.shortDescription, url: pageUrl, image: n.image })} />
       <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Neighborhoods", url: `${site.company.website}/neighborhoods` }, { name: n.name, url: pageUrl }])} />
+      <JsonLd schema={speakableSchema(pageUrl, ["h1", "h2", "h3", "p"])} />
+      <JsonLd schema={faqPageSchema([
+        { question: `What is ${n.name} like as a neighborhood in Austin?`, answer: n.shortDescription },
+        { question: `What are home prices in ${n.name}, Austin?`, answer: `${n.name} is one of Austin's distinct micro-markets. Home values in the area are influenced by school district quality, proximity to downtown, lifestyle amenities, and sustained buyer demand. For current pricing specific to ${n.name}, contact Laurel Seymour at Seymour Realty Group for a hyperlocal market analysis.` },
+        { question: `Is ${n.name} a good place to buy a home in Austin?`, answer: `${n.name} attracts buyers drawn to ${n.shortDescription.toLowerCase()} Working with a local advisor who understands the specific value drivers within ${n.name} — school zones, development trends, and block-level pricing — is essential to making a sound purchase decision.` },
+        { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand the neighborhood's commute patterns to major employment centers, and evaluate long-term development plans in the area. Laurel Seymour at Seymour Realty Group specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
+      ])} />
 
       {/* Hero */}
       <section className="relative w-full min-h-[80vh] flex items-end overflow-hidden">
@@ -134,6 +141,31 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-16 md:py-24 bg-softwhite">
+        <div className="max-w-editorial mx-auto px-6 lg:px-10 max-w-prose">
+          <p className="eyebrow text-terracotta mb-5">Frequently Asked</p>
+          <h2 className="font-display text-3xl md:text-4xl text-navy leading-[1.1] tracking-tight mb-10">
+            Questions about {n.name}
+          </h2>
+          <div className="space-y-8">
+            {[
+              { question: `What is ${n.name} like as a neighborhood in Austin?`, answer: n.shortDescription },
+              { question: `What are home prices like in ${n.name}?`, answer: `${n.name} is one of Austin's distinct micro-markets. Home values are influenced by school district quality, proximity to downtown, lifestyle amenities, and sustained buyer demand. For current pricing specific to ${n.name}, contact Laurel Seymour for a hyperlocal market analysis.` },
+              { question: `Is ${n.name} a good place to buy a home?`, answer: n.whyPeopleMove },
+              { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand commute patterns to major employment centers, and evaluate long-term development plans. Laurel Seymour specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
+            ].map((faq, i) => (
+              <div key={i} className="border-t border-charcoal/15 pt-6">
+                <h3 className="font-display text-xl text-navy leading-snug mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-charcoal/80 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

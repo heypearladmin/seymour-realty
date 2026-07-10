@@ -30,7 +30,14 @@ export default function BlogCard({ post, layout = "standard" }: BlogCardProps) {
       </div>
 
       <div className={`mt-6 ${isFeature ? "md:max-w-2xl" : ""}`}>
-        <p className="eyebrow text-terracotta">{post.category}</p>
+        <div className="flex items-center gap-3 flex-wrap">
+          <p className="eyebrow text-terracotta">{post.category}</p>
+          {post.isNew && (
+            <span className="inline-block bg-terracotta text-softwhite text-[0.6rem] tracking-widest uppercase px-2 py-0.5 font-sans font-medium">
+              New
+            </span>
+          )}
+        </div>
         <h3
           className={`font-display text-navy mt-3 leading-[1.15] tracking-tight ${
             isFeature ? "text-3xl md:text-4xl" : "text-2xl"

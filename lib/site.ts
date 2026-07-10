@@ -24,6 +24,7 @@ export const site = {
     emailHref: "mailto:laurel@seymourrealtygroup.com",
     serviceArea: "Austin, Texas",
     website: "https://seymourrealtygroup.com",
+    trec: "617201",
   },
   social: {
     facebook: "https://www.facebook.com/seymourrealtygroup.austin",

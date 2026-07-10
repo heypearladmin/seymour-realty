@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/seo/schema";
+import { blogPostingSchema, breadcrumbSchema, faqPageSchema, speakableSchema } from "@/lib/seo/schema";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -67,6 +67,8 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <JsonLd schema={blogPostingSchema({ title: post.title, description: post.excerpt, url: pageUrl, image: post.image, datePublished: post.publishedAt })} />
       <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Journal", url: `${site.company.website}/blog` }, { name: post.title, url: pageUrl }])} />
+      <JsonLd schema={speakableSchema(pageUrl, ["h1", "h2", ".blog-excerpt", ".blog-content p"])} />
+      {post.faqs && post.faqs.length > 0 && <JsonLd schema={faqPageSchema(post.faqs)} />}
       {/* Hero image + title block */}
       <section className="pt-32 md:pt-40 bg-softwhite">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
@@ -107,6 +109,28 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </article>
+
+      {/* FAQs */}
+      {post.faqs && post.faqs.length > 0 && (
+        <section className="py-16 md:py-24 bg-beige/40">
+          <div className="max-w-prose mx-auto px-6">
+            <p className="eyebrow text-terracotta mb-5">Frequently Asked</p>
+            <h2 className="font-display text-3xl md:text-4xl text-navy leading-[1.1] tracking-tight mb-10">
+              Questions about this topic
+            </h2>
+            <div className="space-y-8">
+              {post.faqs.map((faq, i) => (
+                <div key={i} className="border-t border-charcoal/15 pt-6">
+                  <h3 className="font-display text-xl text-navy leading-snug mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-charcoal/80 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Meet Laurel */}
       <section className="bg-beige/40 py-20 md:py-28">

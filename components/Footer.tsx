@@ -1,6 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+
+function trackEvent(name: string, category: string) {
+  const w = window as unknown as { gtag?: (cmd: string, event: string, params: object) => void };
+  if (typeof window !== "undefined" && w.gtag) {
+    w.gtag("event", name, { event_category: category });
+  }
+}
 
 export default function Footer() {
   return (
@@ -46,12 +55,20 @@ export default function Footer() {
           <p className="eyebrow text-softwhite/60 mb-5">Contact</p>
           <div className="not-italic text-sm leading-relaxed text-softwhite/85 space-y-2">
             <div>
-              <a href={site.company.phoneHref} className="link-underline">
+              <a
+                href={site.company.phoneHref}
+                onClick={() => trackEvent("phone_click", "Footer")}
+                className="link-underline"
+              >
                 {site.company.phone}
               </a>
             </div>
             <div>
-              <a href={site.company.emailHref} className="link-underline">
+              <a
+                href={site.company.emailHref}
+                onClick={() => trackEvent("email_click", "Footer")}
+                className="link-underline"
+              >
                 {site.company.email}
               </a>
             </div>
@@ -107,9 +124,9 @@ export default function Footer() {
 
       <div className="border-t border-softwhite/10">
         <div className="max-w-editorial mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-softwhite/55">
-          <p>
-            © {new Date().getFullYear()} Seymour Realty Group. All rights
-            reserved.
+          <p className="space-y-1">
+            <span>© {new Date().getFullYear()} Seymour Realty Group. All rights reserved.</span>
+            <span className="block">Laurel Seymour · TX Real Estate License #{site.company.trec} · Seymour Realty Group</span>
           </p>
 
           <ul className="flex flex-wrap gap-x-5 gap-y-2 tracking-editorial uppercase">

@@ -1,23 +1,72 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { site } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { localBusinessSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
-export const metadata = {
-  title: "Contact Laurel Seymour",
-  description:
-    "Begin a conversation with Laurel Seymour, Austin-native real estate advisor and founder of Seymour Realty Group. Thoughtful planning, strategic guidance, and clear direction.",
-  alternates: { canonical: "/contact" },
-};
 
 export default function ContactPage() {
   const { company, social, agent } = site;
 
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    smsConsentTransactional: false,
+    smsConsentMarketing: false,
+  });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value, type, checked } = e.target;
+    setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
+  }
+
+  function trackEvent(name: string, category: string) {
+    const w = window as unknown as { gtag?: (cmd: string, event: string, params: object) => void };
+    if (typeof window !== "undefined" && w.gtag) {
+      w.gtag("event", name, { event_category: category });
+    }
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("submitting");
+    setErrorMsg("");
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      firstName: fd.get("firstName") as string || form.firstName,
+      lastName: fd.get("lastName") as string || form.lastName,
+      email: fd.get("email") as string || form.email,
+      phone: fd.get("phone") as string || form.phone,
+      smsConsentTransactional: fd.get("smsConsentTransactional") === "on" || form.smsConsentTransactional,
+      smsConsentMarketing: fd.get("smsConsentMarketing") === "on" || form.smsConsentMarketing,
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setErrorMsg(data.error || "Something went wrong. Please try again.");
+        setStatus("error");
+      } else {
+        setStatus("success");
+        trackEvent("form_submit", "Contact");
+      }
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+      setStatus("error");
+    }
+  }
+
   return (
     <>
-      <JsonLd schema={localBusinessSchema()} />
-      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: company.website }, { name: "Contact", url: `${company.website}/contact` }])} />
 
       <section className="pt-40 pb-20 md:pt-48 md:pb-28 bg-softwhite">
         <div className="max-w-editorial mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12 md:gap-20 items-start">
@@ -38,6 +87,7 @@ export default function ContactPage() {
                 <p className="eyebrow text-terracotta mb-3">Phone</p>
                 <a
                   href={company.phoneHref}
+                  onClick={() => trackEvent("phone_click", "Contact")}
                   className="font-display text-2xl text-navy link-underline"
                 >
                   {company.phone}
@@ -47,6 +97,7 @@ export default function ContactPage() {
                 <p className="eyebrow text-terracotta mb-3">Email</p>
                 <a
                   href={company.emailHref}
+                  onClick={() => trackEvent("email_click", "Contact")}
                   className="font-display text-2xl text-navy link-underline break-words"
                 >
                   {company.email}
@@ -150,143 +201,161 @@ export default function ContactPage() {
             and respond within one business day.
           </p>
 
-          <form
-            className="mt-14 grid gap-6"
-            aria-label="Contact form"
-            method="post"
-            action="mailto:laurel@seymourrealtygroup.com"
-          >
-            <div className="grid sm:grid-cols-2 gap-6">
-              <label className="block">
-                <span className="eyebrow text-charcoal/60 block mb-2">
-                  First name <span className="text-terracotta">*</span>
-                </span>
-                <input
-                  type="text"
-                  name="firstName"
-                  required
-                  autoComplete="given-name"
-                  className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                  placeholder="First name"
-                />
-              </label>
-              <label className="block">
-                <span className="eyebrow text-charcoal/60 block mb-2">
-                  Last name <span className="text-terracotta">*</span>
-                </span>
-                <input
-                  type="text"
-                  name="lastName"
-                  required
-                  autoComplete="family-name"
-                  className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                  placeholder="Last name"
-                />
-              </label>
+          {status === "success" ? (
+            <div className="mt-14 py-16 text-center">
+              <p className="font-display text-2xl text-navy mb-4">Thank you.</p>
+              <p className="text-charcoal/75 leading-relaxed">
+                Your message has been received. Laurel will be in touch within one business day.
+              </p>
+              <button
+                onClick={() => {
+                  setStatus("idle");
+                  setForm({ firstName: "", lastName: "", email: "", phone: "", smsConsentTransactional: false, smsConsentMarketing: false });
+                }}
+                className="mt-8 inline-block text-[0.78rem] tracking-wider uppercase underline text-charcoal/60 hover:text-terracotta transition-colors duration-300"
+              >
+                Submit another message
+              </button>
             </div>
-            <label className="block">
-              <span className="eyebrow text-charcoal/60 block mb-2">
-                Email <span className="text-terracotta">*</span>
-              </span>
-              <input
-                type="email"
-                name="email"
-                required
-                autoComplete="email"
-                className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                placeholder="you@email.com"
-              />
-            </label>
-            <label className="block">
-              <span className="eyebrow text-charcoal/60 block mb-2">
-                Phone number <span className="text-terracotta">*</span>
-              </span>
-              <input
-                type="tel"
-                name="phone"
-                required
-                autoComplete="tel"
-                inputMode="tel"
-                className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
-                placeholder="(512) 000-0000"
-              />
-            </label>
-            <label className="block">
-              <span className="eyebrow text-charcoal/60 block mb-2">
-                Message
-              </span>
-              <textarea
-                name="message"
-                rows={5}
-                className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300 resize-none"
-                placeholder="A few sentences is plenty."
-              />
-            </label>
-
-            {/* SMS consent — NOT pre-checked, per TCPA / A2P 10DLC */}
-            <fieldset className="mt-2 border-t border-charcoal/15 pt-6">
-              <legend className="sr-only">SMS messaging consent</legend>
-              <label className="flex items-start gap-3 cursor-pointer">
+          ) : (
+            <form
+              className="mt-14 grid gap-6"
+              aria-label="Contact form"
+              onSubmit={handleSubmit}
+            >
+              <div className="grid sm:grid-cols-2 gap-6">
+                <label className="block">
+                  <span className="eyebrow text-charcoal/60 block mb-2">
+                    First name <span className="text-terracotta">*</span>
+                  </span>
+                  <input
+                    type="text"
+                    name="firstName"
+                    required
+                    autoComplete="given-name"
+                    value={form.firstName}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
+                    placeholder="First name"
+                  />
+                </label>
+                <label className="block">
+                  <span className="eyebrow text-charcoal/60 block mb-2">
+                    Last name <span className="text-terracotta">*</span>
+                  </span>
+                  <input
+                    type="text"
+                    name="lastName"
+                    required
+                    autoComplete="family-name"
+                    value={form.lastName}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
+                    placeholder="Last name"
+                  />
+                </label>
+              </div>
+              <label className="block">
+                <span className="eyebrow text-charcoal/60 block mb-2">
+                  Email <span className="text-terracotta">*</span>
+                </span>
                 <input
-                  type="checkbox"
-                  name="smsConsent"
-                  value="yes"
-                  defaultChecked={false}
-                  className="mt-1 h-4 w-4 border border-charcoal/40 text-terracotta focus:ring-terracotta accent-terracotta"
+                  type="email"
+                  name="email"
+                  required
+                  autoComplete="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
+                  placeholder="you@email.com"
                 />
-                <span className="text-sm leading-relaxed text-charcoal/85">
-                  I agree to receive text messages from Laurel Seymour and
-                  Seymour Realty Group at the phone number provided regarding
-                  real estate inquiries and related services. Message
-                  frequency varies. Message &amp; data rates may apply. Reply
-                  STOP to unsubscribe. Reply HELP for help. By submitting this
-                  form, you agree to our{" "}
-                  <Link
-                    href="/terms-of-service"
-                    className="underline hover:text-terracotta"
-                  >
-                    Terms of Service
-                  </Link>{" "}
-                  and{" "}
+              </label>
+              <label className="block">
+                <span className="eyebrow text-charcoal/60 block mb-2">
+                  Phone number <span className="text-terracotta">*</span>
+                </span>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  autoComplete="tel"
+                  inputMode="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  className="w-full bg-transparent border-b border-charcoal/30 py-3 text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-navy transition-colors duration-300"
+                  placeholder="(512) 000-0000"
+                />
+              </label>
+
+              {/* SMS consent — NOT pre-checked, per TCPA / A2P 10DLC */}
+              <fieldset className="mt-2 border-t border-charcoal/15 pt-6 grid gap-5">
+                <legend className="sr-only">SMS messaging consent</legend>
+
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="smsConsentTransactional"
+                    checked={form.smsConsentTransactional}
+                    onChange={handleChange}
+                    className="mt-1 h-4 w-4 shrink-0 border border-charcoal/40 text-terracotta focus:ring-terracotta accent-terracotta"
+                  />
+                  <span className="text-sm leading-relaxed text-charcoal/85">
+                    I consent to receive non-marketing text messages from{" "}
+                    <strong>Seymour Realty Group</strong> regarding real estate
+                    inquiries and related services. Message frequency varies.
+                    Message &amp; data rates may apply. Reply HELP for
+                    assistance, reply STOP to opt out.
+                  </span>
+                </label>
+
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="smsConsentMarketing"
+                    checked={form.smsConsentMarketing}
+                    onChange={handleChange}
+                    className="mt-1 h-4 w-4 shrink-0 border border-charcoal/40 text-terracotta focus:ring-terracotta accent-terracotta"
+                  />
+                  <span className="text-sm leading-relaxed text-charcoal/85">
+                    I consent to receive marketing text messages from{" "}
+                    <strong>Seymour Realty Group</strong> regarding Austin real
+                    estate listings, market updates, and promotional offers.
+                    Message frequency varies. Message &amp; data rates may
+                    apply. Reply HELP for assistance, reply STOP to opt out.
+                  </span>
+                </label>
+              </fieldset>
+
+              {status === "error" && (
+                <p className="text-sm text-red-600">{errorMsg}</p>
+              )}
+
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="w-full bg-navy text-softwhite py-4 text-[0.78rem] tracking-wider uppercase hover:bg-terracotta transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {status === "submitting" ? "Sending..." : "Submit"}
+                </button>
+                <p className="mt-5 text-xs text-center text-charcoal/55">
                   <Link
                     href="/privacy-policy"
                     className="underline hover:text-terracotta"
                   >
                     Privacy Policy
                   </Link>
-                  .
-                </span>
-              </label>
-
-              <p className="mt-5 text-xs leading-relaxed text-charcoal/65">
-                By providing your phone number, you consent to receive calls
-                and text messages from Laurel Seymour and Seymour Realty
-                Group regarding your inquiry and related real estate services.
-                See our{" "}
-                <Link
-                  href="/sms-consent"
-                  className="underline hover:text-terracotta"
-                >
-                  SMS Consent
-                </Link>{" "}
-                page for full details. No mobile information will be shared
-                with third parties/affiliates for marketing/promotional
-                purposes.
-              </p>
-            </fieldset>
-
-            <div className="pt-4">
-              <button
-                type="submit"
-                className="inline-block bg-navy text-softwhite px-7 py-3.5 text-[0.78rem] tracking-wider uppercase hover:bg-terracotta transition-colors duration-300"
-              >
-                Send Message
-              </button>
-              <p className="mt-4 text-xs text-charcoal/55">
-                By submitting, you confirm the consent above.
-              </p>
-            </div>
-          </form>
+                  {" | "}
+                  <Link
+                    href="/terms-of-service"
+                    className="underline hover:text-terracotta"
+                  >
+                    Terms and Conditions
+                  </Link>
+                </p>
+              </div>
+            </form>
+          )}
         </div>
       </section>
     </>
