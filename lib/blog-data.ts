@@ -7,7 +7,9 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  quickAnswer?: string;
   category: string;
+  tags?: string[];
   readTime: string;
   publishedAt: string;
   image: string;
@@ -756,6 +758,34 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
 
-export function getRelatedPosts(slug: string, count = 3): BlogPost[] {
-  return blogPosts.filter((p) => p.slug !== slug).slice(0, count);
+export function getRelatedPosts(slug: string, count = 4): BlogPost[] {
+  const current = blogPosts.find((p) => p.slug === slug);
+  if (!current) return blogPosts.filter((p) => p.slug !== slug).slice(0, count);
+  const sameCategory = blogPosts.filter(
+    (p) => p.slug !== slug && p.category === current.category
+  );
+  const others = blogPosts.filter(
+    (p) => p.slug !== slug && p.category !== current.category
+  );
+  return [...sameCategory, ...others].slice(0, count);
+}
+
+export function slugifyFaq(question: string): string {
+  return question
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .slice(0, 80);
+}
+
+export function getAllFaqs(): Array<FAQ & { postSlug: string; postTitle: string; faqSlug: string }> {
+  return blogPosts.flatMap((post) =>
+    (post.faqs ?? []).map((faq) => ({
+      ...faq,
+      postSlug: post.slug,
+      postTitle: post.title,
+      faqSlug: slugifyFaq(faq.question),
+    }))
+  );
 }
