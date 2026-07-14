@@ -1,6 +1,22 @@
+export interface FaqSource {
+  label: string;
+  url: string;
+}
+
+export interface FaqComparisonTable {
+  headers: string[];
+  rows: string[][];
+}
+
 export interface FAQ {
   question: string;
   answer: string;
+  // Optional rich-content fields for standalone FAQ authority pages
+  keyTakeaways?: string[];
+  expandedContent?: string[];
+  comparisonTable?: FaqComparisonTable;
+  sources?: FaqSource[];
+  lastUpdated?: string;
 }
 
 export interface BlogPost {
@@ -779,12 +795,28 @@ export function slugifyFaq(question: string): string {
     .slice(0, 80);
 }
 
-export function getAllFaqs(): Array<FAQ & { postSlug: string; postTitle: string; faqSlug: string }> {
+export type RichFaq = FAQ & {
+  postSlug: string;
+  postTitle: string;
+  postCategory: string;
+  postPublishedAt: string;
+  postImage: string;
+  postImageAlt: string;
+  postExcerpt: string;
+  faqSlug: string;
+};
+
+export function getAllFaqs(): RichFaq[] {
   return blogPosts.flatMap((post) =>
     (post.faqs ?? []).map((faq) => ({
       ...faq,
       postSlug: post.slug,
       postTitle: post.title,
+      postCategory: post.category,
+      postPublishedAt: post.publishedAt,
+      postImage: post.image,
+      postImageAlt: post.imageAlt,
+      postExcerpt: post.excerpt,
       faqSlug: slugifyFaq(faq.question),
     }))
   );
