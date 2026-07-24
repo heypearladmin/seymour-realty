@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     category: "Investment",
     readTime: "9 min read",
     publishedAt: "July 23, 2026",
-    image: "/images/austin-adu-guide-homeowners.png",
+    image: "/images/website-blog-austin-adu-guide.png",
     imageAlt:
       "A well-designed detached accessory dwelling unit behind a main Austin residence, surrounded by mature oak trees in warm afternoon light",
     isNew: true,
@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
     category: "Buyer Guide",
     readTime: "8 min read",
     publishedAt: "July 16, 2026",
-    image: "/images/austin-new-construction-vs-resale.png",
+    image: "/images/website-blog-new-construction-vs-resale1.png",
     imageAlt:
       "Side-by-side view of a modern new construction home and a mature resale home on a tree-lined Austin street in natural daylight",
     isNew: true,
