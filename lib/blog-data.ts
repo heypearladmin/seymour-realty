@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
       "North Austin has emerged as the city's second major employment and lifestyle hub — anchored by Apple's campus, the Domain mixed-use district, and a rapidly growing residential community. A complete guide to who lives here, what it costs, and what buyers should know.",
     category: "Neighborhood Guide",
     readTime: "8 min read",
-    publishedAt: "August 20, 2026",
+    publishedAt: "July 31, 2026",
     image: "/images/website-blog-north-austin-domain-guide.png",
     imageAlt:
       "North Austin residential street with new construction homes and mature trees near the Domain employment corridor in natural daylight",
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
       "Buying your first home in Austin is genuinely challenging — prices are high, competition is real, and the process has more steps than most first-timers expect. A complete, honest guide to financing, down payment assistance, neighborhoods, and what it actually takes to close your first Austin home in 2026.",
     category: "Buyer Guide",
     readTime: "10 min read",
-    publishedAt: "August 13, 2026",
+    publishedAt: "July 28, 2026",
     image: "/images/website-blog-austin-first-time-homebuyer.png",
     imageAlt:
       "A first-time homebuyer standing in front of their new Austin home on a tree-lined residential street in warm afternoon light",
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       "Austin draws more than 28 million visitors annually. Short-term rental income during SXSW, ACL, and the F1 Grand Prix can be extraordinary — but Austin's STR regulations, neighborhood selection, and underwriting discipline separate informed investors from expensive mistakes.",
     category: "Investment",
     readTime: "9 min read",
-    publishedAt: "August 6, 2026",
+    publishedAt: "July 24, 2026",
     image: "/images/website-blog-austin-airbnb-str-investing.png",
     imageAlt:
       "An inviting Austin short-term rental property with a beautifully designed covered porch and mature oak trees in warm natural light",
@@ -209,7 +209,7 @@ export const blogPosts: BlogPost[] = [
       "Texas has no state income tax — but living in Austin is not cheap. A clear-eyed breakdown of what housing, utilities, food, transportation, and property taxes actually cost for households moving to or living in Austin in 2026.",
     category: "Relocation",
     readTime: "9 min read",
-    publishedAt: "July 30, 2026",
+    publishedAt: "July 21, 2026",
     image: "/images/website-blog-austin-cost-of-living.png",
     imageAlt:
       "A well-kept Austin residential neighborhood street at golden hour, representing daily life and the real cost of living in the city",
@@ -270,7 +270,7 @@ export const blogPosts: BlogPost[] = [
       "Austin has made it easier than ever to add an accessory dwelling unit — and harder than ever to ignore the opportunity. A complete guide to ADU regulations, costs, rental income potential, and what every buyer and seller should understand before making a decision.",
     category: "Investment",
     readTime: "9 min read",
-    publishedAt: "July 23, 2026",
+    publishedAt: "July 17, 2026",
     image: "/images/website-blog-austin-adu-guide.png",
     imageAlt:
       "A well-designed detached accessory dwelling unit behind a main Austin residence, surrounded by mature oak trees in warm afternoon light",
@@ -325,7 +325,7 @@ export const blogPosts: BlogPost[] = [
       "Both have real advantages — and real trade-offs. A clear-eyed guide to the new construction vs. resale decision for Austin buyers in 2026, covering price, location, negotiation, and what builders won't tell you up front.",
     category: "Buyer Guide",
     readTime: "8 min read",
-    publishedAt: "July 16, 2026",
+    publishedAt: "July 14, 2026",
     image: "/images/website-blog-new-construction-vs-resale1.png",
     imageAlt:
       "Side-by-side view of a modern new construction home and a mature resale home on a tree-lined Austin street in natural daylight",
@@ -375,7 +375,7 @@ export const blogPosts: BlogPost[] = [
       "Finding a home you love is the easy part. What happens in the next 48 hours is where most Austin buyers lose clarity — and sometimes, the right home.",
     category: "Buyer Guide",
     readTime: "7 min read",
-    publishedAt: "July 9, 2026",
+    publishedAt: "July 10, 2026",
     image: "/images/austin-buyer-mistakes-home-offer.png",
     imageAlt: "A buyer couple standing outside a well-maintained Austin craftsman bungalow on a tree-lined street, looking at the home thoughtfully in late afternoon light",
     isNew: true,
@@ -416,7 +416,7 @@ export const blogPosts: BlogPost[] = [
       "Resale value is not a question for the day you list. It is a question for the day you buy. Here is how thoughtful Austin buyers think about it from the start.",
     category: "Strategy",
     readTime: "8 min read",
-    publishedAt: "July 6, 2026",
+    publishedAt: "July 7, 2026",
     image: "/images/what-makes-austin-home-easier-to-resell.png",
     imageAlt: "A well-proportioned Austin home on a corner lot with mature landscaping and strong curb appeal in soft natural daylight",
     isNew: true,
@@ -457,7 +457,7 @@ export const blogPosts: BlogPost[] = [
       "Texas has no state income tax — but property taxes are among the highest in the nation. A clear guide to what every Austin buyer should understand before they close.",
     category: "Buyer Guide",
     readTime: "8 min read",
-    publishedAt: "July 2, 2026",
+    publishedAt: "July 3, 2026",
     image: "/images/austin-property-taxes-buyers-guide.png",
     imageAlt: "A well-lit Austin home exterior on a residential street, representing homeownership and property tax considerations",
     isNew: true,
@@ -506,7 +506,7 @@ export const blogPosts: BlogPost[] = [
       "School district lines in Austin don't follow intuition — and they shape property values more than almost any other single factor. A clear guide for families buying in the Austin metro.",
     category: "Buyer Guide",
     readTime: "9 min read",
-    publishedAt: "June 25, 2026",
+    publishedAt: "June 30, 2026",
     image: "/images/austin-school-districts-buyers-guide.png",
     imageAlt: "A tree-lined residential street in an Austin neighborhood known for strong schools, with mature oak trees and well-kept homes",
     isNew: true,
@@ -557,7 +557,7 @@ export const blogPosts: BlogPost[] = [
       "The best moves start with clarity, not urgency. A working guide to what thoughtful planning actually looks like for Austin buyers and sellers — and why early decisions change everything later.",
     category: "Strategy",
     readTime: "7 min read",
-    publishedAt: "June 15, 2026",
+    publishedAt: "June 26, 2026",
     image: "/images/austin-thoughtful-planning.jpg",
     imageAlt:
       "An editorial image suggesting thoughtful planning — a desk, a notebook, and a view of an Austin neighborhood",
@@ -590,7 +590,7 @@ export const blogPosts: BlogPost[] = [
       "Austin is not one market. It is a network of distinct micro-markets, each behaving differently. Here is what is shaping pricing, inventory, and buyer behavior in 2026.",
     category: "Market Intelligence",
     readTime: "7 min read",
-    publishedAt: "June 8, 2026",
+    publishedAt: "June 23, 2026",
     image: "/images/blog-market-trends-2026.jpg",
     imageAlt:
       "Austin skyline at golden hour with the Texas State Capitol in view",
@@ -626,7 +626,7 @@ export const blogPosts: BlogPost[] = [
       "The right Austin neighborhood is not about square footage. It is about how daily life feels once you are there. A working guide to matching lifestyle to place.",
     category: "Neighborhood Guide",
     readTime: "6 min read",
-    publishedAt: "June 1, 2026",
+    publishedAt: "June 19, 2026",
     image: "/images/blog-best-neighborhoods.jpg",
     imageAlt: "Tree-lined Austin neighborhood street with warm afternoon light",
     content: [
@@ -660,7 +660,7 @@ export const blogPosts: BlogPost[] = [
       "Relocating to Austin is exciting, but buying a home here requires more than browsing listings online. A thoughtful relocation primer for informed buyers.",
     category: "Relocation",
     readTime: "8 min read",
-    publishedAt: "May 25, 2026",
+    publishedAt: "June 16, 2026",
     image: "/images/blog-moving-to-austin.jpg",
     imageAlt:
       "Aerial view of Austin neighborhoods with downtown in the distance",
@@ -700,7 +700,7 @@ export const blogPosts: BlogPost[] = [
       "Two neighborhoods only minutes apart can perform very differently. In a city this layered, hyperlocal insight is no longer a luxury — it is the strategy.",
     category: "Market Intelligence",
     readTime: "6 min read",
-    publishedAt: "May 18, 2026",
+    publishedAt: "June 12, 2026",
     image: "/images/blog-local-knowledge.jpg",
     imageAlt: "Modern Austin residential architecture surrounded by oak trees",
     content: [
@@ -736,7 +736,7 @@ export const blogPosts: BlogPost[] = [
       "Buyers form opinions before they ever step inside. A thoughtful guide to preparing, positioning, and presenting an Austin home for the modern buyer.",
     category: "Seller Strategy",
     readTime: "7 min read",
-    publishedAt: "May 11, 2026",
+    publishedAt: "June 9, 2026",
     image: "/images/blog-prepare-for-sale.jpg",
     imageAlt: "Bright, airy Austin home interior styled for sale",
     content: [
@@ -771,7 +771,7 @@ export const blogPosts: BlogPost[] = [
       "There is no single \"Austin market.\" There are dozens of smaller markets operating simultaneously across the city. A primer on reading them.",
     category: "Market Intelligence",
     readTime: "8 min read",
-    publishedAt: "May 4, 2026",
+    publishedAt: "June 5, 2026",
     image: "/images/blog-micro-markets.jpg",
     imageAlt: "A map-style view of an Austin neighborhood from above",
     content: [
@@ -806,7 +806,7 @@ export const blogPosts: BlogPost[] = [
       "Austin's 30 distinct neighborhoods each tell a different story. A comprehensive guide to cost trends, local amenities, and the micro-market dynamics shaping relocation decisions in 2026.",
     category: "Neighborhood Guide",
     readTime: "9 min read",
-    publishedAt: "April 27, 2026",
+    publishedAt: "June 2, 2026",
     image: "/images/the-complete-guide-austin-micro-markets.png",
     imageAlt: "Aerial view of Austin neighborhoods illustrating distinct micro-market areas",
     content: [
@@ -834,7 +834,7 @@ export const blogPosts: BlogPost[] = [
       "An insider's view of Austin's most coveted zip code — Zilker, Bouldin Creek, Barton Hills, and Travis Heights — decoded through lived experience, transaction data, and lifestyle mapping.",
     category: "Neighborhood Guide",
     readTime: "8 min read",
-    publishedAt: "April 20, 2026",
+    publishedAt: "May 29, 2026",
     image: "/images/the-austin-natives-guide-78704.png",
     imageAlt: "Residential street in the 78704 zip code with mature oak trees and mid-century homes",
     content: [
@@ -861,7 +861,7 @@ export const blogPosts: BlogPost[] = [
       "What it means to work with an advisor who combines Austin-native roots, transaction-level market intelligence, and a clear focus on long-term client outcomes.",
     category: "Strategy",
     readTime: "6 min read",
-    publishedAt: "April 13, 2026",
+    publishedAt: "May 26, 2026",
     image: "/images/seymour-realty-group-strategic-advisory.png",
     imageAlt: "Laurel Seymour in an Austin residential neighborhood, representing strategic advisory",
     content: [
@@ -888,7 +888,7 @@ export const blogPosts: BlogPost[] = [
       "Austin's dynamic economy and growing population create real opportunity for long-term real estate investment. The neighborhoods and strategies that separate smart money from speculation.",
     category: "Investment",
     readTime: "8 min read",
-    publishedAt: "April 6, 2026",
+    publishedAt: "May 22, 2026",
     image: "/images/investing-in-austin-long-term-value.png",
     imageAlt: "Austin skyline from a residential vantage point, representing long-term real estate value",
     content: [
@@ -916,7 +916,7 @@ export const blogPosts: BlogPost[] = [
       "Buying a home in Austin requires more than a search filter. A clear overview of the advisory services, local insights, and step-by-step guidance that help buyers move with confidence.",
     category: "Buyer Guide",
     readTime: "7 min read",
-    publishedAt: "March 30, 2026",
+    publishedAt: "May 19, 2026",
     image: "/images/comprehensive-austin-buyer-advisory.png",
     imageAlt: "A buyer reviewing neighborhood information with a real estate advisor in Austin",
     content: [
@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
       "Relocating to Austin means choosing not just a home but a commute, a community, and a daily rhythm. A working guide to the neighborhood intelligence that makes the difference.",
     category: "Relocation",
     readTime: "8 min read",
-    publishedAt: "March 23, 2026",
+    publishedAt: "May 15, 2026",
     image: "/images/austin-relocation-intelligence-commute-mapping.png",
     imageAlt: "A thoughtful view of an Austin neighborhood from above, illustrating commute and lifestyle mapping",
     content: [
@@ -971,7 +971,7 @@ export const blogPosts: BlogPost[] = [
       "A working directory of Austin's key neighborhoods — boundaries, pricing trends, lifestyle characteristics, and what makes each micro-market distinct for buyers, sellers, and investors.",
     category: "Neighborhood Guide",
     readTime: "9 min read",
-    publishedAt: "March 16, 2026",
+    publishedAt: "May 12, 2026",
     image: "/images/austin-neighborhoods-micro-markets-directory.png",
     imageAlt: "Street-level view of a distinct Austin neighborhood illustrating local character and architecture",
     content: [
@@ -998,7 +998,7 @@ export const blogPosts: BlogPost[] = [
       "A comprehensive analysis of Austin's housing market trends, micro-market pricing, and the factors shaping buyer and seller decisions through 2026.",
     category: "Market Intelligence",
     readTime: "8 min read",
-    publishedAt: "March 9, 2026",
+    publishedAt: "May 8, 2026",
     image: "/images/austin-market-intelligence-trends-hub.png",
     imageAlt: "Austin skyline at dusk representing evolving market conditions and long-term investment trends",
     content: [
@@ -1026,7 +1026,7 @@ export const blogPosts: BlogPost[] = [
       "Selling in Austin requires more than a listing date. A practical guide to timing, pricing discipline, presentation, and the marketing strategies that drive stronger results.",
     category: "Seller Strategy",
     readTime: "8 min read",
-    publishedAt: "March 2, 2026",
+    publishedAt: "May 5, 2026",
     image: "/images/austin-home-selling-strategy-timing-guide.png",
     imageAlt: "An Austin home staged for sale with warm interior lighting and clean landscaping",
     content: [
@@ -1054,7 +1054,7 @@ export const blogPosts: BlogPost[] = [
       "A practical guide for Austin homeowners preparing to sell — covering pricing strategies, staging advice, marketing positioning, and how to read local market trends effectively.",
     category: "Seller Strategy",
     readTime: "7 min read",
-    publishedAt: "February 23, 2026",
+    publishedAt: "May 1, 2026",
     image: "/images/austin-home-seller-advisory-services.png",
     imageAlt: "A well-prepared Austin home interior reflecting expert staging and presentation",
     content: [
@@ -1080,7 +1080,7 @@ export const blogPosts: BlogPost[] = [
       "A step-by-step guide to buying a home in Austin — from initial planning and mortgage pre-approval through offer strategy, inspection, and closing — with neighborhood context built in.",
     category: "Buyer Guide",
     readTime: "9 min read",
-    publishedAt: "February 16, 2026",
+    publishedAt: "April 28, 2026",
     image: "/images/austin-home-buying-process.png",
     imageAlt: "A buyer reviewing documents and neighborhood information as part of the Austin home buying process",
     content: [
