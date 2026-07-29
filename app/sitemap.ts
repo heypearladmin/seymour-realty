@@ -1,10 +1,15 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { blogPosts } from "@/lib/blog-data";
+import { blogPosts, getAllFaqs, slugifyFaq } from "@/lib/blog-data";
 import { neighborhoods } from "@/lib/neighborhood-data";
 
 const base = site.company.website.replace(/\/$/, "");
 const now = new Date();
+
+function parsePublishedAt(dateStr: string): Date {
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? now : d;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   type Entry = {
@@ -25,20 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sms-consent", priority: 0.3, changeFrequency: "yearly" },
   ];
 
-  const neighborhoodEntries: MetadataRoute.Sitemap = neighborhoods.map((n) => ({
-    url: `${base}/neighborhoods/${n.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.85,
-  }));
-
-  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((p) => ({
-    url: `${base}/blog/${p.slug}`,
-    lastModified: new Date(p.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
-  }));
-
   const staticEntries: MetadataRoute.Sitemap = staticPages.map(
     ({ path, priority, changeFrequency }) => ({
       url: `${base}${path}`,
@@ -48,5 +39,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticEntries, ...neighborhoodEntries, ...blogEntries];
+  const neighborhoodEntries: MetadataRoute.Sitemap = neighborhoods.map((n) => ({
+    url: `${base}/neighborhoods/${n.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: parsePublishedAt(p.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  const faqEntries: MetadataRoute.Sitemap = getAllFaqs().map((faq) => ({
+    url: `${base}/faq/${faq.postSlug}/${slugifyFaq(faq.question)}`,
+    lastModified: parsePublishedAt(faq.postPublishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticEntries, ...neighborhoodEntries, ...blogEntries, ...faqEntries];
 }
