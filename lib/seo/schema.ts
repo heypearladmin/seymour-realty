@@ -60,6 +60,11 @@ export function personSchema(): SchemaObject {
     url: base,
     jobTitle: site.agent.title,
     description: `${site.agent.fullName} is an Austin-native real estate advisor and founder of ${site.company.name}. Thoughtful planning, strategic guidance, and hyperlocal intelligence across Austin's micro-markets.`,
+    areaServed: [
+      { "@type": "City", name: "Austin", containedInPlace: { "@type": "State", name: "Texas" } },
+      { "@type": "AdministrativeArea", name: "Travis County, Texas" },
+      { "@type": "AdministrativeArea", name: "Williamson County, Texas" },
+    ],
     worksFor: { "@id": `${base}/#agent` },
     image: {
       "@type": "ImageObject",

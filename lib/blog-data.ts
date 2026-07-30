@@ -454,7 +454,7 @@ export const blogPosts: BlogPost[] = [
     slug: "austin-property-taxes-what-buyers-need-to-know",
     title: "Austin Property Taxes: What Buyers Need to Know",
     excerpt:
-      "Texas has no state income tax — but property taxes are among the highest in the nation. A clear guide to what every Austin buyer should understand before they close.",
+      "Austin property taxes run 1.8–2.4% annually — that's $1,050/month on a $600K home. What every buyer must calculate before closing, including the homestead exemption and how to protest your appraisal.",
     category: "Buyer Guide",
     readTime: "8 min read",
     publishedAt: "July 3, 2026",
@@ -503,7 +503,7 @@ export const blogPosts: BlogPost[] = [
     slug: "austin-school-districts-homebuyers-guide",
     title: "Austin School Districts: A Homebuyer's Complete Guide",
     excerpt:
-      "School district lines in Austin don't follow intuition — and they shape property values more than almost any other single factor. A clear guide for families buying in the Austin metro.",
+      "Two Austin homes on the same street can be in different school districts — and that difference can mean $50K+ in value. Eanes ISD, Austin ISD, and every boundary that matters for 2026 buyers.",
     category: "Buyer Guide",
     readTime: "9 min read",
     publishedAt: "June 30, 2026",
