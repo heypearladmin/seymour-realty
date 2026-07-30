@@ -14,7 +14,12 @@ export interface Neighborhood {
   architecture: string;
   walkability: string;
   schools: string;
+  schoolEnrollment: string;
   communityVibe: string;
+  medianPriceRange: string;
+  pricePerSqft: string;
+  marketTrend: string;
+  relatedBlogSlugs: string[];
 }
 
 export const neighborhoods: Neighborhood[] = [
@@ -48,8 +53,19 @@ export const neighborhoods: Neighborhood[] = [
       "Highly walkable along the central spine of Exposition and the streets near Casis Elementary. Lake-adjacent streets are more residential, designed for strolling rather than commuting.",
     schools:
       "Tarrytown is anchored by Casis Elementary, O. Henry Middle School, and Austin High School — a rare combination of strong public schools that has helped sustain demand here for generations.",
+    schoolEnrollment:
+      "Casis Elementary (~450 students, AISD), O. Henry Middle School (~800 students), Austin High School (~2,200 students). Casis consistently ranks among AISD's most sought-after elementary zones, with school assignment directly impacting home values block by block.",
     communityVibe:
       "Established, multi-generational, and engaged. Tarrytown is the kind of neighborhood where people know their neighbors and value privacy in equal measure.",
+    medianPriceRange: "$1.9M – $4.5M",
+    pricePerSqft: "$700 – $1,100 / sqft",
+    marketTrend:
+      "Tarrytown has held value better than most Austin markets through recent cycles. Inventory remains very low, and well-maintained original homes and architect-designed rebuilds both attract competitive interest. Lot premiums for mature trees and lake proximity remain significant.",
+    relatedBlogSlugs: [
+      "austin-school-districts-homebuyers-guide",
+      "what-makes-austin-home-easier-to-resell",
+      "austin-property-taxes-what-buyers-need-to-know",
+    ],
   },
   {
     slug: "westlake",
@@ -81,8 +97,19 @@ export const neighborhoods: Neighborhood[] = [
       "More car-oriented than central Austin, with walkability concentrated within specific developments. The trade-off is space, privacy, and access to surrounding nature.",
     schools:
       "Eanes ISD is one of the most consistently top-rated districts in Texas. Westlake High School in particular has long-standing recognition for academics, athletics, and college placement.",
+    schoolEnrollment:
+      "Eanes ISD serves approximately 7,500 students across 8 campuses. Westlake High School (~2,700 students) ranks among the top public high schools in Texas. Elementary assignments vary by address — Bridge Point, Cedar Creek, Eanes, Forest Trail, and Valley View are the primary elementary feeders. Verify the specific campus assignment before purchasing.",
     communityVibe:
       "Settled, family-focused, and considered. Community life is organized around schools, sports, and the natural landscape that surrounds it.",
+    medianPriceRange: "$1.6M – $5M+",
+    pricePerSqft: "$580 – $950 / sqft",
+    marketTrend:
+      "Eanes ISD zoning continues to insulate Westlake from broader Austin softening. Demand from corporate relocators and California buyers prioritizing top public schools has kept absorption rates healthy. View-lot premiums remain strong; homes without meaningful outdoor space face longer market times.",
+    relatedBlogSlugs: [
+      "austin-school-districts-homebuyers-guide",
+      "austin-property-taxes-what-buyers-need-to-know",
+      "best-neighborhoods-in-austin-by-lifestyle",
+    ],
   },
   {
     slug: "barton-hills",
@@ -114,8 +141,19 @@ export const neighborhoods: Neighborhood[] = [
       "Strong walkability, especially toward Zilker, Barton Springs, and South Lamar. Cyclists and runners use neighborhood streets as part of their daily routine.",
     schools:
       "Anchored by Barton Hills Elementary, with O. Henry Middle School and Austin High serving the surrounding area. Strong neighborhood school identity.",
+    schoolEnrollment:
+      "Barton Hills Elementary (~380 students, AISD) consistently draws high parent engagement and strong test scores relative to the broader AISD average. Feeds into O. Henry Middle (~800 students) and Austin High (~2,200 students). School zone assignment is block-specific — confirm before making an offer.",
     communityVibe:
       "Outdoor-oriented, creative-professional, and tightly knit. People here tend to know their neighbors and care about preserving what makes the area unique.",
+    medianPriceRange: "$1.1M – $2.6M",
+    pricePerSqft: "$530 – $880 / sqft",
+    marketTrend:
+      "Greenbelt-adjacent lots and homes with direct trail access command meaningful premiums over the Barton Hills average. Move-in-ready inventory moves quickly; homes requiring significant work sit longer. Buyer profile skews professional and family-oriented with strong interest in outdoor access.",
+    relatedBlogSlugs: [
+      "austin-natives-guide-78704",
+      "austin-school-districts-homebuyers-guide",
+      "best-neighborhoods-in-austin-by-lifestyle",
+    ],
   },
   {
     slug: "south-congress",
@@ -148,8 +186,19 @@ export const neighborhoods: Neighborhood[] = [
       "Among the most walkable neighborhoods in Austin. Most daily needs — coffee, groceries, restaurants, parks — are within a short walk.",
     schools:
       "Served by AISD, with several local elementary options. Many SoCo households are professionals, creatives, and pre-family or post-family residents drawn primarily by lifestyle.",
+    schoolEnrollment:
+      "AISD serves the South Congress area with Travis Heights Elementary, Becker Elementary, and Fulmore Middle School among the primary options. The buyer profile here skews toward professionals and smaller households for whom school zone is secondary to lifestyle and walkability.",
     communityVibe:
       "Creative, design-conscious, and culturally engaged. The neighborhood attracts people who care about local independent businesses and protecting Austin's character.",
+    medianPriceRange: "$750K – $1.7M",
+    pricePerSqft: "$480 – $780 / sqft",
+    marketTrend:
+      "SoCo remains one of Austin's most liquid markets for well-executed bungalow restorations and architecturally distinct condos. Proximity to the retail and dining corridor is the primary value driver — homes a few blocks off Congress price noticeably lower. Investor interest in short-term rental-eligible properties has moderated since city STR ordinance changes.",
+    relatedBlogSlugs: [
+      "austin-micro-markets-explained",
+      "best-neighborhoods-in-austin-by-lifestyle",
+      "austin-short-term-rental-investing-airbnb-guide",
+    ],
   },
   {
     slug: "east-austin",
@@ -181,8 +230,19 @@ export const neighborhoods: Neighborhood[] = [
       "Strong in pockets, especially along East 6th, East Cesar Chavez, and Manor Road. The neighborhood is generally bike-friendly and increasingly walkable as infill matures.",
     schools:
       "Served by AISD with a mix of neighborhood schools, magnets, and charter options. Many East Austin households are pre-family professionals, but family populations are growing.",
+    schoolEnrollment:
+      "Primary AISD schools serving East Austin include Metz Elementary, Govalle Elementary, and several magnet options through AISD's choice program. Growing family population is increasing demand for school zone clarity — verify specific campus assignment at the address level before purchasing.",
     communityVibe:
       "Creative, modern, and culturally engaged. The neighborhood attracts people who value design, independence, and the next chapter of Austin's identity.",
+    medianPriceRange: "$600K – $1.4M",
+    pricePerSqft: "$430 – $720 / sqft",
+    marketTrend:
+      "East Austin remains the most architecturally active part of the city, with design-forward infill delivering the strongest returns. The market has moderated from its 2022 peak but contemporary builds with strong curb appeal continue to move well. ADU-eligible lots command meaningful premiums as investors and owner-occupants increasingly factor rental income into purchase math.",
+    relatedBlogSlugs: [
+      "austin-adu-guide-homeowners-buyers-2026",
+      "best-neighborhoods-in-austin-by-lifestyle",
+      "austin-micro-markets-explained",
+    ],
   },
   {
     slug: "zilker",
@@ -214,8 +274,19 @@ export const neighborhoods: Neighborhood[] = [
       "Strong walkability toward the park, the lake, and South Lamar. Many residents structure their daily routines around walking or biking.",
     schools:
       "Served by AISD, with strong neighborhood school identity and easy access to private school options across central Austin.",
+    schoolEnrollment:
+      "Zilker Elementary (~450 students, AISD) anchors the school identity for the neighborhood and is consistently well-regarded within AISD. Feeds into O. Henry Middle School and Austin High. Several private school options are within a short drive, including St. Andrew's Episcopal and St. Michael's.",
     communityVibe:
       "Central, family-friendly, and engaged. The neighborhood attracts people who want to be close to everything without feeling like they are in the middle of it.",
+    medianPriceRange: "$1.0M – $2.2M",
+    pricePerSqft: "$520 – $840 / sqft",
+    marketTrend:
+      "Park-adjacent homes in Zilker trade at a consistent premium over the broader 78704 market. Inventory is limited — the neighborhood is fully built out with minimal new development — so moves tend to be selective and deliberate. The ACL Festival window temporarily suppresses showings but does not impact pricing.",
+    relatedBlogSlugs: [
+      "austin-natives-guide-78704",
+      "best-neighborhoods-in-austin-by-lifestyle",
+      "austin-home-buying-process-search-to-close",
+    ],
   },
   {
     slug: "bouldin",
@@ -248,8 +319,19 @@ export const neighborhoods: Neighborhood[] = [
       "Highly walkable. Most daily needs — coffee, restaurants, the lake — are within a short walk or bike ride.",
     schools:
       "Served by AISD with several elementary options. Many Bouldin households are professionals and pre-family or small-family residents drawn primarily by lifestyle and location.",
+    schoolEnrollment:
+      "Bouldin is served by Becker Elementary and Travis Heights Elementary (~350–400 students each, AISD), with Fulmore Middle School and Travis High as the secondary feeders. The buyer mix skews heavily toward lifestyle-first purchasers for whom school zone is secondary to centrality and walkability.",
     communityVibe:
       "Central, design-aware, and unmistakably Austin. The neighborhood attracts people who want to be in the middle of the city without losing their block.",
+    medianPriceRange: "$850K – $1.9M",
+    pricePerSqft: "$490 – $790 / sqft",
+    marketTrend:
+      "Bouldin is one of Austin's most consistently competitive inner-loop markets. Well-restored bungalows on tree-lined blocks attract multiple offers; larger contemporary infill on busy streets faces more negotiation. Inner-loop walkability remains the neighborhood's most durable value driver.",
+    relatedBlogSlugs: [
+      "austin-natives-guide-78704",
+      "austin-micro-markets-explained",
+      "best-neighborhoods-in-austin-by-lifestyle",
+    ],
   },
   {
     slug: "clarksville",
@@ -282,8 +364,19 @@ export const neighborhoods: Neighborhood[] = [
       "Among the most walkable neighborhoods in central Austin. Most daily needs are within a short walk.",
     schools:
       "Served by AISD with strong central elementary options and easy access to private schools across central Austin.",
+    schoolEnrollment:
+      "Clarksville is primarily served by Mathews Elementary and Bryker Woods Elementary (~300–400 students each, AISD) — both well-regarded within the district. Feeds into O. Henry Middle and Austin High. Historic preservation culture here attracts buyers who tend to prioritize neighborhood character alongside school quality.",
     communityVibe:
       "Historic, residential, and thoughtfully cosmopolitan. Clarksville attracts people who want a neighborhood with a long memory.",
+    medianPriceRange: "$1.1M – $2.8M",
+    pricePerSqft: "$580 – $940 / sqft",
+    marketTrend:
+      "Clarksville's small footprint and historic designation keep inventory extremely tight. Homes with original architectural character sell well to buyers drawn to the neighborhood's identity. Contemporary infill has faced more scrutiny — projects that respect the streetscape and scale outperform those that do not.",
+    relatedBlogSlugs: [
+      "austin-micro-markets-explained",
+      "what-makes-austin-home-easier-to-resell",
+      "best-neighborhoods-in-austin-by-lifestyle",
+    ],
   },
   {
     slug: "rollingwood",
@@ -316,8 +409,19 @@ export const neighborhoods: Neighborhood[] = [
       "Residential walkability inside the municipality. Daily errands typically involve a short drive to Westbank or downtown.",
     schools:
       "Eanes ISD — one of the most consistently top-rated districts in Texas. School zoning is a primary driver of Rollingwood demand.",
+    schoolEnrollment:
+      "Rollingwood feeds into Eanes Elementary (~400 students) and Hill Country Middle School, with Westlake High School (~2,700 students) as the secondary campus. Eanes ISD has a ~7,500-student total enrollment with one of the highest per-pupil performance records in Texas. The district is the single most powerful demand driver for Rollingwood home values.",
     communityVibe:
       "Family-anchored, school-engaged, and settled. The community organizes around schools, sports, and small-city civic life.",
+    medianPriceRange: "$1.4M – $3.2M",
+    pricePerSqft: "$560 – $920 / sqft",
+    marketTrend:
+      "Rollingwood's Eanes ISD zoning provides a floor that most central Austin markets lack. Buyers who cannot afford Westlake proper but want Eanes schools view Rollingwood as the strategic play — and that positioning has kept demand steady. Lot-value-driven purchases for teardown/rebuild are active, particularly for larger parcels.",
+    relatedBlogSlugs: [
+      "austin-school-districts-homebuyers-guide",
+      "austin-property-taxes-what-buyers-need-to-know",
+      "best-neighborhoods-in-austin-by-lifestyle",
+    ],
   },
 ];
 

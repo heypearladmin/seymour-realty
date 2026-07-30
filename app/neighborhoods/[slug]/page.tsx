@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
 import NeighborhoodCard from "@/components/NeighborhoodCard";
 import { neighborhoods, getNeighborhoodBySlug } from "@/lib/neighborhood-data";
+import { blogPosts, getPostBySlug } from "@/lib/blog-data";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { neighborhoodPageSchema, breadcrumbSchema, faqPageSchema, speakableSchema } from "@/lib/seo/schema";
 import { site } from "@/lib/site";
@@ -38,6 +39,7 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
   if (!n) notFound();
 
   const others = neighborhoods.filter((x) => x.slug !== n.slug).slice(0, 3);
+  const relatedPosts = n.relatedBlogSlugs.map((s) => getPostBySlug(s)).filter(Boolean) as typeof blogPosts;
 
   const pageUrl = `${site.company.website}/neighborhoods/${n.slug}`;
 
@@ -48,9 +50,10 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
       <JsonLd schema={speakableSchema(pageUrl, ["h1", "h2", "h3", "p"])} />
       <JsonLd schema={faqPageSchema([
         { question: `What is ${n.name} like as a neighborhood in Austin?`, answer: n.shortDescription },
-        { question: `What are home prices in ${n.name}, Austin?`, answer: `${n.name} is one of Austin's distinct micro-markets. Home values in the area are influenced by school district quality, proximity to downtown, lifestyle amenities, and sustained buyer demand. For current pricing specific to ${n.name}, contact Laurel Seymour at Seymour Realty Group for a hyperlocal market analysis.` },
-        { question: `Is ${n.name} a good place to buy a home in Austin?`, answer: `${n.name} attracts buyers drawn to ${n.shortDescription.toLowerCase()} Working with a local advisor who understands the specific value drivers within ${n.name} — school zones, development trends, and block-level pricing — is essential to making a sound purchase decision.` },
-        { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand the neighborhood's commute patterns to major employment centers, and evaluate long-term development plans in the area. Laurel Seymour at Seymour Realty Group specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
+        { question: `What are home prices in ${n.name}, Austin?`, answer: `Home prices in ${n.name} typically range from ${n.medianPriceRange}, with price per square foot running ${n.pricePerSqft}. ${n.marketTrend} For a current, address-specific analysis, contact Laurel Seymour at Seymour Realty Group.` },
+        { question: `What schools serve ${n.name} in Austin?`, answer: n.schoolEnrollment },
+        { question: `Is ${n.name} a good place to buy a home in Austin?`, answer: `${n.name} attracts buyers drawn to ${n.shortDescription.toLowerCase()} ${n.whyPeopleMove}` },
+        { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand the neighborhood's commute patterns to major employment centers, and evaluate long-term development plans in the area. ${n.marketTrend} Laurel Seymour at Seymour Realty Group specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
       ])} />
 
       {/* Hero */}
@@ -98,6 +101,33 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Market Snapshot */}
+      <section className="py-14 md:py-16 bg-navy">
+        <div className="max-w-editorial mx-auto px-6 lg:px-10">
+          <p className="eyebrow text-softwhite/60 mb-8">Market Snapshot · {n.name}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+            <div className="border-t border-softwhite/20 pt-6">
+              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-2">Typical Sale Price</p>
+              <p className="font-display text-softwhite text-2xl md:text-3xl leading-tight">{n.medianPriceRange}</p>
+            </div>
+            <div className="border-t border-softwhite/20 pt-6">
+              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-2">Price Per Sqft</p>
+              <p className="font-display text-softwhite text-2xl md:text-3xl leading-tight">{n.pricePerSqft}</p>
+            </div>
+            <div className="border-t border-softwhite/20 pt-6">
+              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-2">School District</p>
+              <p className="font-display text-softwhite text-2xl md:text-3xl leading-tight">
+                {n.slug === "westlake" || n.slug === "rollingwood" ? "Eanes ISD" : "Austin ISD"}
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-softwhite/10 pt-8">
+            <p className="text-softwhite/70 leading-relaxed max-w-3xl">{n.marketTrend}</p>
+          </div>
+          <p className="mt-6 text-softwhite/40 text-xs">Ranges reflect recent closed sales. Contact Laurel for a current, address-specific analysis.</p>
+        </div>
+      </section>
+
       {/* Detail grid */}
       <section className="py-20 md:py-24 bg-beige/40">
         <div className="max-w-editorial mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-x-14 gap-y-14">
@@ -107,6 +137,7 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
             { label: "Architecture", body: n.architecture },
             { label: "Walkability", body: n.walkability },
             { label: "Schools", body: n.schools },
+            { label: "School Enrollment", body: n.schoolEnrollment },
             { label: "Community Vibe", body: n.communityVibe },
           ].map((item) => (
             <div key={item.label} className="border-t border-charcoal/15 pt-7">
@@ -155,9 +186,9 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
           <div className="space-y-8">
             {[
               { question: `What is ${n.name} like as a neighborhood in Austin?`, answer: n.shortDescription },
-              { question: `What are home prices like in ${n.name}?`, answer: `${n.name} is one of Austin's distinct micro-markets. Home values are influenced by school district quality, proximity to downtown, lifestyle amenities, and sustained buyer demand. For current pricing specific to ${n.name}, contact Laurel Seymour for a hyperlocal market analysis.` },
+              { question: `What are home prices like in ${n.name}?`, answer: `Home prices in ${n.name} typically range from ${n.medianPriceRange}, with price per square foot running ${n.pricePerSqft}. ${n.marketTrend}` },
+              { question: `What schools serve ${n.name}?`, answer: n.schoolEnrollment },
               { question: `Is ${n.name} a good place to buy a home?`, answer: n.whyPeopleMove },
-              { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand commute patterns to major employment centers, and evaluate long-term development plans. Laurel Seymour specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
             ].map((faq, i) => (
               <div key={i} className="border-t border-charcoal/15 pt-6">
                 <h3 className="font-display text-xl text-navy leading-snug mb-3">
@@ -169,6 +200,36 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Related Reading */}
+      {relatedPosts.length > 0 && (
+        <section className="py-20 md:py-24 bg-softwhite">
+          <div className="max-w-editorial mx-auto px-6 lg:px-10">
+            <p className="eyebrow text-terracotta mb-5">From the Journal</p>
+            <h2 className="font-display text-3xl md:text-4xl text-navy leading-[1.1] tracking-tight mb-12">
+              Guides relevant to {n.name} buyers.
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+              {relatedPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group block border-t border-charcoal/15 pt-6"
+                >
+                  <p className="eyebrow text-charcoal/50 mb-3">{post.category} · {post.readTime}</p>
+                  <h3 className="font-display text-xl text-navy leading-snug mb-3 group-hover:text-terracotta transition-colors duration-300">
+                    {post.title}
+                  </h3>
+                  <p className="text-charcoal/70 text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
+                  <span className="mt-4 inline-block text-[0.72rem] tracking-editorial uppercase text-terracotta">
+                    Read →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <CTASection
