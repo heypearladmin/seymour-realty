@@ -73,6 +73,7 @@ export default function HomePage() {
                 src={site.agent.headshot}
                 alt={site.agent.headshotAlt}
                 fill
+                priority
                 sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
               />
