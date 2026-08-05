@@ -36,7 +36,7 @@ export const site = {
     { label: "About", href: "/about" },
     { label: "Neighborhoods", href: "/neighborhoods" },
     { label: "Relocation", href: "/relocation" },
-    { label: "Journal", href: "/blog" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
