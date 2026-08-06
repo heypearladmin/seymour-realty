@@ -10,25 +10,6 @@ const nextConfig: NextConfig = {
   },
   compress: true,
 
-  async redirects() {
-    return [
-      // laurel-seymour.com is a Vercel alias for the same deployment but canonical
-      // tags point to seymourrealtygroup.com — 301 all traffic to the canonical domain.
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "laurel-seymour.com" }],
-        destination: "https://seymourrealtygroup.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.laurel-seymour.com" }],
-        destination: "https://seymourrealtygroup.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
-
   async headers() {
     return [
       {
