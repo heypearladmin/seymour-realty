@@ -206,7 +206,7 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
       {relatedPosts.length > 0 && (
         <section className="py-20 md:py-24 bg-softwhite">
           <div className="max-w-editorial mx-auto px-6 lg:px-10">
-            <p className="eyebrow text-terracotta mb-5">From the Journal</p>
+            <p className="eyebrow text-terracotta mb-5">From the Blog</p>
             <h2 className="font-display text-3xl md:text-4xl text-navy leading-[1.1] tracking-tight mb-12">
               Guides relevant to {n.name} buyers.
             </h2>

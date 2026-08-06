@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd schema={blogPostingSchema({ title: post.title, description: post.excerpt, url: pageUrl, image: post.image, datePublished: post.publishedAt })} />
       <JsonLd schema={breadcrumbSchema([
         { name: "Home", url: site.company.website },
-        { name: "Journal", url: `${site.company.website}/blog` },
+        { name: "Blog", url: `${site.company.website}/blog` },
         { name: post.title, url: pageUrl },
       ])} />
       <JsonLd schema={speakableSchema(pageUrl, ["h1", "h2", ".quick-answer", ".blog-content p"])} />
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <li aria-hidden="true">›</li>
                 <li>
                   <Link href="/blog" className="hover:text-terracotta transition-colors">
-                    Journal
+                    Blog
                   </Link>
                 </li>
                 <li aria-hidden="true">›</li>
@@ -319,7 +319,7 @@ export default async function BlogPostPage({ params }: Props) {
                 id="related-heading"
                 className="font-display text-2xl md:text-3xl text-navy tracking-tight mb-10"
               >
-                More from the journal
+                More from the blog
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
                 {related.map((r) => (

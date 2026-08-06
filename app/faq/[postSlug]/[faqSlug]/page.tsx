@@ -118,7 +118,7 @@ export default async function FaqAnswerPage({ params }: Props) {
       <JsonLd
         schema={breadcrumbSchema([
           { name: "Home", url: site.company.website },
-          { name: "Journal", url: `${site.company.website}/blog` },
+          { name: "Blog", url: `${site.company.website}/blog` },
           { name: faq.postTitle, url: `${site.company.website}/blog/${postSlug}` },
           { name: faq.question, url: pageUrl },
         ])}
@@ -136,7 +136,7 @@ export default async function FaqAnswerPage({ params }: Props) {
                 </li>
                 <li aria-hidden="true">›</li>
                 <li>
-                  <Link href="/blog" className="hover:text-terracotta transition-colors">Journal</Link>
+                  <Link href="/blog" className="hover:text-terracotta transition-colors">Blog</Link>
                 </li>
                 <li aria-hidden="true">›</li>
                 <li>
@@ -360,7 +360,7 @@ export default async function FaqAnswerPage({ params }: Props) {
                 Continue reading
               </p>
               <h2 className="font-display text-2xl md:text-3xl text-navy tracking-tight mb-10">
-                Related articles from the journal
+                Related articles from the blog
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
                 {relatedArticles.map((article) => (

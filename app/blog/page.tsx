@@ -17,12 +17,12 @@ export default function BlogIndexPage() {
 
   return (
     <>
-      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Journal", url: `${site.company.website}/blog` }])} />
+      <JsonLd schema={breadcrumbSchema([{ name: "Home", url: site.company.website }, { name: "Blog", url: `${site.company.website}/blog` }])} />
       {/* Editorial header with hero image */}
       <header className="relative w-full min-h-[58vh] md:min-h-[68vh] flex items-end overflow-hidden">
         <Image
           src="/images/austin-journal-hero-authentic.jpg"
-          alt="Editorial image of central Austin — the city the Journal writes about"
+          alt="Editorial image of central Austin — the city the blog writes about"
           fill
           priority
           sizes="100vw"
@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
           aria-hidden="true"
         />
         <div className="relative max-w-editorial mx-auto w-full px-6 lg:px-10 pb-16 md:pb-24">
-          <p className="eyebrow text-softwhite/85 mb-5">The Journal</p>
+          <p className="eyebrow text-softwhite/85 mb-5">The Blog</p>
           <h1 className="font-display text-softwhite text-5xl md:text-7xl leading-[1.04] tracking-tight max-w-4xl">
             Austin, in long form.
           </h1>

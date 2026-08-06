@@ -226,7 +226,7 @@ export default function HomePage() {
 
       {/* Featured Blog */}
       <Section
-        eyebrow="The Journal"
+        eyebrow="The Blog"
         title="Editorial intelligence on Austin real estate."
         intro="Field notes, market analysis, and relocation strategy — written for thoughtful buyers and sellers who want substance over noise."
       >

@@ -183,7 +183,7 @@ export default function AboutPage() {
         title="The best outcomes come from thoughtful beginnings."
         body="Whether you're a year out or actively looking, a clear conversation now sets up the smarter decision later. I'd love to hear what you're planning."
         primaryCta={{ label: "Contact Laurel", href: "/contact" }}
-        secondaryCta={{ label: "Read the Journal", href: "/blog" }}
+        secondaryCta={{ label: "Read the Blog", href: "/blog" }}
       />
     </>
   );
