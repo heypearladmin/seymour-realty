@@ -178,6 +178,31 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      {/* Location */}
+      <section aria-label="Our Location">
+        <div className="bg-navy py-16 md:py-20">
+          <div className="max-w-editorial mx-auto px-6 lg:px-10">
+            <p className="eyebrow text-softwhite/55 mb-5">Find Us</p>
+            <h2 className="font-display text-3xl md:text-4xl text-softwhite leading-[1.1] tracking-tight">
+              Our Location
+            </h2>
+            <p className="mt-4 text-softwhite/75 text-[1.0625rem]">
+              Seymour Realty Group &middot; Austin, Texas
+            </p>
+          </div>
+        </div>
+        <iframe
+          src="https://maps.google.com/maps?cid=10778768211667616514&output=embed"
+          loading="lazy"
+          width="100%"
+          height="450"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Seymour Realty Group on Google Maps"
+          allowFullScreen
+          style={{ border: 0, display: "block" }}
+        />
+      </section>
+
       <CTASection
         eyebrow="Begin a Conversation"
         title="The best outcomes come from thoughtful beginnings."
