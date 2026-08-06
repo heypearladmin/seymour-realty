@@ -25,6 +25,7 @@ export const site = {
     serviceArea: "Austin, Texas",
     website: "https://seymourrealtygroup.com",
     trec: "617201",
+    address: "708 S Lamar Blvd, Austin, TX 78704",
   },
   social: {
     facebook: "https://www.facebook.com/seymourrealtygroup.austin",

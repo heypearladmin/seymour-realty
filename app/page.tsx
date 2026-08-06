@@ -411,7 +411,7 @@ export default function HomePage() {
               Our Location
             </h2>
             <p className="mt-4 text-softwhite/75 text-[1.0625rem]">
-              Seymour Realty Group &middot; Austin, Texas
+              {site.company.address}
             </p>
           </div>
         </div>
