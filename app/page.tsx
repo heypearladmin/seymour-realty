@@ -344,64 +344,6 @@ export default function HomePage() {
       </Section>
 
 
-      {/* Video Authority */}
-      <Section
-        eyebrow="On Camera"
-        title="Austin, in long form."
-        intro="Neighborhood tours, market briefings, and relocation conversations — published on YouTube and across the Seymour Realty Group video channels."
-        background="beige"
-      >
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {[1, 2].map((i) => (
-            <div
-              key={i}
-              className="relative aspect-video bg-navy/90 flex items-center justify-center group cursor-pointer overflow-hidden"
-            >
-              <div className="absolute inset-0 opacity-50 group-hover:opacity-65 transition-opacity duration-500">
-                <Image
-                  src={
-                    i === 1
-                      ? "/images/video-thumb-neighborhood-tour.jpg"
-                      : "/images/video-thumb-market-briefing.jpg"
-                  }
-                  alt={
-                    i === 1
-                      ? "Modern Austin neighborhood featured in video tour"
-                      : "Aerial Austin view featured in market briefing"
-                  }
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative z-10 text-center text-softwhite px-6">
-                <div className="w-16 h-16 mx-auto rounded-full border border-softwhite/70 flex items-center justify-center mb-5 group-hover:bg-terracotta group-hover:border-terracotta transition-colors duration-300">
-                  <span className="ml-1 border-l-[10px] border-l-softwhite border-y-[7px] border-y-transparent" />
-                </div>
-                <p className="eyebrow text-softwhite/80">
-                  {i === 1 ? "Neighborhood Tour" : "Market Briefing"}
-                </p>
-                <p className="font-display text-2xl md:text-3xl mt-2">
-                  {i === 1
-                    ? "Inside Tarrytown"
-                    : "Austin Q2 — What's Actually Moving"}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a
-            href={site.social.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-[0.76rem] tracking-wider uppercase text-terracotta border-b border-terracotta pb-1 hover:text-navy hover:border-navy transition-colors duration-300"
-          >
-            Visit the YouTube Channel →
-          </a>
-        </div>
-      </Section>
-
       {/* Location */}
       <section aria-label="Our Location">
         <div className="bg-navy py-16 md:py-20">
