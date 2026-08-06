@@ -20,10 +20,17 @@ export async function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
+function truncate(str: string, max: number): string {
+  if (str.length <= max) return str;
+  const cut = str.slice(0, max - 3);
+  return cut.slice(0, cut.lastIndexOf(" ")) + "...";
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const pageUrl = `${site.company.website}/blog/${post.slug}`;
   return {
     title: post.title,
     description: post.excerpt,
@@ -31,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: pageUrl,
       type: "article",
       publishedTime: post.publishedAt,
       authors: [site.agent.fullName],
@@ -39,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: truncate(post.excerpt, 125),
       images: [post.image],
     },
   };

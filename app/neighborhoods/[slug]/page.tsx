@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title: `${n.name} — An Austin Micro-Market Guide`,
       description: n.shortDescription,
+      url: `${site.company.website}/neighborhoods/${n.slug}`,
       images: [{ url: n.image, alt: n.imageAlt }],
     },
   };

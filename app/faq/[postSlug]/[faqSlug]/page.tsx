@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (f) => f.postSlug === postSlug && f.faqSlug === faqSlug
   );
   if (!faq) return {};
-  const description = (faq.answer).slice(0, 155);
+  const description = faq.answer.slice(0, 155);
+  const pageUrl = `${site.company.website}/faq/${postSlug}/${faqSlug}`;
   return {
     title: faq.question,
     description,
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: faq.question,
       description,
+      url: pageUrl,
       type: "article",
       publishedTime: faq.postPublishedAt,
       authors: [site.agent.fullName],
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: faq.question,
-      description,
+      description: description.length > 125 ? description.slice(0, 122) + "..." : description,
       images: [faq.postImage],
     },
   };
