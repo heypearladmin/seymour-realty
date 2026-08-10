@@ -54,12 +54,23 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-9">
           {site.nav.map((item) => (
             <li key={item.href}>
-              <Link
-                href={item.href}
-                className="text-[0.78rem] tracking-wider uppercase text-charcoal hover:text-terracotta transition-colors duration-300"
-              >
-                {item.label}
-              </Link>
+              {item.external ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[0.78rem] tracking-wider uppercase text-charcoal hover:text-terracotta transition-colors duration-300"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="text-[0.78rem] tracking-wider uppercase text-charcoal hover:text-terracotta transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -88,13 +99,25 @@ export default function Navbar() {
           <ul className="px-6 py-6 space-y-5">
             {site.nav.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block text-sm tracking-wider uppercase text-charcoal"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm tracking-wider uppercase text-charcoal"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block text-sm tracking-wider uppercase text-charcoal"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li className="pt-2">
