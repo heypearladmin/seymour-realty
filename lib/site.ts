@@ -38,8 +38,7 @@ export const site = {
     { label: "Neighborhoods", href: "/neighborhoods" },
     { label: "Relocation", href: "/relocation" },
     { label: "Blog", href: "/blog" },
-    { label: "Search Homes", href: "http://app.unlockmls.com/", external: true },
-    { label: "Contact", href: "/contact" },
+{ label: "Contact", href: "/contact" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
