@@ -37,6 +37,158 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "austin-flood-zones-homebuyers-guide",
+    title: "Austin Flood Zones: What Every Homebuyer Must Know",
+    excerpt:
+      "Flooding is Austin's most underestimated real estate risk. Before you make an offer, understand FEMA flood maps, flood insurance costs, and which Austin neighborhoods carry the highest exposure — and which are protected.",
+    quickAnswer:
+      "Austin properties in FEMA Special Flood Hazard Areas (Zones A/AE) require flood insurance with a federally backed mortgage. Costs range from $1,200 to $4,500+ annually. Check flood zones at the City of Austin Flood Pro viewer or FEMA's Flood Map Service Center before making an offer.",
+    category: "Buyer Guide",
+    tags: ["flood zones", "flood insurance", "Austin homebuying", "FEMA", "due diligence"],
+    readTime: "9 min read",
+    publishedAt: "August 13, 2026",
+    image: "/images/website-blog-austin-flood-zones-homebuyers-guide.webp",
+    imageAlt:
+      "A well-maintained Austin home on elevated terrain above a creek corridor, showing the contrast between flood-exposed and protected residential land in warm natural daylight",
+    isNew: true,
+    content: [
+      "Austin is a city built around water — and water, at times, has built its own case for being taken seriously.",
+      "The city's terrain is carved by creeks, springs, and rivers. Barton Creek, Shoal Creek, Onion Creek, Williamson Creek, and the Colorado River all flow through or adjacent to residential neighborhoods. In a normal year, they are amenities. In a wet year, they can be liabilities.",
+      "Flood risk is Austin's most underestimated real estate variable. Most buyers never look at a flood map until after they fall in love with a property — if they look at one at all. The ones who look before understand something important about what they are actually buying.",
+      "Why Austin Has Significant Flood Risk",
+      "Central Texas sits at the edge of what meteorologists call Flash Flood Alley — a geographic corridor where atmospheric conditions regularly produce intense, short-duration rainfall events. Austin has experienced multiple catastrophic flood events in its history, including the 2015 Memorial Day floods that killed 12 people across central Texas and the 2018 Halloween floods that damaged thousands of structures across Travis County.",
+      "The physical geography amplifies the risk. Austin is underlain by limestone, which does not absorb water well. Runoff from heavy rain moves quickly into creek channels. The city's hilly terrain funnels water into low-lying corridors — exactly where some of the most desirable residential land sits.",
+      "Development has made the problem worse over time. As impervious cover increases — more rooftops, more pavement, less grassland — the same rainstorm produces more runoff into the same creek channels. Neighborhoods that experienced modest flooding twenty years ago can see more significant events today.",
+      "FEMA Flood Maps: What Buyers Need to Read",
+      "FEMA's National Flood Insurance Program designates flood risk areas on Flood Insurance Rate Maps (FIRMs). The two designations buyers encounter most often are Special Flood Hazard Areas — FEMA Zone A or Zone AE — which represent the 100-year floodplain. This means a 1% annual chance of flooding. Over a 30-year mortgage, that represents roughly a 26% probability of flooding during the loan term. Moderate flood hazard areas — Zone X (shaded) — represent the 500-year floodplain, with a 0.2% annual probability. These areas are less likely to flood than Zone A, but they are not flood-free.",
+      "FEMA flood maps are a starting point, not a guarantee. They are updated periodically and are often based on older hydrology data. Austin has remapped portions of the city as development and climate patterns have shifted. A property outside the FEMA floodplain can still experience flood damage in extreme events.",
+      "How to Look Up the Flood Zone for Any Austin Property",
+      "The City of Austin maintains the Austin Flood Pro viewer (austintexas.gov/floodpro), which shows FEMA flood zones, local creek channels, and City of Austin flood modeling for properties within the city limits. Travis County properties can also be checked at the FEMA Flood Map Service Center (msc.fema.gov). For any property you are seriously considering, confirm the flood zone designation at the specific address — not the neighborhood generally.",
+      "Austin Neighborhoods With Significant Flood Exposure",
+      "Certain Austin neighborhoods carry higher flood risk than others. Barton Creek and its tributaries affect portions of Barton Hills, Oak Hill, and properties along the creek's residential edge. During significant rainfall, Barton Creek's flow can rise dramatically — a single 1981 storm raised Barton Creek at Loop 360 by over 40 feet. Homes immediately adjacent to Barton Creek face meaningful risk; homes on elevated ground nearby do not.",
+      "Shoal Creek runs through central Austin — Clarksville, Hyde Park, and neighborhoods north along the corridor. Shoal Creek has flooded residential streets during multiple events. In 1981, Shoal Creek rose high enough to deposit cars on rooftops in the corridor.",
+      "Onion Creek in far south Austin has experienced the most severe and repeated residential flooding in the metro area. After the 2013 and 2015 floods, Travis County and the City of Austin completed a buyout program that acquired and demolished more than 800 homes in the Onion Creek floodplain. Some residential areas near Onion Creek remain.",
+      "Williamson Creek in South Austin — running through neighborhoods including Westgate and Oak Hill — has caused residential flooding in multiple events. East Austin's lower-lying sections adjacent to the Colorado River and east of I-35 carry localized flood exposure depending on the specific block.",
+      "What Flood Insurance Actually Costs in Austin",
+      "If a property is in a FEMA Special Flood Hazard Area and the buyer takes out a federally backed mortgage, flood insurance is required. It is purchased through the National Flood Insurance Program (NFIP) or private insurers.",
+      "FEMA's NFIP program underwent significant repricing in 2021 with its Risk Rating 2.0 methodology, which assigns rates based on individual property characteristics including distance from water, elevation, and structure type. Austin properties in high-risk zones commonly pay $1,200 to $4,500 per year in flood insurance, with rates varying significantly based on elevation certificate data and coverage levels.",
+      "Properties elevated above the Base Flood Elevation (BFE) qualify for lower rates. An elevation certificate — obtained from a licensed surveyor — documents the relationship between a structure's lowest floor and the BFE. Buyers should request elevation certificates for properties in flood zones before closing; this document directly affects insurance costs and is a legitimate negotiating point in transactions involving flood-zone properties.",
+      "Flood insurance also covers less than most buyers assume. Standard NFIP policies cover structural damage up to $250,000 and contents up to $100,000, but do not cover loss of use, temporary housing during repairs, or certain types of water damage that a standard homeowner's policy covers. Buyers in high-risk areas should understand what is and is not covered before purchasing.",
+      "Due Diligence Steps Before Buying in a Flood-Exposed Area",
+      "Before closing on any Austin property in or near a flood zone, buyers should take five steps. First, confirm the flood zone classification at the specific property address using both the City of Austin Flood Pro viewer and the FEMA Flood Map Service Center tool. Second, request any available elevation certificate from the seller. Third, obtain a flood insurance quote before your option period ends — the cost may affect whether the property is affordable. Fourth, review the property's flood insurance claims history through a CLUE (Comprehensive Loss Underwriting Exchange) report, which sellers can request and disclose. Fifth, during the inspection, ask specifically about water intrusion history, signs of previous flooding, and the elevation of the lowest floor relative to surrounding grade.",
+      "Understanding Flood Risk in the 78704 Zip Code",
+      "The 78704 zip code — Zilker, Bouldin, Barton Hills, Travis Heights — includes properties with very different flood profiles. Lady Bird Lake's shoreline, low-lying portions of Barton Hills adjacent to Barton Creek, and certain parts of Travis Heights near Blunn Creek carry meaningful flood exposure. The majority of 78704 properties on elevated terrain above these waterways are outside the 100-year floodplain. This variation is why looking at the zip code is insufficient — the specific address and its elevation matter.",
+      "Being Outside the Floodplain Does Not Mean No Risk",
+      "A property outside the FEMA Special Flood Hazard Area is not immune to flooding. In extreme rainfall events — storms that exceed the 100-year or 500-year design threshold — water finds its way into structures that FEMA maps designate as safe. This is sometimes called sheet flooding or overland flow, and it is not covered by standard flood insurance unless specifically purchased.",
+      "Austin's 2015 Memorial Day storm produced rainfall that exceeded 500-year return intervals in some locations. Properties in Zone X — the moderate risk zone — that experienced flooding in that event were outside the 100-year floodplain on paper. The water did not read the map.",
+      "What to Do With This Information",
+      "Flood zone designation is not a disqualifier. Many attractive, well-priced Austin properties are in or near flood zones — and many of them are appropriately elevated and insured. The buyers who make good decisions in these situations are the ones who go in with complete information: confirmed flood zone, elevation certificate, realistic insurance cost, and a clear understanding of the specific risk the property carries.",
+      "A real estate advisor with hyperlocal Austin knowledge can help you read the flood map for a specific property in context — what it means for that address on that block relative to the creek it sits near. That context is what separates a flood zone property worth buying from one that carries risk you have not fully priced.",
+    ],
+    faqs: [
+      {
+        question: "What are the most flood-prone areas in Austin, Texas?",
+        answer: "Austin's highest flood-risk areas include properties adjacent to Barton Creek (Barton Hills, Oak Hill), Shoal Creek (central Austin, Hyde Park, Clarksville), Onion Creek (far south Austin), and Williamson Creek (South Austin). The City of Austin Flood Pro viewer and FEMA Flood Map Service Center provide address-level flood zone data. Flood risk varies dramatically within neighborhoods — two homes on the same street can have very different flood profiles based on elevation.",
+      },
+      {
+        question: "Do I need flood insurance in Austin, Texas?",
+        answer: "Flood insurance is required for federally backed mortgages (FHA, VA, Fannie Mae, Freddie Mac) on properties in a FEMA Special Flood Hazard Area (Zone A or Zone AE). Properties outside the designated floodplain do not require flood insurance by lender mandate, though buyers may choose to purchase it voluntarily. Even properties in Zone X (moderate risk) can experience flooding in significant storm events — Austin's 2015 Memorial Day floods affected structures well outside the official 100-year floodplain.",
+      },
+      {
+        question: "How do I look up the flood zone for an Austin property?",
+        answer: "Use the City of Austin Flood Pro viewer at austintexas.gov/floodpro for properties within Austin city limits — it shows FEMA flood zones, creek channels, and local flood modeling data. For Travis County properties outside the city, use the FEMA Flood Map Service Center at msc.fema.gov. Always check at the specific property address, not the neighborhood generally. A buyer's agent familiar with Austin's terrain can help you interpret what the zone designation means for the specific property.",
+      },
+      {
+        question: "How much does flood insurance cost in Austin, Texas?",
+        answer: "Under FEMA's Risk Rating 2.0 methodology (implemented 2021), flood insurance for Austin properties in high-risk zones commonly ranges from $1,200 to $4,500 per year depending on elevation, distance from water, structure type, and coverage amount. Properties with elevation certificates showing significant clearance above the Base Flood Elevation qualify for lower rates. Private flood insurance alternatives are available and sometimes cost less than NFIP for well-elevated structures. Always obtain a flood insurance quote before your inspection period ends.",
+      },
+      {
+        question: "Can I buy a home in a flood zone in Austin?",
+        answer: "Yes. Many attractive Austin properties are in or near flood zones and are reasonable purchases for buyers who understand the risk and cost of managing it. Key steps before purchasing: confirm the specific flood zone at the address, request any existing elevation certificate, obtain a flood insurance quote before your option period ends, and review the property's CLUE report for prior flood claims. A flood zone designation is a variable to underwrite carefully, not an automatic disqualifier — but buyers who skip this due diligence are taking on risk they do not see until it rains.",
+      },
+    ],
+  },
+  {
+    slug: "westlake-hills-rollingwood-neighborhood-guide",
+    title: "Westlake Hills & Rollingwood: Complete Buyer's Guide to Austin's Premier School District",
+    excerpt:
+      "Eanes ISD is the defining asset of Westlake Hills and Rollingwood — and it shapes everything from home prices to resale dynamics. A complete guide for buyers considering Austin's most consistently desirable school district.",
+    quickAnswer:
+      "Westlake Hills and Rollingwood sit within Eanes ISD — consistently rated one of Texas's top school districts. Home prices range from $850,000 to $5M+, with Rollingwood offering the most accessible entry point at $900K–$1.5M. Commute to downtown Austin is 20–45 minutes depending on location.",
+    category: "Neighborhood Guide",
+    tags: ["Westlake Hills", "Rollingwood", "Eanes ISD", "Austin neighborhoods", "school districts"],
+    readTime: "10 min read",
+    publishedAt: "August 11, 2026",
+    image: "/images/website-blog-westlake-hills-rollingwood-guide.webp",
+    imageAlt:
+      "Hillside residential street in Westlake Hills, Texas, with limestone homes tucked among mature oak trees and views of the Hill Country beyond in soft afternoon light",
+    isNew: true,
+    content: [
+      "No area in the Austin real estate market is referenced more often and understood less deeply than Westlake Hills and Rollingwood.",
+      "The shorthand — 'Westlake' — covers a geography and a school district that buyers from outside Austin often conflate with a single neighborhood. In practice, Westlake Hills is an incorporated city with its own municipal government within Travis County. Rollingwood is a separate incorporated city adjacent to it. Both lie entirely within Eanes Independent School District, which is the defining feature — and the primary driver of value — for every property in the area.",
+      "Understanding Westlake Hills and Rollingwood is, at its core, understanding what makes Eanes ISD worth what it costs to live in it — and what the specific properties within that district look like at different price points.",
+      "Eanes ISD: The District That Defines the Market",
+      "Eanes Independent School District serves Westlake Hills, Rollingwood, and a small portion of the Bee Cave community in far west Austin. It is consistently rated one of the top school districts in Texas and routinely appears on national lists of the best public school systems in the country.",
+      "Westlake High School — the district's single high school — consistently produces among the highest SAT and ACT scores of any large public high school in Texas. The district's graduation rate exceeds 99%, and a significant percentage of graduates enroll in four-year universities. Advanced Placement course offerings are extensive, and the school's athletics and fine arts programs are well-resourced.",
+      "At the elementary level, Eanes ISD operates three schools: Forest Trail, Valley View, and Bridge Point. Each school serves a specific attendance zone within the district. All three are well-regarded. Every elementary school feeds into West Ridge Middle School and ultimately into Westlake High. Buyers should verify which elementary serves a specific address — and not assume based on the neighborhood name.",
+      "The Eanes ISD premium in home prices is real and documented. Comparable homes — same size, same condition, same distance from downtown — trade at 20 to 35% more inside Eanes ISD than just outside its boundaries. For buyers with school-age children, that premium is frequently justified. For buyers without school priorities, other Austin micro-markets typically offer better value at lower price points.",
+      "What Westlake Hills Looks Like: Property Types and Price Ranges",
+      "Westlake Hills is a residential city of approximately 3,200 residents, incorporated into its own municipal structure within Travis County. It has its own city government, its own permitting, and development standards that are more restrictive than the City of Austin in many respects. That restrictiveness is part of what preserves neighborhood character and limits density.",
+      "Most residential development in Westlake Hills follows a hillside pattern — homes built on sloped terrain, often with significant elevation changes from street to entry, and views in multiple directions. The dominant architectural styles range from mid-century ranch homes on generous lots to contemporary and transitional construction on infill sites.",
+      "Entry-level Westlake Hills properties — typically older ranch-style homes on reasonable lots with original finishes — start around $850,000 to $1,100,000. Mid-range properties — updated homes of 2,500 to 3,500 square feet on lots with privacy and views — range from $1,100,000 to $2,000,000. Larger or architecturally significant properties on premium lots can reach $3,000,000 to $5,000,000 or more.",
+      "Rollingwood: The More Accessible Entry Point",
+      "Rollingwood is a smaller city adjacent to Westlake Hills — also entirely within Eanes ISD — that tends to attract buyers who want the school district but are working within a tighter budget relative to deeper Westlake Hills properties. Rollingwood lots are generally flatter, closer to Austin's urban core, and slightly more modest in scale than the hillside properties that define much of Westlake Hills.",
+      "Rollingwood properties in 2026 typically range from $900,000 to $1,500,000 depending on size, condition, and lot. Because Rollingwood sits closer to Mopac and the urban core, commute times to downtown Austin are generally shorter than for properties farther into Westlake Hills proper.",
+      "For buyers who want Eanes ISD access at the lower end of the district's price range, Rollingwood is the most common entry point. For buyers who prioritize view lots, privacy, and the distinctly residential hill character, moving farther into Westlake Hills makes sense despite the additional cost.",
+      "Commute from Westlake to Downtown Austin",
+      "Westlake Hills and Rollingwood are west of downtown Austin, separated by Mopac (Loop 1) and the Hill Country terrain. Commute realities vary significantly by specific location within the area.",
+      "Rollingwood to downtown at 8am: approximately 20 to 30 minutes via Mopac, depending on conditions at the key interchange. At 10am, the same drive takes 12 to 18 minutes. Properties in Rollingwood near the Mopac and Bee Caves intersection are among the most commute-convenient addresses in the Eanes ISD service area.",
+      "Deeper Westlake Hills — properties on Westlake Drive, Rob Roy Road, or in the higher-elevation sections — can add 10 to 20 minutes to downtown commute times at peak hours. Many Westlake Hills internal roads are two-lane; this creates time variability that buyers accustomed to multi-lane highways underestimate.",
+      "Loop 360 (Capital of Texas Highway) forms the eastern boundary of most Westlake Hills properties and is a primary commute corridor. Traffic on 360 at peak hours is notable, though not comparable to I-35 congestion. The 360 connects to Mopac to the east and RR 2222 to the north.",
+      "Buyers who work at the Domain or the 183 Tech Corridor face a more complex commute from Westlake Hills — typically routing north via Mopac and dealing with the 183 merge. For this buyer profile, north Austin neighborhoods often represent a more commute-efficient choice.",
+      "Lifestyle in Westlake Hills and Rollingwood",
+      "Westlake Hills and Rollingwood are residential in a way that the denser parts of Austin are not. There are no significant commercial strips within the residential core, no through-traffic corridors, and very little of the pedestrian activity that defines South Congress or East Austin.",
+      "That is largely the point. Buyers who choose Westlake are explicitly choosing a quieter residential pace — oriented around backyards, cul-de-sacs, neighborhood pools, and school activities rather than walkable restaurants and bars.",
+      "Outdoor recreation is accessible: Barton Creek Greenbelt entry points are nearby, Lake Austin is reachable by car, and the Hill Country Roadway along Loop 360 connects to parks and trails. The lifestyle is fundamentally car-dependent, and residents accept that trade-off deliberately in exchange for school access and residential character.",
+      "Commercial amenities are anchored by the Davenport Village shopping center at the intersection of Loop 360 and Walsh Tarlton — home to a Central Market, restaurants, and retail. The 360 Overlook and nearby corridor along Bee Caves Road provide additional options close to the area.",
+      "Who Buys in Westlake Hills and Rollingwood",
+      "The buyer profile is fairly consistent. The most common buyer is a family relocating to Austin — often from California, the Pacific Northwest, or another high-income-tax state — with school-age children and a household income that allows them to prioritize school district above price flexibility. These buyers typically have household incomes above $250,000 and are often purchasing in the $1,200,000 to $2,500,000 range.",
+      "A secondary profile is the established Austin family doing a move-up purchase — trading a smaller home in Barton Hills or the 78704 area for more square footage and Eanes ISD access as their children reach elementary school age.",
+      "Investor buyers are present but less dominant than in urban Austin neighborhoods. The rental market in Westlake Hills and Rollingwood is thinner than in more urban areas — this market is driven by owner-occupants, not renters.",
+      "Resale Dynamics: Why Westlake Holds Value",
+      "Westlake Hills and Rollingwood have one of the most defensible resale profiles in the Austin market. Properties within Eanes ISD do not discount significantly even in broader market downturns, because the driver of demand — school access — is not correlated with office occupancy rates, tech employment cycles, or interest rate sensitivity in the way other Austin micro-markets are.",
+      "The family buyer pool that drives Westlake demand is relatively recession-resistant. High earners relocating from coastal metros continue arriving in Austin across economic cycles, because the income tax savings remain compelling regardless of interest rate conditions.",
+      "Well-maintained properties in Westlake Hills and Rollingwood have demonstrated durable appreciation over multi-decade periods. Supply is constrained — Westlake Hills is largely built out, and Rollingwood has very limited vacant land. New inventory in these areas is almost exclusively teardown-and-rebuild, which reinforces price floors throughout the district.",
+      "What Buyers Should Know Before Making an Offer",
+      "Several factors distinguish Westlake Hills and Rollingwood transactions from typical Austin purchases. First: verify the specific elementary school assignment for any address before making an offer. All Westlake Hills and Rollingwood properties fall within Eanes ISD, but the elementary assignment varies by address. Use the Eanes ISD address lookup tool or call the district office — do not assume based on the neighborhood name.",
+      "Second: septic systems are common in Westlake Hills, particularly for hillside properties not connected to the municipal sewer system. Septic inspection, capacity verification, and maintenance history are important due diligence items that are absent in more urban Austin transactions.",
+      "Third: lot topography matters significantly to usable area. A large lot that is 80% slope provides very different lifestyle value than a flat or gently sloped lot of the same nominal size. Walk the lot specifically and evaluate usable outdoor space, not just total square footage on the listing.",
+      "Fourth: deed restrictions in some Westlake Hills sections add a layer to renovation and construction planning. Understanding which restrictions apply to a specific property requires a title review — particularly relevant for buyers planning significant additions or rebuild projects.",
+    ],
+    faqs: [
+      {
+        question: "What is the best school district in Austin, Texas?",
+        answer: "Eanes ISD — serving Westlake Hills and Rollingwood — is widely considered the top school district in the Austin metro and consistently ranks among the best in Texas. Westlake High School produces among the highest test scores of any large public high school in Texas. Homes within Eanes ISD trade at a documented 20–35% premium over comparable homes just outside district boundaries, reflecting sustained buyer demand for school access that has held across multiple economic cycles.",
+      },
+      {
+        question: "How much do homes cost in Westlake Hills, Austin?",
+        answer: "Home prices in Westlake Hills in 2026 range from approximately $850,000 to $1,100,000 for entry-level properties (older ranch homes with original finishes), $1,100,000 to $2,000,000 for mid-range updated homes, and $3,000,000 to $5,000,000+ for larger architecturally significant properties on premium view lots. Rollingwood, the adjacent Eanes ISD city, typically ranges from $900,000 to $1,500,000 and offers the most accessible entry point into the school district.",
+      },
+      {
+        question: "What is Rollingwood, Texas known for?",
+        answer: "Rollingwood is a small incorporated city adjacent to Westlake Hills, west of downtown Austin. It is known primarily for its location within Eanes ISD — one of Texas's top school districts — combined with flatter terrain and a slightly lower price point than deeper Westlake Hills properties. Rollingwood's proximity to Mopac makes it one of the more commute-convenient addresses within the Eanes district, typically 20 to 30 minutes to downtown Austin at peak hours.",
+      },
+      {
+        question: "How far is Westlake Hills from downtown Austin?",
+        answer: "Westlake Hills is approximately 5 to 8 miles from downtown Austin depending on the specific location within the city. Rollingwood is slightly closer. Commute times from Rollingwood run 20 to 30 minutes at peak hours and 12 to 18 minutes during off-peak times. Properties deeper in Westlake Hills — on Westlake Drive or Rob Roy Road — can add 10 to 20 minutes to peak-hour commutes. Loop 360 is the primary commute corridor connecting the area to Mopac and the rest of Austin.",
+      },
+      {
+        question: "Is Westlake Hills worth the price premium in Austin?",
+        answer: "For families with school-age children, the Westlake Hills premium is frequently justified: Eanes ISD's documented performance advantage produces school access that buyers pay 20–35% above comparable non-Eanes properties to secure. For buyers without school priorities, the premium is harder to justify — other Austin micro-markets offer comparable lifestyle and commute access at lower price points. The resale case for Westlake Hills is among the strongest in the Austin market, as Eanes ISD demand has been durable across multiple economic cycles.",
+      },
+    ],
+  },
+  {
     slug: "north-austin-domain-neighborhood-guide",
     title: "North Austin & The Domain: A Complete Neighborhood Guide",
     excerpt:
@@ -47,7 +199,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-north-austin-domain-guide.png",
     imageAlt:
       "North Austin residential street with new construction homes and mature trees near the Domain employment corridor in natural daylight",
-    isNew: true,
     content: [
       "For most of Austin's history, the city's identity was anchored in its urban core — downtown, South Congress, East Austin, and the neighborhoods radiating from Barton Springs and Lady Bird Lake.",
       "That center of gravity has shifted. North Austin, anchored by Apple's sprawling campus and The Domain mixed-use district, has become the city's second major employment hub — and a fully realized residential destination in its own right.",
@@ -100,7 +251,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-first-time-homebuyer.png",
     imageAlt:
       "A first-time homebuyer standing in front of their new Austin home on a tree-lined residential street in warm afternoon light",
-    isNew: true,
     content: [
       "Buying your first home in Austin is one of the most meaningful financial decisions you will make — and one of the most complex processes most people have ever navigated.",
       "The honest picture: Austin is expensive, competition for well-priced homes in desirable neighborhoods is real, and the process has more moving parts than most first-timers anticipate. But the market in 2026 is more accessible than it was at the 2022 peak. Inventory has improved, price growth has moderated, and down payment assistance programs have become more widely used.",
@@ -156,7 +306,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-airbnb-str-investing.png",
     imageAlt:
       "An inviting Austin short-term rental property with a beautifully designed covered porch and mature oak trees in warm natural light",
-    isNew: true,
     content: [
       "Austin is one of the most visited cities in the United States. SXSW, ACL Music Festival, the Formula 1 United States Grand Prix at the Circuit of the Americas, the Texas Longhorns football season, and a relentless calendar of conferences and conventions bring millions of visitors each year.",
       "That visitor demand creates meaningful short-term rental revenue opportunities. But Austin's STR market is also one of the most regulated, most competitive, and most location-sensitive rental environments in Texas. Investors who succeed here understand the rules, choose neighborhoods strategically, and underwrite honestly.",
@@ -213,7 +362,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-cost-of-living.png",
     imageAlt:
       "A well-kept Austin residential neighborhood street at golden hour, representing daily life and the real cost of living in the city",
-    isNew: true,
     content: [
       "Austin's cost of living is one of the most-searched questions by anyone considering a move here — and one of the most misunderstood.",
       "The short answer: Austin is meaningfully less expensive than San Francisco, Seattle, and New York. It is more expensive than most other Texas cities and, depending on lifestyle, it can surprise people who arrived expecting broad affordability.",
@@ -274,7 +422,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-adu-guide.png",
     imageAlt:
       "A well-designed detached accessory dwelling unit behind a main Austin residence, surrounded by mature oak trees in warm afternoon light",
-    isNew: true,
     content: [
       "A few years ago, adding an accessory dwelling unit to an Austin property required navigating a complicated set of restrictions — owner-occupancy requirements, limited lot eligibility, and setback rules that made many properties effectively ineligible.",
       "That changed. Austin's HOME (Home Options for Middle-income Empowerment) initiative, adopted in phases between 2023 and 2024, removed the owner-occupancy requirement, expanded ADU eligibility to far more lots across the city, and reduced barriers that had kept the ADU market smaller than the demand for it.",
@@ -329,7 +476,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-new-construction-vs-resale1.png",
     imageAlt:
       "Side-by-side view of a modern new construction home and a mature resale home on a tree-lined Austin street in natural daylight",
-    isNew: true,
     content: [
       "Most Austin buyers come into the market with a preference already formed. Some want a home they can shape to their taste — new appliances, a modern layout, no one else's choices built into the walls. Others want established character: mature oak trees, a neighborhood with identity, a block they can picture themselves on.",
       "Both instincts are valid. Both can lead to the right decision. But the new construction vs. resale choice in Austin involves trade-offs that are specific to this city and its geography — and the buyers who understand those trade-offs clearly consistently make better decisions than those who don't.",
@@ -378,7 +524,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "July 10, 2026",
     image: "/images/austin-buyer-mistakes-home-offer.png",
     imageAlt: "A buyer couple standing outside a well-maintained Austin craftsman bungalow on a tree-lined street, looking at the home thoughtfully in late afternoon light",
-    isNew: true,
     content: [
       "There is a specific kind of clarity that arrives the moment you walk into a home and know it is the one. The light, the layout, the way the backyard sits — something clicks. It is real and it matters.",
       "It is also the moment when buyers are most likely to make their worst decisions.",
@@ -419,7 +564,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "July 7, 2026",
     image: "/images/what-makes-austin-home-easier-to-resell.png",
     imageAlt: "A well-proportioned Austin home on a corner lot with mature landscaping and strong curb appeal in soft natural daylight",
-    isNew: true,
     content: [
       "Most buyers do not think about resale when they purchase. They are focused on what the home offers them right now — the light, the layout, the neighborhood, the price. Resale is a distant abstraction.",
       "The buyers who make the best real estate decisions think differently. They understand that the day they buy is the day they determine how easy or difficult their eventual sale will be. The choices made at purchase — about location, lot, floorplan, and property type — are far harder to change than paint colors or fixtures.",
@@ -460,7 +604,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "July 3, 2026",
     image: "/images/austin-property-taxes-buyers-guide.png",
     imageAlt: "A well-lit Austin home exterior on a residential street, representing homeownership and property tax considerations",
-    isNew: true,
     content: [
       "One of the most common surprises for buyers relocating to Austin — especially from California, New York, or Washington — is Texas property taxes.",
       "The pitch is familiar: Texas has no state income tax. That is true. What is less often explained upfront is that Texas makes up for it largely through property taxes, which rank among the highest effective rates in the country.",
@@ -509,7 +652,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "June 30, 2026",
     image: "/images/austin-school-districts-buyers-guide.png",
     imageAlt: "A tree-lined residential street in an Austin neighborhood known for strong schools, with mature oak trees and well-kept homes",
-    isNew: true,
     content: [
       "For families buying a home in Austin, school district boundaries are not a secondary consideration. They are often the primary one.",
       "School districts in the Austin metro vary significantly in performance, resources, and the long-term effect they have on property values. Understanding which district applies to a given address — and what that means in practice — is one of the most important pieces of due diligence a family can do before buying.",
