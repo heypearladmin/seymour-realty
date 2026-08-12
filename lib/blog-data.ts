@@ -199,7 +199,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["Tarrytown", "Casis Elementary", "Austin ISD", "Austin neighborhoods", "luxury real estate"],
     readTime: "9 min read",
     publishedAt: "August 7, 2026",
-    image: "/images/neighborhood-tarrytown.jpg",
+    image: "/images/website-blog-tarrytown-austin-neighborhood-guide.webp",
     imageAlt:
       "A gracious Tarrytown street in central Austin lined with towering live oak trees and well-kept homes in warm afternoon light, showing the neighborhood's established residential character",
     isNew: true,
@@ -276,7 +276,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["East Austin", "78702", "78721", "Austin neighborhoods", "urban real estate"],
     readTime: "9 min read",
     publishedAt: "August 4, 2026",
-    image: "/images/neighborhood-east-austin.jpg",
+    image: "/images/website-blog-east-austin-neighborhood-guide.webp",
     imageAlt:
       "A colorful residential street in East Austin with bungalow homes, mature pecan trees, and the energy of a neighborhood in active transformation on a bright afternoon",
     isNew: true,
