@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/lib/blog-data";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -42,6 +43,12 @@ export default function BlogIndexPage() {
             written for thoughtful buyers and sellers who want substance over
             noise.
           </p>
+          <Link
+            href="/faq"
+            className="mt-8 inline-block text-[0.76rem] tracking-wider uppercase text-softwhite/85 border-b border-softwhite/40 pb-1 hover:text-terracotta hover:border-terracotta transition-colors duration-300"
+          >
+            Browse All Questions →
+          </Link>
         </div>
       </header>
 

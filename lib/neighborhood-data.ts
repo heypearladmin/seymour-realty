@@ -62,9 +62,9 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "Tarrytown has held value better than most Austin markets through recent cycles. Inventory remains very low, and well-maintained original homes and architect-designed rebuilds both attract competitive interest. Lot premiums for mature trees and lake proximity remain significant.",
     relatedBlogSlugs: [
+      "tarrytown-austin-neighborhood-guide",
       "austin-school-districts-homebuyers-guide",
       "what-makes-austin-home-easier-to-resell",
-      "austin-property-taxes-what-buyers-need-to-know",
     ],
   },
   {
@@ -106,9 +106,9 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "Eanes ISD zoning continues to insulate Westlake from broader Austin softening. Demand from corporate relocators and California buyers prioritizing top public schools has kept absorption rates healthy. View-lot premiums remain strong; homes without meaningful outdoor space face longer market times.",
     relatedBlogSlugs: [
+      "westlake-hills-rollingwood-neighborhood-guide",
       "austin-school-districts-homebuyers-guide",
       "austin-property-taxes-what-buyers-need-to-know",
-      "best-neighborhoods-in-austin-by-lifestyle",
     ],
   },
   {
@@ -150,9 +150,9 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "Greenbelt-adjacent lots and homes with direct trail access command meaningful premiums over the Barton Hills average. Move-in-ready inventory moves quickly; homes requiring significant work sit longer. Buyer profile skews professional and family-oriented with strong interest in outdoor access.",
     relatedBlogSlugs: [
+      "austin-flood-zones-homebuyers-guide",
       "austin-natives-guide-78704",
       "austin-school-districts-homebuyers-guide",
-      "best-neighborhoods-in-austin-by-lifestyle",
     ],
   },
   {
@@ -239,8 +239,8 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "East Austin remains the most architecturally active part of the city, with design-forward infill delivering the strongest returns. The market has moderated from its 2022 peak but contemporary builds with strong curb appeal continue to move well. ADU-eligible lots command meaningful premiums as investors and owner-occupants increasingly factor rental income into purchase math.",
     relatedBlogSlugs: [
+      "east-austin-neighborhood-guide",
       "austin-adu-guide-homeowners-buyers-2026",
-      "best-neighborhoods-in-austin-by-lifestyle",
       "austin-micro-markets-explained",
     ],
   },
@@ -283,8 +283,8 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "Park-adjacent homes in Zilker trade at a consistent premium over the broader 78704 market. Inventory is limited — the neighborhood is fully built out with minimal new development — so moves tend to be selective and deliberate. The ACL Festival window temporarily suppresses showings but does not impact pricing.",
     relatedBlogSlugs: [
+      "austin-flood-zones-homebuyers-guide",
       "austin-natives-guide-78704",
-      "best-neighborhoods-in-austin-by-lifestyle",
       "austin-home-buying-process-search-to-close",
     ],
   },
@@ -418,9 +418,9 @@ export const neighborhoods: Neighborhood[] = [
     marketTrend:
       "Rollingwood's Eanes ISD zoning provides a floor that most central Austin markets lack. Buyers who cannot afford Westlake proper but want Eanes schools view Rollingwood as the strategic play — and that positioning has kept demand steady. Lot-value-driven purchases for teardown/rebuild are active, particularly for larger parcels.",
     relatedBlogSlugs: [
+      "westlake-hills-rollingwood-neighborhood-guide",
       "austin-school-districts-homebuyers-guide",
       "austin-property-taxes-what-buyers-need-to-know",
-      "best-neighborhoods-in-austin-by-lifestyle",
     ],
   },
 ];

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const GHL_LOCATION_ID = "0opRxfrvirYWX8LXL4Rx";
-const GHL_API_KEY = "pit-32ca9103-cbad-49d8-b8c7-a6a26fd866f6";
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
+const GHL_API_KEY = process.env.GHL_API_KEY;
 
 const GHL_HEADERS = {
   "Authorization": `Bearer ${GHL_API_KEY}`,
@@ -10,6 +10,11 @@ const GHL_HEADERS = {
 };
 
 export async function POST(req: NextRequest) {
+  if (!GHL_API_KEY || !GHL_LOCATION_ID) {
+    console.error("Missing GHL_API_KEY or GHL_LOCATION_ID environment variables.");
+    return NextResponse.json({ error: "Submission failed. Please try again." }, { status: 500 });
+  }
+
   const body = await req.json();
   const { firstName, lastName, email, phone, smsConsentTransactional, smsConsentMarketing } = body;
 

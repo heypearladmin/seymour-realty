@@ -99,16 +99,17 @@ export default function RootLayout({
             ]),
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `var script=document.createElement("script");script.setAttribute("nowprocket","");script.setAttribute("nitro-exclude","");script.src="https://reports.heypearl.io/scripts/dynamic_optimization.js";script.dataset.uuid="e3622af3-190e-464e-b078-6ef9e79cef2c";script.id="sa-dynamic-optimization";document.head.appendChild(script);`,
-          }}
-        />
       </head>
       <body className="font-sans bg-softwhite text-charcoal antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Script
+          id="sa-dynamic-optimization"
+          src="https://reports.heypearl.io/scripts/dynamic_optimization.js"
+          data-uuid="e3622af3-190e-464e-b078-6ef9e79cef2c"
+          strategy="afterInteractive"
+        />
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
