@@ -41,7 +41,7 @@ export default function Section({
     align === "center" ? "text-center mx-auto" : "";
 
   return (
-    <section id={id} className={`${bg} ${pad}`}>
+    <section id={id} className={`${bg} ${pad} ${id ? "scroll-mt-24" : ""}`}>
       <div className={`max-w-editorial mx-auto px-6 lg:px-10 ${alignClasses}`}>
         {(eyebrow || title || intro) && (
           <header className={`mb-14 md:mb-20 ${align === "center" ? "max-w-3xl mx-auto" : "max-w-3xl"}`}>

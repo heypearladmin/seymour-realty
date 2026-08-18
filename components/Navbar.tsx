@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
+import ServicesDropdown from "@/components/nav/ServicesDropdown";
+import MobileServicesAccordion from "@/components/nav/MobileServicesAccordion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,6 +54,9 @@ export default function Navbar() {
         </Link>
 
         <ul className="hidden md:flex items-center gap-9">
+          <li>
+            <ServicesDropdown />
+          </li>
           {site.nav.map((item) => (
             <li key={item.href}>
               <Link
@@ -86,6 +91,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-charcoal/10 bg-softwhite">
           <ul className="px-6 py-6 space-y-5">
+            <MobileServicesAccordion onNavigate={() => setOpen(false)} />
             {site.nav.map((item) => (
               <li key={item.href}>
                 <Link

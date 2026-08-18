@@ -101,11 +101,20 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       {/* Structured data */}
       <JsonLd schema={blogPostingSchema({ title: post.title, description: post.excerpt, url: pageUrl, image: post.image, datePublished: post.publishedAt })} />
-      <JsonLd schema={breadcrumbSchema([
-        { name: "Home", url: site.company.website },
-        { name: "Blog", url: `${site.company.website}/blog` },
-        { name: post.title, url: pageUrl },
-      ])} />
+      <JsonLd schema={breadcrumbSchema(
+        post.pillar
+          ? [
+              { name: "Home", url: site.company.website },
+              { name: "Services", url: `${site.company.website}/services/${post.pillar}` },
+              { name: post.pillar === "buying" ? "Buying" : "Selling", url: `${site.company.website}/services/${post.pillar}` },
+              { name: post.title, url: pageUrl },
+            ]
+          : [
+              { name: "Home", url: site.company.website },
+              { name: "Blog", url: `${site.company.website}/blog` },
+              { name: post.title, url: pageUrl },
+            ]
+      )} />
       <JsonLd schema={speakableSchema(pageUrl, ["h1", "h2", ".quick-answer", ".blog-content p"])} />
       {post.faqs && post.faqs.length > 0 && (
         <JsonLd schema={faqPageSchema(post.faqs)} />
@@ -124,17 +133,42 @@ export default async function BlogPostPage({ params }: Props) {
                   </Link>
                 </li>
                 <li aria-hidden="true">›</li>
-                <li>
-                  <Link href="/blog" className="hover:text-terracotta transition-colors">
-                    Blog
-                  </Link>
-                </li>
+                {post.pillar ? (
+                  <>
+                    <li className="text-charcoal/30">Services</li>
+                    <li aria-hidden="true">›</li>
+                    <li>
+                      <Link
+                        href={`/services/${post.pillar}`}
+                        className="hover:text-terracotta transition-colors"
+                      >
+                        {post.pillar === "buying" ? "Buying" : "Selling"}
+                      </Link>
+                    </li>
+                  </>
+                ) : (
+                  <li>
+                    <Link href="/blog" className="hover:text-terracotta transition-colors">
+                      Blog
+                    </Link>
+                  </li>
+                )}
                 <li aria-hidden="true">›</li>
                 <li className="text-charcoal/30 truncate max-w-[24ch]">{post.title}</li>
               </ol>
             </nav>
 
-            <p className="eyebrow text-terracotta mb-5 text-center">{post.category}</p>
+            <div className="flex items-center justify-center gap-3 flex-wrap mb-5">
+              <p className="eyebrow text-terracotta">{post.category}</p>
+              {post.pillar && (
+                <Link
+                  href={`/services/${post.pillar}`}
+                  className="text-[0.68rem] tracking-wider uppercase text-navy/70 border border-charcoal/20 px-2.5 py-1 hover:text-terracotta hover:border-terracotta/40 transition-colors duration-200"
+                >
+                  {post.pillar === "buying" ? "Buying Resource Center" : "Selling Resource Center"} →
+                </Link>
+              )}
+            </div>
             <h1 className="font-display text-4xl md:text-6xl text-navy leading-[1.05] tracking-tight text-center">
               {post.title}
             </h1>

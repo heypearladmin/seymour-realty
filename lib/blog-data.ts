@@ -33,6 +33,8 @@ export interface BlogPost {
   content: string[];
   faqs?: FAQ[];
   isNew?: boolean;
+  // Optional link back to a Services resource hub (/services/buying or /services/selling)
+  pillar?: "buying" | "selling";
 }
 
 export const blogPosts: BlogPost[] = [
@@ -400,6 +402,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Buying your first home in Austin is genuinely challenging — prices are high, competition is real, and the process has more steps than most first-timers expect. A complete, honest guide to financing, down payment assistance, neighborhoods, and what it actually takes to close your first Austin home in 2026.",
     category: "Buyer Guide",
+    pillar: "buying",
     readTime: "10 min read",
     publishedAt: "July 28, 2026",
     image: "/images/website-blog-austin-first-time-homebuyer.png",
@@ -625,6 +628,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Both have real advantages — and real trade-offs. A clear-eyed guide to the new construction vs. resale decision for Austin buyers in 2026, covering price, location, negotiation, and what builders won't tell you up front.",
     category: "Buyer Guide",
+    pillar: "buying",
     readTime: "8 min read",
     publishedAt: "July 14, 2026",
     image: "/images/website-blog-new-construction-vs-resale1.png",
@@ -674,6 +678,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Finding a home you love is the easy part. What happens in the next 48 hours is where most Austin buyers lose clarity — and sometimes, the right home.",
     category: "Buyer Guide",
+    pillar: "buying",
     readTime: "7 min read",
     publishedAt: "July 10, 2026",
     image: "/images/austin-buyer-mistakes-home-offer.png",
@@ -754,6 +759,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Austin property taxes run 1.8–2.4% annually — that's $1,050/month on a $600K home. What every buyer must calculate before closing, including the homestead exemption and how to protest your appraisal.",
     category: "Buyer Guide",
+    pillar: "buying",
     readTime: "8 min read",
     publishedAt: "July 3, 2026",
     image: "/images/austin-property-taxes-buyers-guide.png",
@@ -1031,6 +1037,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Buyers form opinions before they ever step inside. A thoughtful guide to preparing, positioning, and presenting an Austin home for the modern buyer.",
     category: "Seller Strategy",
+    pillar: "selling",
     readTime: "7 min read",
     publishedAt: "June 9, 2026",
     image: "/images/blog-prepare-for-sale.jpg",
@@ -1321,6 +1328,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Selling in Austin requires more than a listing date. A practical guide to timing, pricing discipline, presentation, and the marketing strategies that drive stronger results.",
     category: "Seller Strategy",
+    pillar: "selling",
     readTime: "8 min read",
     publishedAt: "May 5, 2026",
     image: "/images/austin-home-selling-strategy-timing-guide.png",
@@ -1349,6 +1357,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A practical guide for Austin homeowners preparing to sell — covering pricing strategies, staging advice, marketing positioning, and how to read local market trends effectively.",
     category: "Seller Strategy",
+    pillar: "selling",
     readTime: "7 min read",
     publishedAt: "May 1, 2026",
     image: "/images/austin-home-seller-advisory-services.png",
@@ -1375,6 +1384,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A step-by-step guide to buying a home in Austin — from initial planning and mortgage pre-approval through offer strategy, inspection, and closing — with neighborhood context built in.",
     category: "Buyer Guide",
+    pillar: "buying",
     readTime: "9 min read",
     publishedAt: "April 28, 2026",
     image: "/images/austin-home-buying-process.png",
@@ -1400,6 +1410,10 @@ export const blogPosts: BlogPost[] = [
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
+}
+
+export function getPostsByPillar(pillar: "buying" | "selling"): BlogPost[] {
+  return blogPosts.filter((p) => p.pillar === pillar);
 }
 
 export function getRelatedPosts(slug: string, count = 4): BlogPost[] {

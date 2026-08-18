@@ -38,6 +38,22 @@ export default function Footer() {
         <div className="md:col-span-3">
           <p className="eyebrow text-softwhite/60 mb-5">Explore</p>
           <ul className="space-y-3 text-sm">
+            <li>
+              <Link
+                href="/services/buying"
+                className="text-softwhite/85 hover:text-terracotta transition-colors duration-300"
+              >
+                Buying
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/services/selling"
+                className="text-softwhite/85 hover:text-terracotta transition-colors duration-300"
+              >
+                Selling
+              </Link>
+            </li>
             {site.nav.map((item) => (
               <li key={item.href}>
                 <Link
