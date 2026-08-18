@@ -6,7 +6,7 @@ import BlogCard from "@/components/BlogCard";
 import NeighborhoodCard from "@/components/NeighborhoodCard";
 import CTASection from "@/components/CTASection";
 import { blogPosts } from "@/lib/blog-data";
-import { neighborhoods } from "@/lib/neighborhood-data";
+import { featuredNeighborhoods } from "@/lib/neighborhood-data";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localBusinessSchema, breadcrumbSchema, speakableSchema, itemListSchema, faqPageSchema } from "@/lib/seo/schema";
@@ -32,7 +32,6 @@ const microMarketsOnMap = [
 
 export default function HomePage() {
   const featuredPosts = blogPosts.slice(0, 3);
-  const featuredNeighborhoods = neighborhoods.slice(0, 6);
 
   return (
     <>

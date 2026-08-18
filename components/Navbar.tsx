@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 import ServicesDropdown from "@/components/nav/ServicesDropdown";
 import MobileServicesAccordion from "@/components/nav/MobileServicesAccordion";
+import NeighborhoodsDropdown from "@/components/nav/NeighborhoodsDropdown";
+import MobileNeighborhoodsAccordion from "@/components/nav/MobileNeighborhoodsAccordion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,16 +59,22 @@ export default function Navbar() {
           <li>
             <ServicesDropdown />
           </li>
-          {site.nav.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="text-[0.78rem] tracking-wider uppercase text-charcoal hover:text-terracotta transition-colors duration-300"
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          {site.nav.map((item) =>
+            item.label === "Neighborhoods" ? (
+              <li key={item.href}>
+                <NeighborhoodsDropdown />
+              </li>
+            ) : (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-[0.78rem] tracking-wider uppercase text-charcoal hover:text-terracotta transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
 
         <Link
@@ -92,17 +100,24 @@ export default function Navbar() {
         <div className="md:hidden border-t border-charcoal/10 bg-softwhite">
           <ul className="px-6 py-6 space-y-5">
             <MobileServicesAccordion onNavigate={() => setOpen(false)} />
-            {site.nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block text-sm tracking-wider uppercase text-charcoal"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {site.nav.map((item) =>
+              item.label === "Neighborhoods" ? (
+                <MobileNeighborhoodsAccordion
+                  key={item.href}
+                  onNavigate={() => setOpen(false)}
+                />
+              ) : (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block text-sm tracking-wider uppercase text-charcoal"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            )}
             <li className="pt-2">
               <Link
                 href="/contact"

@@ -425,6 +425,11 @@ export const neighborhoods: Neighborhood[] = [
   },
 ];
 
+// The site's canonical "featured" set — surfaced on the homepage ("Six
+// Places to Start") and in the Neighborhoods navigation dropdown. Keeping
+// this as a single derived export means both stay in sync automatically.
+export const featuredNeighborhoods: Neighborhood[] = neighborhoods.slice(0, 6);
+
 export function getNeighborhoodBySlug(slug: string): Neighborhood | undefined {
   return neighborhoods.find((n) => n.slug === slug);
 }
