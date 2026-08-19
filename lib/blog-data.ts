@@ -39,6 +39,145 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "austin-mortgage-rates-financing-guide-2026",
+    title: "Austin Mortgage Rates & Financing in 2026: A Buyer's Guide to Loan Options and Pre-Approval",
+    excerpt:
+      "Rates, loan types, and what actually changes your pre-approval number. A clear-eyed guide to financing an Austin home in 2026 — conventional, FHA, VA, and the lender questions that matter more than the headline rate.",
+    quickAnswer:
+      "As of 2026, 30-year conventional mortgage rates for well-qualified Austin buyers generally run in the mid-to-high 6% range, with FHA and VA rates often slightly lower. The rate you're quoted matters less than your total monthly payment — credit score, down payment, loan type, and points all move that number more than day-to-day rate headlines suggest.",
+    category: "Buyer Guide",
+    tags: ["mortgage rates", "home financing", "pre-approval", "Austin buyers", "loan types"],
+    readTime: "10 min read",
+    publishedAt: "August 20, 2026",
+    image: "/images/website-blog-austin-mortgage-rates-financing-guide.webp",
+    imageAlt:
+      "A well-lit Austin home office desk with mortgage documents, a laptop, and a calculator, suggesting a buyer reviewing financing options",
+    isNew: true,
+    pillar: "buying",
+    content: [
+      "Every Austin buyer conversation eventually arrives at the same question: what's the rate right now? It's a reasonable question, and also the wrong one to build a financing strategy around.",
+      "Rates move week to week, sometimes day to day. What doesn't move nearly as much — and what actually determines whether a monthly payment feels comfortable or crushing — is the set of decisions underneath the rate: loan type, credit profile, down payment size, and whether you buy down the rate with points. A buyer who understands those levers makes a materially better financing decision than one who is simply chasing the lowest number in a lender's ad.",
+      "This guide walks through where rates actually stand in 2026, the loan types available to Austin buyers, what changes a pre-approval number, and the financing mistakes that cost buyers the most money over the life of a loan.",
+      "Where Mortgage Rates Actually Stand in 2026",
+      "After the rate volatility of the early 2020s, the market has settled into a more predictable — if still elevated relative to the 2010s — range. Well-qualified buyers with strong credit and a conventional 20% down payment are generally seeing 30-year fixed rates in the mid-to-high 6% range in 2026, with 15-year fixed loans typically a half-point to a full point lower.",
+      "Those numbers move with each Federal Reserve decision and broader bond market activity, so a rate quoted in January will not necessarily match one quoted in October. What matters for planning purposes is the range, not the exact decimal point on any given day — and building a budget around a slightly conservative rate estimate protects you from payment shock if rates tick up between pre-approval and closing.",
+      "Adjustable-rate mortgages (ARMs) have re-entered the conversation for buyers who don't plan to stay in a home long-term, offering a lower initial rate for a fixed period — typically 5, 7, or 10 years — before adjusting. ARMs make sense for a specific type of buyer and are a genuine mistake for a family planning to stay in a home for a decade or more.",
+      "Conventional, FHA, VA, and USDA: Choosing the Right Loan Type",
+      "Conventional loans are the most common financing path for Austin buyers with solid credit and at least 3-5% down, and they avoid the ongoing mortgage insurance premium that FHA loans carry once you reach 20% equity. They're the default recommendation for buyers who qualify, but qualification standards — credit score, debt-to-income ratio — are stricter than FHA.",
+      "FHA loans allow down payments as low as 3.5% and are more forgiving on credit score and debt-to-income ratio, making them the entry point for many first-time Austin buyers. The trade-off is mortgage insurance premium (MIP), which in most cases stays for the life of the loan unless you refinance later — a real cost that should factor into any FHA-versus-conventional comparison.",
+      "VA loans, available to eligible veterans and active-duty service members, offer 0% down payment and no ongoing mortgage insurance — among the strongest financing terms available to any buyer category. Austin's proximity to major military installations means a meaningful share of local buyers qualify for VA financing and don't realize how much better those terms are than a conventional loan.",
+      "USDA loans, which support 0%-down financing in eligible rural and some exurban areas, apply to only a limited portion of the greater Austin market — but buyers looking at outer Williamson or Hays County properties should specifically ask a lender whether a given address qualifies before ruling it out.",
+      "What Actually Changes Your Pre-Approval Number",
+      "Credit score is the single largest lever most buyers can still influence in the weeks before applying. The difference between a 680 and a 760 credit score can move a quoted rate by half a point or more — which, compounded over a 30-year loan, is a meaningfully larger sum than most buyers assume. Paying down revolving credit card balances in the 60-90 days before applying is the fastest way to move that number.",
+      "Debt-to-income ratio (DTI) — your total monthly debt payments divided by gross monthly income — is the second major factor, and it's why a buyer with a high income but significant existing debt (car payments, student loans, other mortgages) can sometimes qualify for less than a buyer with a lower income and no other debt. Most conventional lenders want to see a DTI at or below 43-45%, though some programs allow more with compensating factors.",
+      "Down payment size affects both your rate and whether you'll pay private mortgage insurance (PMI) on a conventional loan. PMI applies below 20% down and typically runs 0.3-1.5% of the loan amount annually until you reach 20% equity — a cost worth calculating explicitly rather than treating as a rounding error, since on a $500,000 loan that can mean $1,500-$7,500 per year.",
+      "Points — prepaid interest paid at closing in exchange for a lower rate — make sense for buyers who plan to stay in a home long enough for the upfront cost to pay off through lower monthly payments. A lender can calculate your specific breakeven point; as a general rule, if you don't expect to stay in the home at least 5-7 years, paying points rarely makes financial sense.",
+      "The Pre-Approval Process, Step by Step",
+      "Pre-qualification and pre-approval are not the same thing, and conflating them is one of the most common — and costly — mistakes Austin buyers make. Pre-qualification is a rough estimate based on self-reported numbers; pre-approval means a lender has verified your income, assets, and credit and is prepared to issue a conditional commitment. In Austin's competitive listings, sellers routinely disregard offers backed only by pre-qualification.",
+      "Getting fully pre-approved typically requires two years of tax returns or W-2s, recent pay stubs, two to three months of bank statements, and authorization for a credit pull. Gathering these documents before you start touring homes — not after you find one you love — is what allows you to move fast when the right listing appears.",
+      "Rate locks matter more than most buyers realize. Once you're under contract, your lender can lock your rate for a set period — typically 30 to 60 days — protecting you from rate movement between application and closing. Ask specifically about lock periods and any float-down options if rates drop after you lock.",
+      "Shopping Lenders Without Hurting Your Credit",
+      "Multiple mortgage inquiries within a short window — typically 14 to 45 days depending on the credit scoring model — are treated as a single inquiry for credit scoring purposes, which means shopping three or four lenders in the same two-week period does not meaningfully hurt your score the way spreading those inquiries over months would.",
+      "Comparing lenders on rate alone misses real cost differences in origination fees, underwriting fees, and how quickly each lender can close — a genuine consideration in a competitive offer situation where a seller may favor a buyer whose lender has a track record of closing on time. I work with a small group of Austin-based lenders for exactly this reason: speed and communication matter as much as the rate on the page.",
+      "The Cost of Waiting for a Better Rate",
+      "A common hesitation is waiting for rates to drop before buying — a reasonable instinct that often backfires in a market like Austin's, where home prices and rate movements don't always move in the buyer's favor at the same time. A lower rate later, on a higher purchase price, can easily cost more per month than a higher rate now on today's price — and \"marry the house, date the rate\" exists as an old lending industry phrase precisely because refinancing later is a real, well-established option if rates do fall.",
+      "The buyers who do best financially are usually the ones who buy when their own life circumstances are right and refinance opportunistically later — not the ones trying to perfectly time a market that even professional economists routinely misjudge.",
+    ],
+    faqs: [
+      {
+        question: "What are mortgage rates in Austin right now in 2026?",
+        answer:
+          "As of 2026, well-qualified buyers with strong credit and a conventional down payment are generally seeing 30-year fixed rates in the mid-to-high 6% range, with 15-year fixed loans typically a half-point to a full point lower. Rates move with Federal Reserve decisions and bond market activity, so exact numbers shift week to week — a lender can provide a same-day quote based on your specific credit profile.",
+      },
+      {
+        question: "How much do I need to make to buy a house in Austin?",
+        answer:
+          "It depends heavily on down payment size, debt-to-income ratio, and the specific home price, but as a general guideline, most lenders want your total housing payment (principal, interest, taxes, and insurance) to stay at or below 28-33% of gross monthly income, with total debt payments under 43-45%. A lender can run exact numbers based on your income, debts, and target price range during pre-approval.",
+      },
+      {
+        question: "Is it better to get an FHA loan or a conventional loan in Austin?",
+        answer:
+          "Conventional loans are generally better for buyers with strong credit and at least 3-5% down, since they avoid the long-term mortgage insurance premium FHA loans carry. FHA loans make sense for buyers with lower credit scores or smaller down payments who wouldn't otherwise qualify for conventional financing. The right choice depends on your specific credit profile and how long you plan to stay in the home.",
+      },
+      {
+        question: "How long does mortgage pre-approval take?",
+        answer:
+          "A complete pre-approval typically takes a few days to a week once you've submitted tax returns, pay stubs, bank statements, and authorized a credit pull — assuming no unusual issues arise in underwriting. Gathering these documents before you start touring homes lets you move quickly when you find the right listing, which matters in Austin's competitive market.",
+      },
+      {
+        question: "Should I wait for interest rates to drop before buying a home in Austin?",
+        answer:
+          "Waiting for lower rates often backfires, since home prices and rates don't always move favorably together — a lower rate later on a higher price can cost more per month than a higher rate now on today's price. Refinancing is a well-established option if rates do fall after you buy, which is why many buyers proceed when their own timeline is right rather than trying to time the broader rate market.",
+      },
+    ],
+  },
+  {
+    slug: "austin-homeowners-insurance-guide-2026",
+    title: "Austin Homeowners Insurance in 2026: What Rising Premiums Mean for Buyers and Owners",
+    excerpt:
+      "Homeowners insurance costs in Texas have climbed sharply — and Austin is not exempt. What's driving the increases, what coverage actually protects you, and how buyers can shop smarter before closing.",
+    quickAnswer:
+      "Texas homeowners insurance premiums have risen significantly in recent years, driven by hail, wind, and severe convective storm losses statewide. In 2026, a typical Austin single-family home carries an annual premium in the roughly $2,200 to $4,800 range depending on age, roof condition, construction type, and flood zone status — meaningfully higher than the national average. Shopping multiple carriers before closing, understanding roof age requirements, and confirming flood coverage separately are the three highest-impact steps a buyer can take.",
+    category: "Buyer Guide",
+    tags: ["homeowners insurance", "Austin insurance costs", "flood insurance", "closing costs", "cost of ownership"],
+    readTime: "9 min read",
+    publishedAt: "August 17, 2026",
+    image: "/images/website-blog-austin-homeowners-insurance-guide.webp",
+    imageAlt:
+      "An Austin single-family home exterior with a well-maintained composition shingle roof under a clear sky, representing the condition insurers evaluate most closely",
+    isNew: true,
+    content: [
+      "Ask any Austin homeowner who has renewed their insurance policy in the last two years, and you'll hear some version of the same complaint: the premium went up, again, by more than seems reasonable. It isn't a local pricing quirk — it's a statewide trend, and understanding why matters just as much for buyers evaluating a purchase as it does for existing owners bracing for a renewal notice.",
+      "Texas has become one of the most expensive states in the country for homeowners insurance, driven by a run of costly hail, wind, and severe convective storm events that have pushed insurer losses higher year after year. Austin isn't the epicenter of that risk the way Hill Country wildfire zones or Gulf Coast wind exposure are, but it isn't insulated from it either.",
+      "This guide covers what's actually driving Austin-area premiums upward, what a typical policy costs in 2026, what coverage genuinely protects you, and the specific steps a buyer can take to avoid an unpleasant insurance surprise between contract and closing.",
+      "Why Texas Insurance Costs Have Climbed So Sharply",
+      "The primary driver isn't Austin-specific flooding or wildfire risk — it's hail. Texas leads the nation in hail-related insurance claims most years, and roof damage from hail and wind events is the single largest driver of the statewide premium increases homeowners have felt since the early 2020s. A roof replacement that once cost a fraction of what it does today, combined with more frequent severe weather events, has pushed insurers to raise rates broadly across the state — not just in the areas hit hardest.",
+      "Reinsurance costs — the insurance that insurance companies themselves buy to cover catastrophic losses — have also risen sharply industry-wide, and those costs get passed down to homeowner premiums. This is a national and even global reinsurance market dynamic, not something unique to Texas, but Texas's own claims history has made the state a higher-cost market within that broader trend.",
+      "Some insurers have pulled back from writing new policies in parts of Texas altogether, narrowing the field of carriers actively competing for a given property and reducing the natural downward pressure that competition provides on pricing. This makes shopping multiple carriers — rather than accepting a first quote — more valuable than it was a decade ago, not less.",
+      "What a Typical Austin Policy Costs in 2026",
+      "For a standard single-family home in the Austin metro, annual premiums in 2026 typically fall in the range of $2,200 to $4,800, depending heavily on the home's age, roof age and material, square footage, construction type, claims history, and specific location. Newer homes with impact-resistant roofing generally sit at the lower end of that range; older homes with original roofs approaching or past 20 years often sit at the higher end — or become difficult to insure with standard carriers at all.",
+      "Roof age is one of the single largest factors insurers weigh, and many carriers now decline to write new policies on roofs older than 15-20 years without a full replacement or a recent, documented inspection. Buyers evaluating an older home should factor a probable roof replacement — and the insurance implications of an aging roof — directly into their offer strategy, not treat it as a post-closing surprise.",
+      "Homes in FEMA-designated flood zones carry an entirely separate flood insurance cost on top of standard homeowners coverage, since standard policies exclude flood damage outright. For a full breakdown of flood zone designations, NFIP costs, and which Austin neighborhoods carry meaningful flood exposure, see the companion guide on Austin flood zones for homebuyers.",
+      "What Standard Coverage Actually Protects — and What It Doesn't",
+      "A standard homeowners policy (HO-3 in industry terms) covers the dwelling structure, other structures like fences and detached garages, personal property, liability, and additional living expenses if the home becomes temporarily uninhabitable. What it excludes matters just as much: flood damage, and in some cases, foundation movement from soil-related causes, both require separate coverage or an explicit endorsement.",
+      "Foundation coverage deserves specific attention in Austin given the area's expansive clay soils, which cause more foundation movement here than in much of the country. Standard policies typically cover foundation damage caused by a covered peril — a plumbing leak, for instance — but not gradual settling or soil-movement-related cracking, which is treated as a maintenance issue rather than an insurable loss. Buyers should ask directly what a specific policy does and doesn't cover on this point, since it varies by carrier and endorsement.",
+      "Replacement cost coverage versus actual cash value is another distinction worth confirming explicitly. Replacement cost policies pay to rebuild or repair at current construction costs; actual cash value policies factor in depreciation, which can leave a significant gap between what you're paid and what rebuilding actually costs — particularly on an older roof.",
+      "How Buyers Should Shop for Insurance Before Closing",
+      "Get insurance quotes during your option period, not after you're already committed to closing. A property that turns out to be difficult or unusually expensive to insure — due to an aging roof, prior claims history tied to the address, or specific construction materials — is far better discovered while you still have negotiating leverage or an exit option than after you've waived contingencies.",
+      "Ask specifically about the roof's age, material, and last inspection or replacement date before requesting quotes, since this single data point drives more of the quote variance than almost any other factor. If the seller doesn't know the exact roof age, a home inspection or a roofer's assessment can typically establish it.",
+      "Shop at least three carriers, including at least one independent agency that represents multiple insurers rather than a single-carrier captive agent — independent agents can often find meaningfully better pricing for a specific property's risk profile than the first quote from a big-name direct carrier.",
+      "Ask about bundling home and auto coverage, claims-free discounts, impact-resistant roofing discounts, and monitored security system discounts — these can meaningfully offset an otherwise high premium and are frequently underutilized simply because buyers don't ask.",
+      "Factor the actual insurance quote into your closing cost and monthly payment math before finalizing your offer, not after. An insurance premium that runs $1,500 above what you budgeted changes the real math on a purchase in a way that's better understood in advance than discovered at closing.",
+    ],
+    faqs: [
+      {
+        question: "Why is homeowners insurance so expensive in Texas in 2026?",
+        answer:
+          "Texas insurance costs have risen sharply due to a high volume of hail, wind, and severe convective storm claims statewide, which drive up both direct insurer losses and the reinsurance costs insurers pass on to homeowners. Some carriers have also pulled back from writing new policies in parts of Texas, reducing competition and putting further upward pressure on pricing.",
+      },
+      {
+        question: "How much is homeowners insurance for a house in Austin?",
+        answer:
+          "In 2026, a typical single-family home in the Austin metro carries an annual premium in the roughly $2,200 to $4,800 range, depending on the home's age, roof age and material, square footage, and specific location. Homes with older roofs, homes in flood zones, and homes with prior claims history typically fall toward the higher end of that range.",
+      },
+      {
+        question: "Do I need flood insurance in addition to homeowners insurance in Austin?",
+        answer:
+          "Yes, if the property is in a FEMA-designated flood zone, or if you simply want protection against flood damage — standard homeowners policies exclude flood damage entirely regardless of location. See the companion guide on Austin flood zones for a full breakdown of flood zone designations and typical NFIP costs.",
+      },
+      {
+        question: "Does homeowners insurance cover foundation problems in Austin?",
+        answer:
+          "Generally, standard policies cover foundation damage caused by a covered peril, such as a sudden plumbing leak, but not gradual settling or soil-movement-related cracking, which Austin's expansive clay soils make more common than in much of the country. This is typically treated as a maintenance issue rather than an insurable loss — buyers should ask a specific carrier directly how their policy treats foundation movement.",
+      },
+      {
+        question: "When should I get homeowners insurance quotes when buying a house in Austin?",
+        answer:
+          "Get quotes during your option period, before you've waived contingencies or fully committed to closing. A home that turns out to be unusually expensive or difficult to insure — often due to an aging roof or prior claims history — is far easier to address while you still have negotiating leverage than after closing.",
+      },
+    ],
+  },
+  {
     slug: "austin-flood-zones-homebuyers-guide",
     title: "Austin Flood Zones: What Every Homebuyer Must Know",
     excerpt:
@@ -52,7 +191,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-flood-zones-homebuyers-guide.webp",
     imageAlt:
       "A well-maintained Austin home on elevated terrain above a creek corridor, showing the contrast between flood-exposed and protected residential land in warm natural daylight",
-    isNew: true,
     content: [
       "Austin is a city built around water — and water, at times, has built its own case for being taken seriously.",
       "The city's terrain is carved by creeks, springs, and rivers. Barton Creek, Shoal Creek, Onion Creek, Williamson Creek, and the Colorado River all flow through or adjacent to residential neighborhoods. In a normal year, they are amenities. In a wet year, they can be liabilities.",
@@ -124,7 +262,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-westlake-hills-rollingwood-guide.webp",
     imageAlt:
       "Hillside residential street in Westlake Hills, Texas, with limestone homes tucked among mature oak trees and views of the Hill Country beyond in soft afternoon light",
-    isNew: true,
     content: [
       "No area in the Austin real estate market is referenced more often and understood less deeply than Westlake Hills and Rollingwood.",
       "The shorthand — 'Westlake' — covers a geography and a school district that buyers from outside Austin often conflate with a single neighborhood. In practice, Westlake Hills is an incorporated city with its own municipal government within Travis County. Rollingwood is a separate incorporated city adjacent to it. Both lie entirely within Eanes Independent School District, which is the defining feature — and the primary driver of value — for every property in the area.",
@@ -204,7 +341,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-tarrytown-austin-neighborhood-guide.webp",
     imageAlt:
       "A gracious Tarrytown street in central Austin lined with towering live oak trees and well-kept homes in warm afternoon light, showing the neighborhood's established residential character",
-    isNew: true,
     content: [
       "Tarrytown occupies a specific place in Austin's residential hierarchy that has nothing to do with hype and everything to do with scarcity.",
       "It is one of the few genuinely established neighborhoods in Austin's urban core — a place where the streets feel mature, the lots are generous, and the oak canopy has had decades to grow into something irreplaceable. It is also one of the most consistently sought-after addresses in the city, for reasons that hold across interest rate environments, tech cycles, and broader market fluctuations.",
@@ -281,7 +417,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-east-austin-neighborhood-guide.webp",
     imageAlt:
       "A colorful residential street in East Austin with bungalow homes, mature pecan trees, and the energy of a neighborhood in active transformation on a bright afternoon",
-    isNew: true,
     content: [
       "No part of Austin has changed faster over the past fifteen years than the neighborhoods east of I-35. And no part of Austin is more frequently misunderstood by buyers arriving with impressions formed five years too late.",
       "East Austin today is not the East Austin of the early 2010s, when buyers were drawn by affordability and cultural energy in equal measure. It is not the East Austin of 2018, when new bars and restaurants were appearing faster than buyers could track them. And it is not the East Austin of 2021 and 2022, when bidding wars pushed prices to peaks that required significant correction.",
