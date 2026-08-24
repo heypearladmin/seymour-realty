@@ -190,6 +190,7 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
               { question: `What are home prices like in ${n.name}?`, answer: `Home prices in ${n.name} typically range from ${n.medianPriceRange}, with price per square foot running ${n.pricePerSqft}. ${n.marketTrend}` },
               { question: `What schools serve ${n.name}?`, answer: n.schoolEnrollment },
               { question: `Is ${n.name} a good place to buy a home?`, answer: n.whyPeopleMove },
+              { question: `What should I know before buying in ${n.name}?`, answer: `Buyers considering ${n.name} should research school district boundaries, understand the neighborhood's commute patterns to major employment centers, and evaluate long-term development plans in the area. ${n.marketTrend} Laurel Seymour at Seymour Realty Group specializes in Austin micro-market intelligence and can provide a detailed neighborhood analysis.` },
             ].map((faq, i) => (
               <div key={i} className="border-t border-charcoal/15 pt-6">
                 <h3 className="font-display text-xl text-navy leading-snug mb-3">
