@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
+import LeadMagnetForm from "@/components/LeadMagnetForm";
 import NeighborhoodCard from "@/components/NeighborhoodCard";
 import { neighborhoods, getNeighborhoodBySlug } from "@/lib/neighborhood-data";
 import { blogPosts, getPostBySlug } from "@/lib/blog-data";
@@ -176,6 +177,18 @@ export default async function NeighborhoodDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Lead magnet */}
+      {n.leadMagnet && (
+        <section className="py-4 bg-softwhite">
+          <div className="max-w-editorial mx-auto px-6 lg:px-10">
+            <LeadMagnetForm
+              magnetSlug={n.leadMagnet}
+              description={`Get the full ${n.name} neighborhood guide as a downloadable PDF — pricing, schools, lifestyle, and what to know before you buy, all in one place.`}
+            />
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       <section className="py-16 md:py-24 bg-softwhite">

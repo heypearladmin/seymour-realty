@@ -35,6 +35,8 @@ export interface BlogPost {
   isNew?: boolean;
   // Optional link back to a Services resource hub (/services/buying or /services/selling)
   pillar?: "buying" | "selling";
+  // Optional slug into lib/lead-magnets.ts — renders a gated PDF download CTA
+  leadMagnet?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -54,6 +56,7 @@ export const blogPosts: BlogPost[] = [
       "A well-lit Austin home office desk with mortgage documents, a laptop, and a calculator, suggesting a buyer reviewing financing options",
     isNew: true,
     pillar: "buying",
+    leadMagnet: "mortgage-rates-financing-austin",
     content: [
       "Every Austin buyer conversation eventually arrives at the same question: what's the rate right now? It's a reasonable question, and also the wrong one to build a financing strategy around.",
       "Rates move week to week, sometimes day to day. What doesn't move nearly as much — and what actually determines whether a monthly payment feels comfortable or crushing — is the set of decisions underneath the rate: loan type, credit profile, down payment size, and whether you buy down the rate with points. A buyer who understands those levers makes a materially better financing decision than one who is simply chasing the lowest number in a lender's ad.",
@@ -126,6 +129,7 @@ export const blogPosts: BlogPost[] = [
     imageAlt:
       "An Austin single-family home exterior with a well-maintained composition shingle roof under a clear sky, representing the condition insurers evaluate most closely",
     isNew: true,
+    leadMagnet: "homeowners-insurance-austin",
     content: [
       "Ask any Austin homeowner who has renewed their insurance policy in the last two years, and you'll hear some version of the same complaint: the premium went up, again, by more than seems reasonable. It isn't a local pricing quirk — it's a statewide trend, and understanding why matters just as much for buyers evaluating a purchase as it does for existing owners bracing for a renewal notice.",
       "Texas has become one of the most expensive states in the country for homeowners insurance, driven by a run of costly hail, wind, and severe convective storm events that have pushed insurer losses higher year after year. Austin isn't the epicenter of that risk the way Hill Country wildfire zones or Gulf Coast wind exposure are, but it isn't insulated from it either.",
@@ -191,6 +195,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-flood-zones-homebuyers-guide.webp",
     imageAlt:
       "A well-maintained Austin home on elevated terrain above a creek corridor, showing the contrast between flood-exposed and protected residential land in warm natural daylight",
+    leadMagnet: "flood-zones-austin",
     content: [
       "Austin is a city built around water — and water, at times, has built its own case for being taken seriously.",
       "The city's terrain is carved by creeks, springs, and rivers. Barton Creek, Shoal Creek, Onion Creek, Williamson Creek, and the Colorado River all flow through or adjacent to residential neighborhoods. In a normal year, they are amenities. In a wet year, they can be liabilities.",
@@ -262,6 +267,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-westlake-hills-rollingwood-guide.webp",
     imageAlt:
       "Hillside residential street in Westlake Hills, Texas, with limestone homes tucked among mature oak trees and views of the Hill Country beyond in soft afternoon light",
+    leadMagnet: "neighborhood-westlake-rollingwood",
     content: [
       "No area in the Austin real estate market is referenced more often and understood less deeply than Westlake Hills and Rollingwood.",
       "The shorthand — 'Westlake' — covers a geography and a school district that buyers from outside Austin often conflate with a single neighborhood. In practice, Westlake Hills is an incorporated city with its own municipal government within Travis County. Rollingwood is a separate incorporated city adjacent to it. Both lie entirely within Eanes Independent School District, which is the defining feature — and the primary driver of value — for every property in the area.",
@@ -341,6 +347,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-tarrytown-austin-neighborhood-guide.webp",
     imageAlt:
       "A gracious Tarrytown street in central Austin lined with towering live oak trees and well-kept homes in warm afternoon light, showing the neighborhood's established residential character",
+    leadMagnet: "neighborhood-tarrytown",
     content: [
       "Tarrytown occupies a specific place in Austin's residential hierarchy that has nothing to do with hype and everything to do with scarcity.",
       "It is one of the few genuinely established neighborhoods in Austin's urban core — a place where the streets feel mature, the lots are generous, and the oak canopy has had decades to grow into something irreplaceable. It is also one of the most consistently sought-after addresses in the city, for reasons that hold across interest rate environments, tech cycles, and broader market fluctuations.",
@@ -417,6 +424,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-east-austin-neighborhood-guide.webp",
     imageAlt:
       "A colorful residential street in East Austin with bungalow homes, mature pecan trees, and the energy of a neighborhood in active transformation on a bright afternoon",
+    leadMagnet: "neighborhood-east-austin",
     content: [
       "No part of Austin has changed faster over the past fifteen years than the neighborhoods east of I-35. And no part of Austin is more frequently misunderstood by buyers arriving with impressions formed five years too late.",
       "East Austin today is not the East Austin of the early 2010s, when buyers were drawn by affordability and cultural energy in equal measure. It is not the East Austin of 2018, when new bars and restaurants were appearing faster than buyers could track them. And it is not the East Austin of 2021 and 2022, when bidding wars pushed prices to peaks that required significant correction.",

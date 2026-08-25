@@ -20,6 +20,8 @@ export interface Neighborhood {
   pricePerSqft: string;
   marketTrend: string;
   relatedBlogSlugs: string[];
+  // Optional slug into lib/lead-magnets.ts — renders a gated PDF download CTA
+  leadMagnet?: string;
 }
 
 export const neighborhoods: Neighborhood[] = [
@@ -66,6 +68,7 @@ export const neighborhoods: Neighborhood[] = [
       "austin-school-districts-homebuyers-guide",
       "what-makes-austin-home-easier-to-resell",
     ],
+    leadMagnet: "neighborhood-tarrytown",
   },
   {
     slug: "westlake",
@@ -110,6 +113,7 @@ export const neighborhoods: Neighborhood[] = [
       "austin-school-districts-homebuyers-guide",
       "austin-property-taxes-what-buyers-need-to-know",
     ],
+    leadMagnet: "neighborhood-westlake-rollingwood",
   },
   {
     slug: "barton-hills",
@@ -243,6 +247,7 @@ export const neighborhoods: Neighborhood[] = [
       "austin-adu-guide-homeowners-buyers-2026",
       "austin-micro-markets-explained",
     ],
+    leadMagnet: "neighborhood-east-austin",
   },
   {
     slug: "zilker",
@@ -422,6 +427,7 @@ export const neighborhoods: Neighborhood[] = [
       "austin-school-districts-homebuyers-guide",
       "austin-property-taxes-what-buyers-need-to-know",
     ],
+    leadMagnet: "neighborhood-westlake-rollingwood",
   },
 ];
 

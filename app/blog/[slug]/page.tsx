@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BlogCard from "@/components/BlogCard";
+import LeadMagnetForm from "@/components/LeadMagnetForm";
 import QuickAnswer from "@/components/blog/QuickAnswer";
 import TableOfContents from "@/components/blog/TableOfContents";
 import FAQCard from "@/components/blog/FAQCard";
@@ -271,6 +272,16 @@ export default async function BlogPostPage({ params }: Props) {
             )}
           </div>
         </div>
+
+        {/* ── 2b. LEAD MAGNET ──────────────────────────────────────── */}
+        {post.leadMagnet && (
+          <div className="max-w-editorial mx-auto px-6 lg:px-10">
+            <LeadMagnetForm
+              magnetSlug={post.leadMagnet}
+              description="Get the full guide as a downloadable PDF — the same information above, organized for easy reference as you move through the process."
+            />
+          </div>
+        )}
 
         {/* ── 3. FAQ SECTION ───────────────────────────────────────── */}
         {post.faqs && post.faqs.length > 0 && (
