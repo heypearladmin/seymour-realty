@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import { realEstateAgentSchema, webSiteSchema, personSchema, profilePageSchema } from "@/lib/seo/schema";
 import "./globals.css";
 
@@ -104,6 +105,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <StickyCTA />
         <Script
           id="sa-dynamic-optimization"
           src="https://reports.heypearl.io/scripts/dynamic_optimization.js"
