@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useMemo, useState } from "react";
 import { site } from "@/lib/site";
+import { getPostBySlug } from "@/lib/blog-data";
+import { getNeighborhoodBySlug } from "@/lib/neighborhood-data";
 
 function trackEvent(name: string, category: string) {
   const w = window as unknown as { gtag?: (cmd: string, event: string, params: object) => void };
@@ -15,9 +18,40 @@ interface StickyCTAProps {
   pillText?: string;
 }
 
-export default function StickyCTA({
-  pillText = `Have Questions? Talk to ${site.agent.firstName}`,
-}: StickyCTAProps) {
+// Classifies the current route into a sticky-CTA variant (Phase 7: buyer,
+// seller, relocation, neighborhood, or general) so every page gets a
+// contextual teaser without any page needing to pass one in manually.
+function useContextualPillText(): string {
+  const pathname = usePathname();
+  return useMemo(() => {
+    const agent = site.agent.firstName;
+
+    if (pathname?.startsWith("/blog/")) {
+      const slug = pathname.split("/")[2];
+      const post = slug ? getPostBySlug(slug) : undefined;
+      if (post?.pillar === "buying") return `Ready to Find Your Home? Talk to ${agent}`;
+      if (post?.pillar === "selling") return "Curious What Your Home Is Worth?";
+      if (post?.category === "Relocation") return `Moving to Austin? Talk to ${agent}`;
+      if (post?.category === "Neighborhood Guide") return "Want to Know More About This Area?";
+    }
+
+    if (pathname?.startsWith("/neighborhoods/")) {
+      const slug = pathname.split("/")[2];
+      const n = slug ? getNeighborhoodBySlug(slug) : undefined;
+      if (n) return `Want to Know More About ${n.name}?`;
+    }
+
+    if (pathname === "/services/buying") return `Ready to Find Your Home? Talk to ${agent}`;
+    if (pathname === "/services/selling") return "Curious What Your Home Is Worth?";
+    if (pathname === "/relocation") return `Moving to Austin? Talk to ${agent}`;
+
+    return `Have Questions? Talk to ${agent}`;
+  }, [pathname]);
+}
+
+export default function StickyCTA({ pillText }: StickyCTAProps) {
+  const contextualPillText = useContextualPillText();
+  const resolvedPillText = pillText ?? contextualPillText;
   const [open, setOpen] = useState(false);
   const [pillDismissed, setPillDismissed] = useState(false);
 
@@ -111,7 +145,7 @@ export default function StickyCTA({
               onClick={() => setOpen(true)}
               className="text-[0.82rem] text-charcoal/85 hover:text-terracotta transition-colors duration-200 whitespace-nowrap"
             >
-              {pillText}
+              {resolvedPillText}
             </button>
             <button
               type="button"

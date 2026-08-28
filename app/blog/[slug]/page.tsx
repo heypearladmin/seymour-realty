@@ -273,14 +273,26 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* ── 2b. LEAD MAGNET ──────────────────────────────────────── */}
-        {post.leadMagnet && (
-          <div className="max-w-editorial mx-auto px-6 lg:px-10">
-            <LeadMagnetForm
-              magnetSlug={post.leadMagnet}
-              description="Get the full guide as a downloadable PDF — the same information above, organized for easy reference as you move through the process."
-            />
+        {/* ── 2b. LEAD MAGNET(S) ───────────────────────────────────── */}
+        {post.leadMagnets && post.leadMagnets.length > 0 ? (
+          <div className="max-w-editorial mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6">
+            {post.leadMagnets.map((slug) => (
+              <LeadMagnetForm
+                key={slug}
+                magnetSlug={slug}
+                description="Get the full neighborhood guide as a downloadable PDF."
+              />
+            ))}
           </div>
+        ) : (
+          post.leadMagnet && (
+            <div className="max-w-editorial mx-auto px-6 lg:px-10">
+              <LeadMagnetForm
+                magnetSlug={post.leadMagnet}
+                description="Get the full guide as a downloadable PDF — the same information above, organized for easy reference as you move through the process."
+              />
+            </div>
+          )
         )}
 
         {/* ── 3. FAQ SECTION ───────────────────────────────────────── */}

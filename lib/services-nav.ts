@@ -23,7 +23,7 @@ export const servicesNav: { buying: ServiceNavColumn; selling: ServiceNavColumn 
       { label: "Finding the Right Home", href: "/blog/austin-buyer-mistakes-when-finding-a-home" },
       { label: "Making an Offer", href: "/services/buying#making-an-offer" },
       { label: "Home Inspections", href: "/services/buying#inspections" },
-      { label: "Closing Costs", href: "/blog/austin-property-taxes-what-buyers-need-to-know" },
+      { label: "Closing Costs", href: "/blog/austin-closing-costs-explained-guide" },
       { label: "Closing Day", href: "/services/buying#closing-day" },
       { label: "New Construction", href: "/blog/austin-new-construction-vs-resale-homes" },
       { label: "Luxury Home Buying", href: "/services/buying#luxury-buying" },

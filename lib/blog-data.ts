@@ -37,9 +37,144 @@ export interface BlogPost {
   pillar?: "buying" | "selling";
   // Optional slug into lib/lead-magnets.ts — renders a gated PDF download CTA
   leadMagnet?: string;
+  // Optional multiple slugs into lib/lead-magnets.ts — for posts (e.g. a
+  // neighborhood comparison) where more than one existing guide is relevant
+  leadMagnets?: string[];
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "tarrytown-vs-westlake-hills-comparison",
+    title: "Tarrytown vs. Westlake Hills: Which Austin Neighborhood Fits Your Family?",
+    excerpt:
+      "Two of Austin's most sought-after addresses, compared directly — school district, commute, price, lot character, and the kind of daily life each one actually offers. A clear-eyed guide for buyers deciding between them.",
+    quickAnswer:
+      "Tarrytown offers a shorter downtown commute (10-15 minutes), Austin ISD's Casis Elementary zone, and a more urban residential character on smaller, tree-canopied lots starting around $1.2M. Westlake Hills offers Eanes ISD — widely considered Texas's strongest public school district — larger lots, more suburban privacy, and a 20-45 minute commute, starting around $850K. Families choosing between them are usually choosing between commute and urban feel (Tarrytown) versus school district and space (Westlake Hills).",
+    category: "Neighborhood Guide",
+    tags: ["Tarrytown", "Westlake Hills", "Rollingwood", "neighborhood comparison", "Austin schools"],
+    readTime: "10 min read",
+    publishedAt: "August 27, 2026",
+    image: "/images/website-blog-tarrytown-vs-westlake-hills-comparison.webp",
+    imageAlt:
+      "A split view of two distinct Austin residential streets — one shaded by mature oak trees near downtown, the other opening onto Hill Country terrain — representing the choice between Tarrytown and Westlake Hills",
+    isNew: true,
+    leadMagnets: ["neighborhood-tarrytown", "neighborhood-westlake-rollingwood"],
+    content: [
+      "Every relocation buyer and every move-up family eventually asks some version of the same question: Tarrytown or Westlake? It's usually not a casual question — it's the fork in the road that determines the next decade of school pickups, commute times, and Saturday mornings.",
+      "Both are considered among Austin's premier addresses. Both attract buyers who could afford to live almost anywhere in the city and have chosen these two specific places on purpose. But they are not the same decision wearing two different price tags — they represent two genuinely different bets on what a good daily life looks like.",
+      "This guide puts them side by side, directly, on the factors that actually decide most families' choice: school district, commute, price, lot character, and lifestyle. If you want the deep dive on either neighborhood individually, the standalone Tarrytown guide and Westlake Hills & Rollingwood guide go further on each — this article is about the decision between them.",
+      "The Short Version",
+      "Tarrytown means Austin ISD's Casis Elementary zone, a 10-15 minute downtown commute, and a more urban, walkable residential character on lots that run smaller and more established. Westlake Hills means Eanes ISD — widely regarded as the strongest public school district in Texas — a 20-45 minute commute depending on exact location, and larger lots with more Hill Country privacy and space. Rollingwood, a separate incorporated city adjacent to Westlake, offers Eanes ISD zoning at a meaningfully lower price point than Westlake Hills proper, and is worth understanding as a third option for buyers weighing this same decision.",
+      "School District: Casis Elementary vs. Eanes ISD",
+      "This is the factor that decides the comparison for most families, and it deserves to be understood precisely rather than by reputation alone. Tarrytown falls within Austin ISD, and most of the neighborhood is zoned to Casis Elementary — the single most sought-after elementary assignment within Austin ISD, feeding into O. Henry Middle School and Austin High School.",
+      "Westlake Hills and Rollingwood fall entirely within Eanes Independent School District, a separate district from Austin ISD that consistently ranks among the top public school districts in Texas across state accountability ratings. Eanes runs its own elementary schools (Bridge Point, Cedar Creek, Eanes, Forest Trail, Valley View), feeding into Hill Country Middle School and Westlake High School.",
+      "The honest comparison: Casis Elementary is the best AISD has to offer, and it's genuinely excellent. Eanes ISD as a whole district is what draws families specifically to Westlake and Rollingwood — the advantage isn't one standout school, it's the consistency of the entire K-12 pipeline. Families who want the strongest possible district-wide guarantee tend to land on Westlake or Rollingwood. Families who want excellent schools without leaving Austin ISD's boundaries, or who have strong ties to AISD's high school landscape, tend to land on Tarrytown.",
+      "Commute: The Trade-Off Most Buyers Underestimate",
+      "Tarrytown sits just west of downtown Austin, and most addresses are a genuine 10-15 minute drive to the urban core at peak hours — one of the shortest commutes of any premium Austin neighborhood. This is a real, daily, compounding advantage for anyone working downtown or near the university.",
+      "Westlake Hills and Rollingwood sit farther west, beyond MoPac, and the commute to downtown typically runs 20-45 minutes depending on the specific address and time of day. Rollingwood, being closer to MoPac than the interior of Westlake Hills, generally commutes faster than addresses deep in Westlake — a meaningful reason some buyers choose it specifically.",
+      "This is not a minor detail. A 20-30 minute daily commute difference, in both directions, is close to an hour of a parent's day — every day, for as long as they live there. Buyers who work downtown and value that time back consistently weight this factor more heavily once they actually run the math on their own schedule.",
+      "Price and Lot Character",
+      "Tarrytown home prices in 2026 typically range from $1.2M to $4M+, on lots that run smaller and more established — mature oak canopy, older construction mixed with teardown rebuilds, and a residential fabric that reads as central-Austin urban rather than suburban.",
+      "Westlake Hills runs from roughly $850K to $5M+, generally on larger lots with more topographical variation — Hill Country views, more separation between homes, and a residential feel that reads as suburban-private rather than urban-central. Rollingwood offers the most accessible entry point into Eanes ISD, typically $900K to $1.5M, on a smaller municipal footprint than Westlake Hills itself.",
+      "Buyers sometimes assume Westlake is uniformly more expensive than Tarrytown because of its school-district reputation — in practice, Tarrytown's smaller, more established lots close to downtown often command a premium that puts its entry price above Rollingwood's, even though Rollingwood carries the stronger district. Price comparisons should always be run address-by-address, not neighborhood-by-neighborhood.",
+      "Lifestyle: Urban-Adjacent vs. Hill Country Private",
+      "Daily life in Tarrytown leans urban-adjacent — walkable pockets near Exposition Boulevard, a short drive or bike ride to downtown, Lake Austin access at the neighborhood's western edge, and a pace that feels residential but connected. It suits families and buyers who want proximity without giving up a tree-lined, established block.",
+      "Daily life in Westlake Hills and Rollingwood leans toward Hill Country privacy — more space between neighbors, greenbelt and nature-preserve access, a car-oriented daily rhythm, and a pace organized around schools, sports, and the surrounding landscape rather than city errands. It suits families prioritizing space, privacy, and total commitment to the Eanes school pipeline over downtown proximity.",
+      "Which Buyer Fits Which Neighborhood",
+      "Tarrytown tends to fit buyers who work downtown or near the university, who want walkability and central-Austin character, and for whom Casis Elementary combined with a short commute outweighs having the single strongest district-wide school system in the state.",
+      "Westlake Hills tends to fit buyers for whom the entire K-12 Eanes pipeline is the priority, who want more space and privacy, and who are willing to trade commute time for that guarantee. Rollingwood tends to fit buyers who want Eanes ISD specifically but at a more accessible price point and a shorter commute than Westlake Hills proper offers.",
+      "None of these are wrong answers — they're different bets on what matters most in daily life, and the right one depends entirely on your own commute, budget, and how you weigh a single standout elementary school against a full top-tier district.",
+    ],
+    faqs: [
+      {
+        question: "Is Tarrytown or Westlake Hills better for schools?",
+        answer: "Westlake Hills and Rollingwood are zoned to Eanes ISD, widely considered the strongest public school district in Texas across the entire K-12 pipeline. Tarrytown is zoned to Austin ISD's Casis Elementary, the single most sought-after elementary assignment within AISD, feeding into O. Henry Middle School and Austin High School. Eanes offers district-wide consistency; Casis offers a standout elementary school within a larger district. The right choice depends on whether you prioritize one excellent early school or a top-tier system all the way through high school.",
+      },
+      {
+        question: "What is the commute like from Westlake Hills to downtown Austin?",
+        answer: "Commutes from Westlake Hills to downtown Austin typically run 20 to 45 minutes depending on the specific address and time of day, since most of the area sits west of MoPac. Rollingwood, being closer to MoPac, generally commutes faster than addresses deep within Westlake Hills. Tarrytown, by comparison, offers a 10 to 15 minute downtown commute from most addresses.",
+      },
+      {
+        question: "Is Rollingwood cheaper than Westlake Hills?",
+        answer: "Yes, generally. Rollingwood offers the most accessible entry point into Eanes ISD, typically in the $900,000 to $1.5 million range, compared to Westlake Hills' broader range of roughly $850,000 to $5 million or more. Rollingwood is also closer to MoPac, giving it a shorter downtown commute than most Westlake Hills addresses.",
+      },
+      {
+        question: "How much do homes cost in Tarrytown vs. Westlake Hills?",
+        answer: "Tarrytown home prices in 2026 typically range from $1.2 million to $4 million or more, on smaller, established lots close to downtown. Westlake Hills ranges from roughly $850,000 to $5 million or more, generally on larger lots with more topographical variation. Price should always be compared address-by-address, since Tarrytown's central location can push its entry price above Rollingwood's despite Rollingwood carrying the stronger school district.",
+      },
+      {
+        question: "Should I choose Tarrytown or Westlake Hills for my family?",
+        answer: "Choose Tarrytown if a short downtown commute and Austin ISD's Casis Elementary zone matter most, and you're comfortable trading some lot size and privacy for proximity. Choose Westlake Hills or Rollingwood if the full Eanes ISD K-12 pipeline, more space, and Hill Country privacy matter most, and you're willing to accept a longer commute. Both are strong, well-established choices — the right one depends on your own commute tolerance, budget, and how you weigh school-district breadth against location.",
+      },
+    ],
+  },
+  {
+    slug: "austin-closing-costs-explained-guide",
+    title: "Austin Closing Costs Explained: A Complete Line-Item Breakdown for Buyers",
+    excerpt:
+      "Down payment isn't the only number that matters at the closing table. A full, line-by-line breakdown of what Austin buyers actually pay in closing costs — title, escrow, lender fees, prepaids, and the questions worth asking before you sign.",
+    quickAnswer:
+      "Austin homebuyers typically pay 2% to 5% of the purchase price in closing costs, separate from the down payment — on a $500,000 home, that's roughly $10,000 to $25,000. The largest line items are lender fees, title insurance, escrow/settlement fees, prepaid property taxes and insurance, and recording fees. Buyers can shop title companies and some lender fees, but cannot avoid closing costs entirely.",
+    category: "Buyer Guide",
+    tags: ["closing costs", "cash to close", "title insurance", "escrow", "Austin buyers"],
+    readTime: "9 min read",
+    publishedAt: "August 24, 2026",
+    image: "/images/website-blog-austin-closing-costs-explained-guide.webp",
+    imageAlt:
+      "A tidy closing table setup with a pen, a stack of paperwork, and a house key resting on a folder, suggesting the final stage of an Austin home purchase",
+    isNew: true,
+    pillar: "buying",
+    leadMagnet: "mortgage-rates-financing-austin",
+    content: [
+      "Buyers spend weeks preparing for the down payment. Far fewer spend any real time preparing for the second number that shows up at the closing table — closing costs — and it's the one that catches first-time buyers off guard almost every time.",
+      "Closing costs are not a single fee. They are a collection of a dozen or more separate charges, from a handful of different parties, each doing a specific piece of work to get a title transferred cleanly and a loan funded correctly. Understanding what each one actually pays for turns a confusing wall of numbers on a closing disclosure into a document you can read with confidence.",
+      "This guide walks through every major line item an Austin buyer should expect, what it costs, which ones are negotiable, and the specific questions worth asking your lender and title company before you're sitting at the table with a pen in hand.",
+      "What Closing Costs Actually Are",
+      "Closing costs are the fees required to legally and financially complete a real estate transaction, separate from the purchase price itself and separate from the down payment. They cover the work of the lender underwriting and funding the loan, the title company verifying clean ownership and insuring against future claims, the county recording the new deed, and a handful of prepaid items that fund your escrow account for the year ahead.",
+      "In Austin, buyers typically pay 2% to 5% of the purchase price in closing costs. On a $500,000 home, that's roughly $10,000 to $25,000 — on top of, not instead of, the down payment. Where a given transaction falls in that range depends on loan type, lender, title company, and how much of the seller's concessions (if any) are applied toward closing costs.",
+      "Lender Fees",
+      "Origination fees cover the lender's cost of processing, underwriting, and funding the loan, typically running 0.5% to 1% of the loan amount. Underwriting and processing fees are sometimes broken out separately or bundled into origination, depending on the lender.",
+      "Discount points, if you choose to buy down your rate, are a separate optional cost — each point typically costs 1% of the loan amount and lowers your rate by roughly a quarter point, and are worth it only if you plan to stay in the home long enough for the monthly savings to outpace the upfront cost. A lender can calculate your specific breakeven point; the full mechanics of rate shopping and loan types are covered in the companion mortgage and financing guide.",
+      "Appraisal and credit report fees are smaller, largely fixed costs — typically $500-$700 for the appraisal and $30-$100 for the credit report — charged regardless of lender, since both are third-party services the lender is required to order.",
+      "Title and Escrow Fees",
+      "Title insurance is one of the largest single line items and comes in two forms: lender's title insurance, which protects the lender's interest in the loan, and owner's title insurance, which protects you, the buyer, against a future claim on ownership. In Texas, title insurance premiums are set by the state and are not negotiable in price — but you can shop which title company you use, and origination-adjacent fees the title company charges (escrow fee, courier fee, wire fee) can vary between companies.",
+      "The escrow or settlement fee covers the title company's work coordinating the closing itself — collecting funds, disbursing payoffs, and handling the signing. This typically runs $300-$700 depending on the title company and transaction complexity.",
+      "Recording fees, paid to Travis County (or the relevant county) to officially record the new deed and any lien, are a smaller, fixed governmental cost — typically under $200.",
+      "Prepaid Items",
+      "Prepaid property taxes and homeowners insurance fund your escrow account so your lender can pay these bills on your behalf going forward. Depending on your closing date relative to the county's tax cycle, you may prepay several months of property taxes at closing — a cost that can run into the thousands on an Austin home given the area's property tax rates, covered in more depth in the companion property tax guide.",
+      "Prepaid interest covers the daily interest that accrues between your closing date and the first day of the following month, since mortgage payments are made in arrears. This is usually a modest amount but varies based on your closing date and loan amount.",
+      "The first year of homeowners insurance is also typically paid in full at closing and then rolled into your monthly escrow payments going forward — worth budgeting for explicitly, especially given how much Austin-area premiums have shifted in recent years, covered in the companion homeowners insurance guide.",
+      "What's Negotiable and What Isn't",
+      "Title insurance premiums are state-regulated in Texas and not negotiable by price, but which title company you use is entirely your choice — buyers are not required to use the title company a builder, agent, or lender recommends, and shopping this decision can save money on the adjacent escrow, courier, and wire fees title companies do control.",
+      "Lender fees vary meaningfully between lenders, which is exactly why rate-and-fee shopping matters as much as rate shopping alone — a lender with a slightly higher rate but meaningfully lower fees can come out ahead on total cash needed at closing.",
+      "Seller concessions — funds the seller agrees to contribute toward your closing costs, negotiated as part of the offer — are often the single biggest lever available to reduce cash needed at the table, particularly in a market where sellers are motivated. This is a conversation worth having explicitly during offer strategy, not an afterthought once you're already under contract.",
+      "How to Estimate Your Cash to Close",
+      "Your lender is required to provide a Loan Estimate within three business days of application, which includes a good-faith estimate of closing costs — and a Closing Disclosure at least three business days before closing with the final, binding numbers. Reading both carefully, and asking your lender to explain any line item that jumped between the two, is a reasonable and expected part of the process.",
+      "A simple rule of thumb for early budgeting: set aside 3% of your target purchase price for closing costs, in addition to your down payment, and refine that number once you have a real Loan Estimate in hand from a specific lender on a specific property.",
+    ],
+    faqs: [
+      {
+        question: "How much are closing costs in Austin, Texas?",
+        answer: "Austin buyers typically pay 2% to 5% of the purchase price in closing costs, separate from the down payment. On a $500,000 home, that's roughly $10,000 to $25,000. The exact amount depends on loan type, lender fees, title company, prepaid property taxes and insurance, and your specific closing date.",
+      },
+      {
+        question: "What is included in closing costs when buying a house?",
+        answer: "Closing costs include lender fees (origination, underwriting, points if applicable), title insurance and escrow fees, government recording fees, and prepaid items like property taxes, homeowners insurance, and daily interest that accrues before your first mortgage payment. Each covers a specific piece of work required to fund the loan and transfer clean title.",
+      },
+      {
+        question: "Can you negotiate closing costs in Texas?",
+        answer: "Title insurance premiums are state-regulated in Texas and not negotiable by price, but you can shop which title company you use, since adjacent fees like escrow and wire charges vary between companies. Lender fees vary meaningfully between lenders, and seller concessions negotiated into your offer are often the biggest lever for reducing cash needed at closing.",
+      },
+      {
+        question: "Who pays closing costs, the buyer or the seller?",
+        answer: "In most Texas transactions, buyers and sellers each pay their own set of closing costs — buyers generally cover lender fees, buyer's title insurance, and prepaid items, while sellers typically cover their own title work, agent commissions, and any negotiated seller concessions toward the buyer's costs. The specific split is set in the purchase contract and can be negotiated.",
+      },
+      {
+        question: "When do I find out my exact closing costs?",
+        answer: "Lenders are required to provide a Loan Estimate within three business days of your application, giving a good-faith estimate, and a Closing Disclosure at least three business days before closing with the final, binding numbers. Comparing the two and asking your lender to explain any changes is a normal and expected part of the process.",
+      },
+    ],
+  },
   {
     slug: "austin-mortgage-rates-financing-guide-2026",
     title: "Austin Mortgage Rates & Financing in 2026: A Buyer's Guide to Loan Options and Pre-Approval",
@@ -54,7 +189,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-mortgage-rates-financing-guide.webp",
     imageAlt:
       "A well-lit Austin home office desk with mortgage documents, a laptop, and a calculator, suggesting a buyer reviewing financing options",
-    isNew: true,
     pillar: "buying",
     leadMagnet: "mortgage-rates-financing-austin",
     content: [
@@ -128,7 +262,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-homeowners-insurance-guide.webp",
     imageAlt:
       "An Austin single-family home exterior with a well-maintained composition shingle roof under a clear sky, representing the condition insurers evaluate most closely",
-    isNew: true,
     leadMagnet: "homeowners-insurance-austin",
     content: [
       "Ask any Austin homeowner who has renewed their insurance policy in the last two years, and you'll hear some version of the same complaint: the premium went up, again, by more than seems reasonable. It isn't a local pricing quirk — it's a statewide trend, and understanding why matters just as much for buyers evaluating a purchase as it does for existing owners bracing for a renewal notice.",

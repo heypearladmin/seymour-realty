@@ -65,8 +65,8 @@ export const neighborhoods: Neighborhood[] = [
       "Tarrytown has held value better than most Austin markets through recent cycles. Inventory remains very low, and well-maintained original homes and architect-designed rebuilds both attract competitive interest. Lot premiums for mature trees and lake proximity remain significant.",
     relatedBlogSlugs: [
       "tarrytown-austin-neighborhood-guide",
+      "tarrytown-vs-westlake-hills-comparison",
       "austin-school-districts-homebuyers-guide",
-      "what-makes-austin-home-easier-to-resell",
     ],
     leadMagnet: "neighborhood-tarrytown",
   },
@@ -110,8 +110,8 @@ export const neighborhoods: Neighborhood[] = [
       "Eanes ISD zoning continues to insulate Westlake from broader Austin softening. Demand from corporate relocators and California buyers prioritizing top public schools has kept absorption rates healthy. View-lot premiums remain strong; homes without meaningful outdoor space face longer market times.",
     relatedBlogSlugs: [
       "westlake-hills-rollingwood-neighborhood-guide",
+      "tarrytown-vs-westlake-hills-comparison",
       "austin-school-districts-homebuyers-guide",
-      "austin-property-taxes-what-buyers-need-to-know",
     ],
     leadMagnet: "neighborhood-westlake-rollingwood",
   },
@@ -424,8 +424,8 @@ export const neighborhoods: Neighborhood[] = [
       "Rollingwood's Eanes ISD zoning provides a floor that most central Austin markets lack. Buyers who cannot afford Westlake proper but want Eanes schools view Rollingwood as the strategic play — and that positioning has kept demand steady. Lot-value-driven purchases for teardown/rebuild are active, particularly for larger parcels.",
     relatedBlogSlugs: [
       "westlake-hills-rollingwood-neighborhood-guide",
+      "tarrytown-vs-westlake-hills-comparison",
       "austin-school-districts-homebuyers-guide",
-      "austin-property-taxes-what-buyers-need-to-know",
     ],
     leadMagnet: "neighborhood-westlake-rollingwood",
   },
