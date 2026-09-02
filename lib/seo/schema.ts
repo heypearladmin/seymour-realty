@@ -123,6 +123,50 @@ export function serviceSchema(params: {
   });
 }
 
+export function residenceListingSchema(params: {
+  name: string;
+  description: string;
+  url: string;
+  image: string;
+  price: number;
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion: string;
+  postalCode: string;
+  numberOfBedrooms: number;
+  numberOfBathrooms: number;
+  floorSize: number;
+}): SchemaObject {
+  return withContext({
+    "@type": "SingleFamilyResidence",
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    image: params.image,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: params.streetAddress,
+      addressLocality: params.addressLocality,
+      addressRegion: params.addressRegion,
+      postalCode: params.postalCode,
+      addressCountry: "US",
+    },
+    numberOfBedrooms: params.numberOfBedrooms,
+    numberOfBathroomsTotal: params.numberOfBathrooms,
+    floorSize: {
+      "@type": "QuantitativeValue",
+      value: params.floorSize,
+      unitCode: "FTK",
+    },
+    offers: {
+      "@type": "Offer",
+      price: params.price,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  });
+}
+
 export function breadcrumbSchema(
   items: { name: string; url: string }[]
 ): SchemaObject {

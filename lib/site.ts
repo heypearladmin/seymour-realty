@@ -35,6 +35,7 @@ export const site = {
   },
   nav: [
     { label: "About", href: "/about" },
+    { label: "Listings", href: "/listings" },
     { label: "Neighborhoods", href: "/neighborhoods" },
     { label: "Relocation", href: "/relocation" },
     { label: "Blog", href: "/blog" },
