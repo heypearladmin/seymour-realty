@@ -23,10 +23,9 @@ export async function generateMetadata({ params }: PageProps) {
   if (!listing) return { title: "Listing Not Found" };
 
   const title = `${listing.address}, ${listing.city}, ${listing.state} — ${formatPrice(listing.price)}`;
-  const description =
-    listing.bedrooms > 0
-      ? `${listing.bedrooms} bed, ${listing.bathrooms} bath home at ${listing.address} in ${listing.city}, ${listing.state}. ${listing.squareFeet.toLocaleString()} sqft, listed at ${formatPrice(listing.price)}.`
-      : `${listing.squareFeet.toLocaleString()} sqft property at ${listing.address} in ${listing.city}, ${listing.state}, listed at ${formatPrice(listing.price)}.`;
+  const description = listing.squareFeet
+    ? `${listing.bedrooms} bed, ${listing.bathrooms} bath home at ${listing.address} in ${listing.city}, ${listing.state}. ${listing.squareFeet.toLocaleString()} sqft, listed at ${formatPrice(listing.price)}.`
+    : `${listing.lotSizeSqft.toLocaleString()} sqft lot at ${listing.address} in ${listing.city}, ${listing.state}, listed at ${formatPrice(listing.price)}.`;
 
   return {
     title,
@@ -64,7 +63,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
           postalCode: listing.zip,
           numberOfBedrooms: listing.bedrooms,
           numberOfBathrooms: listing.bathrooms,
-          floorSize: listing.squareFeet,
+          floorSize: listing.squareFeet ?? listing.lotSizeSqft,
         })}
       />
       <JsonLd
@@ -110,18 +109,22 @@ export default async function ListingDetailPage({ params }: PageProps) {
             {formatPrice(listing.price)}
           </p>
           <div className="flex flex-wrap items-center gap-8 text-softwhite/85">
-            <div>
-              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Beds</p>
-              <p className="font-display text-2xl">{listing.bedrooms}</p>
-            </div>
-            <div>
-              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Baths</p>
-              <p className="font-display text-2xl">{listing.bathrooms}</p>
-            </div>
-            <div>
-              <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Square Feet</p>
-              <p className="font-display text-2xl">{listing.squareFeet.toLocaleString()}</p>
-            </div>
+            {listing.squareFeet ? (
+              <>
+                <div>
+                  <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Beds</p>
+                  <p className="font-display text-2xl">{listing.bedrooms}</p>
+                </div>
+                <div>
+                  <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Baths</p>
+                  <p className="font-display text-2xl">{listing.bathrooms}</p>
+                </div>
+                <div>
+                  <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Square Feet</p>
+                  <p className="font-display text-2xl">{listing.squareFeet.toLocaleString()}</p>
+                </div>
+              </>
+            ) : null}
             <div>
               <p className="text-softwhite/50 text-xs tracking-widest uppercase mb-1">Lot Size</p>
               <p className="font-display text-2xl">{listing.lotSizeSqft.toLocaleString()} sqft</p>

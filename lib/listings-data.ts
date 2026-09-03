@@ -14,7 +14,7 @@ export interface Listing {
   price: number;
   bedrooms: number;
   bathrooms: number;
-  squareFeet: number;
+  squareFeet?: number;
   lotSizeSqft: number;
   yearBuilt?: number;
   mlsNumber: string;
@@ -320,6 +320,122 @@ export const listings: Listing[] = [
       {
         src: "/images/listing3/ea00ad869f5b38668d10614b6575adc5-uncropped_scaled_within_1536_1152.webp",
         alt: "Back storage area with a refrigerator, shelving, and stacked chairs",
+      },
+    ],
+    listingAgent: {
+      name: "Laurel Seymour",
+      brokerage: "Ashley Austin Homes",
+      phone: "(512) 217-6103",
+    },
+  },
+  {
+    id: "116-fairbanks-ave",
+    slug: "116-fairbanks-ave-san-antonio-tx",
+    status: "Active",
+    address: "116 Fairbanks Ave",
+    city: "San Antonio",
+    state: "TX",
+    zip: "78210",
+    price: 39000,
+    bedrooms: 0,
+    bathrooms: 0,
+    lotSizeSqft: 8150,
+    mlsNumber: "1534415",
+    subdivision: "Ncb 2975",
+    description:
+      "Build your dream home or investment property on this vacant lot in a well-established neighborhood! The previous structure has been removed, and the lot is ready for redevelopment. Utilities were previously connected — buyer to verify. Conveniently located near downtown San Antonio with easy access to major highways. Owner financing available — see attachments for details!",
+    features: [
+      "Vacant lot, previous structure removed",
+      "Ready for redevelopment",
+      "Utilities previously connected (buyer to verify)",
+      "Near downtown San Antonio",
+      "Easy access to major highways",
+      "Owner financing available",
+    ],
+    heroImage: {
+      src: "/images/listing4/0934e4881eab36f85cf3f139b095275d-uncropped_scaled_within_1536_1152.webp",
+      alt: "Vacant, cleared lot at 116 Fairbanks Ave in San Antonio, Texas, with neighboring homes visible",
+    },
+    images: [
+      {
+        src: "/images/listing4/0934e4881eab36f85cf3f139b095275d-uncropped_scaled_within_1536_1152.webp",
+        alt: "Vacant, cleared lot with neighboring homes and mature trees",
+      },
+      {
+        src: "/images/listing4/c031aafbafae528196ae2afd2281e037-uncropped_scaled_within_1536_1152.webp",
+        alt: "Street view of the vacant lot and surrounding neighborhood",
+      },
+    ],
+    listingAgent: {
+      name: "Laurel Seymour",
+      brokerage: "Ashley Austin Homes",
+      phone: "(512) 217-6103",
+    },
+  },
+  {
+    id: "6402-ponca-st",
+    slug: "6402-ponca-st-austin-tx",
+    status: "Active",
+    address: "6402 Ponca St",
+    city: "Austin",
+    state: "TX",
+    zip: "78741",
+    price: 160000,
+    bedrooms: 0,
+    bathrooms: 0,
+    lotSizeSqft: 5575,
+    mlsNumber: "1045342",
+    subdivision: "Cuellar Susie & Martin Subd",
+    description:
+      "Opportunity awaits in East Austin! This cleared and level lot offers a prime location for your custom single-family home. Situated on a quiet street just minutes from downtown, this is a great chance to build new in a rapidly appreciating area. Previous structure has been removed, and the lot is ready for your vision. Survey available.",
+    features: [
+      "Quiet street in East Austin",
+      "Cleared and level lot",
+      "Minutes from downtown Austin",
+      "Previous structure removed",
+      "Survey available",
+      "Corner lot",
+    ],
+    heroImage: {
+      src: "/images/listing5/14877c7570067aeb5555cd07a9137406-uncropped_scaled_within_1536_1152.webp",
+      alt: "Cleared vacant lot at 6402 Ponca St in East Austin, Texas, with a neighboring red house",
+    },
+    images: [
+      {
+        src: "/images/listing5/14877c7570067aeb5555cd07a9137406-uncropped_scaled_within_1536_1152.webp",
+        alt: "Street-level view of the cleared lot with a neighboring red house",
+      },
+      {
+        src: "/images/listing5/e06060b381287e05421f853bdc08f0a0-uncropped_scaled_within_1536_1152.webp",
+        alt: "Street-level view of the lot and sidewalk from the opposite angle",
+      },
+      {
+        src: "/images/listing5/5277d148bfce890cb5d5dfefdf9c3357-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view with the lot boundary outlined, downtown Austin skyline in the distance",
+      },
+      {
+        src: "/images/listing5/6e844b2c965218e9ccf0932c0b79532f-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the surrounding East Austin neighborhood",
+      },
+      {
+        src: "/images/listing5/888659651f525c38afce69ab8cc912b9-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view showing nearby streets and commercial buildings",
+      },
+      {
+        src: "/images/listing5/94ad84ab01335c658d21829191b4cafa-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the neighborhood with the Austin skyline visible in the distance",
+      },
+      {
+        src: "/images/listing5/9abb434de311e4137da16d1248f7ced3-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the neighborhood streets with downtown Austin in the background",
+      },
+      {
+        src: "/images/listing5/ba92fc2ffa90e0758c5c02b3099faa35-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view looking toward the Austin skyline and surrounding tree canopy",
+      },
+      {
+        src: "/images/listing5/debd2784b696fafeae190c13587d8e02-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the neighborhood with downtown Austin skyline in view",
       },
     ],
     listingAgent: {

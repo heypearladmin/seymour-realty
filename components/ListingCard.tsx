@@ -34,11 +34,17 @@ export default function ListingCard({ listing }: ListingCardProps) {
           {listing.city}, {listing.state} {listing.zip}
         </p>
         <div className="mt-3 flex items-center gap-4 text-[0.82rem] text-charcoal/70">
-          <span>{listing.bedrooms} Beds</span>
-          <span className="w-px h-3 bg-charcoal/20" aria-hidden="true" />
-          <span>{listing.bathrooms} Baths</span>
-          <span className="w-px h-3 bg-charcoal/20" aria-hidden="true" />
-          <span>{listing.squareFeet.toLocaleString()} Sqft</span>
+          {listing.squareFeet ? (
+            <>
+              <span>{listing.bedrooms} Beds</span>
+              <span className="w-px h-3 bg-charcoal/20" aria-hidden="true" />
+              <span>{listing.bathrooms} Baths</span>
+              <span className="w-px h-3 bg-charcoal/20" aria-hidden="true" />
+              <span>{listing.squareFeet.toLocaleString()} Sqft</span>
+            </>
+          ) : (
+            <span>{listing.lotSizeSqft.toLocaleString()} Sqft Lot</span>
+          )}
         </div>
         <p className="mt-4 text-[0.72rem] tracking-editorial uppercase text-terracotta inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
           View Property <span aria-hidden="true">→</span>
