@@ -444,6 +444,143 @@ export const listings: Listing[] = [
       phone: "(512) 217-6103",
     },
   },
+  {
+    id: "2918-ranch-road-620-n-w219",
+    slug: "2918-ranch-road-620-n-w219-austin-tx",
+    status: "Active",
+    address: "2918 Ranch Road 620 N #W-219",
+    city: "Austin",
+    state: "TX",
+    zip: "78734",
+    price: 250000,
+    bedrooms: 2,
+    bathrooms: 3,
+    squareFeet: 1395,
+    lotSizeSqft: 5296,
+    yearBuilt: 1999,
+    mlsNumber: "9078414",
+    subdivision: "Villas On Travis Condo Amd",
+    hoaFee: "$880/month (Villas on Travis)",
+    description:
+      "Enjoy resort-style living in the heart of Lakeway! This well-priced condo in a gated community offers the perfect blend of comfort, convenience, and low-maintenance living. Residents have access to a variety of amenities including a sparkling community pool, tennis courts, and private lake access - ideal for those who love the outdoors and an active lifestyle. Whether you're looking for a peaceful retreat, a weekend getaway, or a full-time residence, this unit delivers great value in a prime location along RR 620 with easy access to shopping, dining, and Lake Travis. Don't miss this opportunity to own a slice of the good life!",
+    features: [
+      "Gated community",
+      "Tennis courts",
+      "Private lake access",
+      "Community pool",
+      "Primary bedroom on main level",
+      "Wood flooring throughout",
+      "Living room fireplace",
+      "Attached garage",
+    ],
+    heroImage: {
+      src: "/images/listing6/32082b7dd5fdc03e2173e67550454d76-uncropped_scaled_within_1536_1152.webp",
+      alt: "Aerial view of the Villas on Travis gated condo community on Lake Travis in Lakeway, Texas, with the community pool in the foreground",
+    },
+    images: [
+      {
+        src: "/images/listing6/32082b7dd5fdc03e2173e67550454d76-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the gated condo community, pool, and Lake Travis",
+      },
+      {
+        src: "/images/listing6/1b238a7a892c3ea40652f4097b9d2abf-uncropped_scaled_within_1536_1152.webp",
+        alt: "Villas on Travis community entrance gate and sign",
+      },
+      {
+        src: "/images/listing6/ea0d18d4b8324636ffdf9706feb097e8-uncropped_scaled_within_1536_1152.webp",
+        alt: "Covered front entry and door to unit 219",
+      },
+      {
+        src: "/images/listing6/4ea5e26d4141ddb8ea3186bd1845480c-uncropped_scaled_within_1536_1152.webp",
+        alt: "Exterior walkway and staircases of the condo building",
+      },
+      {
+        src: "/images/listing6/2a3b9e72f0dd73df565f9ee4fb4bb43d-uncropped_scaled_within_1536_1152.webp",
+        alt: "Living room with wood flooring, vaulted ceiling, and a tile fireplace",
+      },
+      {
+        src: "/images/listing6/fbb61f748b00d0e29489e19a7f8059ca-uncropped_scaled_within_1536_1152.webp",
+        alt: "Living room with fireplace and view toward the kitchen and entry stairs",
+      },
+      {
+        src: "/images/listing6/d4518421becd7b148cbf8e200e9ef061-uncropped_scaled_within_1536_1152.webp",
+        alt: "Dining area with a chandelier, open to the kitchen and living room",
+      },
+      {
+        src: "/images/listing6/867b667892d662d88af99dc3a677777f-uncropped_scaled_within_1536_1152.webp",
+        alt: "Kitchen with white cabinetry, black granite counters, and stainless appliances",
+      },
+      {
+        src: "/images/listing6/32a329bfbf1441d1fe2b68201e417609-uncropped_scaled_within_1536_1152.webp",
+        alt: "Entry hallway with staircase and view into the kitchen",
+      },
+      {
+        src: "/images/listing6/bb752f095c15cf29ce02ad081abe4c46-uncropped_scaled_within_1536_1152.webp",
+        alt: "Staircase with decorative tiled risers and wood treads",
+      },
+      {
+        src: "/images/listing6/e3fecab3c21ca91df203b3ebe289cec6-uncropped_scaled_within_1536_1152.webp",
+        alt: "Upstairs landing with linen closet and railing",
+      },
+      {
+        src: "/images/listing6/2ab618036ab9331e07879e7484378e59-uncropped_scaled_within_1536_1152.webp",
+        alt: "Primary bedroom with wood flooring, balcony access, and views toward the hill country",
+      },
+      {
+        src: "/images/listing6/38f8cdafbb391396562f9fef95710a70-uncropped_scaled_within_1536_1152.webp",
+        alt: "Primary bathroom with a soaking tub, glass shower, and dual-sink vanity",
+      },
+      {
+        src: "/images/listing6/398487149dfbbe97a948e9b311ecbda0-uncropped_scaled_within_1536_1152.webp",
+        alt: "Bathroom with a tub-shower combination and single vanity",
+      },
+      {
+        src: "/images/listing6/7f680af683118a05e8dfd825b09f941a-uncropped_scaled_within_1536_1152.webp",
+        alt: "Powder bathroom with a pedestal sink and mosaic-framed mirror",
+      },
+      {
+        src: "/images/listing6/6446390a1d2e0b32735109918d7f78e8-uncropped_scaled_within_1536_1152.webp",
+        alt: "Secondary bedroom with double closet doors and an ensuite bathroom",
+      },
+      {
+        src: "/images/listing6/a60395bccb2a9753e613fc5153664347-uncropped_scaled_within_1536_1152.webp",
+        alt: "Secondary bedroom with double closet doors and open shelving",
+      },
+      {
+        src: "/images/listing6/5a62a2a55df29c45beb97f0de5bfb7f2-uncropped_scaled_within_1536_1152.webp",
+        alt: "Bedroom with a decorative stained-glass window transom",
+      },
+      {
+        src: "/images/listing6/cfd92af05b3104d4064e5e432a667df3-uncropped_scaled_within_1536_1152.webp",
+        alt: "Bedroom with a stained-glass window accent and ceiling fan",
+      },
+      {
+        src: "/images/listing6/9dfb3f063db8a4dda43b3a125ddb20be-uncropped_scaled_within_1536_1152.webp",
+        alt: "Community pool and hot tub overlooking Lake Travis",
+      },
+      {
+        src: "/images/listing6/a79c5d5a645a938f98cf0157e0e672e4-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the community pool area and Lake Travis shoreline",
+      },
+      {
+        src: "/images/listing6/d3e72b2ad41b201dd1282d71f21feb1d-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of Lake Travis and the surrounding condo community",
+      },
+      {
+        src: "/images/listing6/e37d296c2c38e4e765f57232879bdac8-uncropped_scaled_within_1536_1152.webp",
+        alt: "Aerial view of the community along RR 620 next to Lake Travis",
+      },
+      {
+        src: "/images/listing6/ff59cfdd4297fca523897d6134b851bd-uncropped_scaled_within_1536_1152.webp",
+        alt: "Community sport court surrounded by condo buildings",
+      },
+    ],
+    listingAgent: {
+      name: "Laurel Seymour",
+      brokerage: "Ashley Austin Homes",
+      phone: "(512) 217-6103",
+    },
+  },
 ];
 
 export function getAllListings(): Listing[] {
