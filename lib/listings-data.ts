@@ -16,7 +16,7 @@ export interface Listing {
   bathrooms: number;
   squareFeet: number;
   lotSizeSqft: number;
-  yearBuilt: number;
+  yearBuilt?: number;
   mlsNumber: string;
   subdivision: string;
   hoaFee?: string;
@@ -251,6 +251,75 @@ export const listings: Listing[] = [
       {
         src: "/images/listing2/5b9c0efe9061b4e96e6e8be5c6b46b77-uncropped_scaled_within_1536_1152.webp",
         alt: "Upstairs bonus room with sectional seating and large windows",
+      },
+    ],
+    listingAgent: {
+      name: "Laurel Seymour",
+      brokerage: "Ashley Austin Homes",
+      phone: "(512) 217-6103",
+    },
+  },
+  {
+    id: "1407-grand-ave",
+    slug: "1407-grand-ave-big-wells-tx",
+    status: "Active",
+    address: "1407 Grand Ave",
+    city: "Big Wells",
+    state: "TX",
+    zip: "78830",
+    price: 47500,
+    bedrooms: 0,
+    bathrooms: 0,
+    squareFeet: 1512,
+    lotSizeSqft: 5000,
+    mlsNumber: "2174934",
+    subdivision: "Big Wells-Orig Town",
+    description:
+      "Unlock the potential of 1407 Grand Avenue in Big Wells, TX — a former restaurant brimming with possibilities. Situated on a high-traffic corner near South Commerce Street, this spacious commercial building features a generous dining area, full kitchen setup, and flexible layout ready for transformation. Whether you're looking to revive a local dining staple or reimagine the space entirely, this fixer-upper offers outstanding visibility and a strategic location ideal for a variety of business ventures. Bring your vision and breathe new life into this promising property!",
+    features: [
+      "High-traffic corner location",
+      "Flexible layout",
+      "Generous dining area",
+      "Full kitchen setup",
+      "Fixer-upper / investment opportunity",
+      "Owner may carry financing",
+    ],
+    heroImage: {
+      src: "/images/listing3/26f90bcd5f598b04a485adc3674f5eaf-uncropped_scaled_within_1536_1152.webp",
+      alt: "Exterior of the former Gonzalez Restaurant building at 1407 Grand Ave in Big Wells, Texas, with orange and yellow siding",
+    },
+    images: [
+      {
+        src: "/images/listing3/26f90bcd5f598b04a485adc3674f5eaf-uncropped_scaled_within_1536_1152.webp",
+        alt: "Exterior of the building with orange and yellow siding and a Gonzalez Restaurant sign",
+      },
+      {
+        src: "/images/listing3/0088d8c5fd30c7518ff64d6b52ef4a25-uncropped_scaled_within_1536_1152.webp",
+        alt: "Former dining room with orange walls, wood flooring, and the front entrance door",
+      },
+      {
+        src: "/images/listing3/016150d4268e6fdf05b6b3c4028ae3cb-uncropped_scaled_within_1536_1152.webp",
+        alt: "Dining area with built-in booth seating and a ceiling fan",
+      },
+      {
+        src: "/images/listing3/35654748f86c9a7310241ea35c0e69a3-uncropped_scaled_within_1536_1152.webp",
+        alt: "Kitchen hallway with a pass-through window, hanging pots, and a stove at the back",
+      },
+      {
+        src: "/images/listing3/5f8335d9fbd7e728d0accf7a5e46ed97-uncropped_scaled_within_1536_1152.webp",
+        alt: "Kitchen shelving with dishware, hanging pots and pans, and a sink",
+      },
+      {
+        src: "/images/listing3/756b78a0d6a1eb68854da402736cba72-uncropped_scaled_within_1536_1152.webp",
+        alt: "Former service counter with a pass-through window and built-in wood shelving",
+      },
+      {
+        src: "/images/listing3/b22bd40de9daa7346db43c6107d2a37b-uncropped_scaled_within_1536_1152.webp",
+        alt: "Kitchen with a long stainless prep table and gas stove",
+      },
+      {
+        src: "/images/listing3/ea00ad869f5b38668d10614b6575adc5-uncropped_scaled_within_1536_1152.webp",
+        alt: "Back storage area with a refrigerator, shelving, and stacked chairs",
       },
     ],
     listingAgent: {

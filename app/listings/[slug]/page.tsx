@@ -23,7 +23,10 @@ export async function generateMetadata({ params }: PageProps) {
   if (!listing) return { title: "Listing Not Found" };
 
   const title = `${listing.address}, ${listing.city}, ${listing.state} — ${formatPrice(listing.price)}`;
-  const description = `${listing.bedrooms} bed, ${listing.bathrooms} bath home at ${listing.address} in ${listing.city}, ${listing.state}. ${listing.squareFeet.toLocaleString()} sqft, listed at ${formatPrice(listing.price)}.`;
+  const description =
+    listing.bedrooms > 0
+      ? `${listing.bedrooms} bed, ${listing.bathrooms} bath home at ${listing.address} in ${listing.city}, ${listing.state}. ${listing.squareFeet.toLocaleString()} sqft, listed at ${formatPrice(listing.price)}.`
+      : `${listing.squareFeet.toLocaleString()} sqft property at ${listing.address} in ${listing.city}, ${listing.state}, listed at ${formatPrice(listing.price)}.`;
 
   return {
     title,
@@ -161,10 +164,12 @@ export default async function ListingDetailPage({ params }: PageProps) {
         <div className="max-w-editorial mx-auto px-6 lg:px-10">
           <p className="eyebrow text-charcoal/60 mb-10">Property Details</p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 gap-y-10">
-            <div className="border-t border-charcoal/15 pt-6">
-              <p className="eyebrow text-charcoal/60 mb-2">Year Built</p>
-              <p className="text-charcoal/85">{listing.yearBuilt}</p>
-            </div>
+            {listing.yearBuilt && (
+              <div className="border-t border-charcoal/15 pt-6">
+                <p className="eyebrow text-charcoal/60 mb-2">Year Built</p>
+                <p className="text-charcoal/85">{listing.yearBuilt}</p>
+              </div>
+            )}
             <div className="border-t border-charcoal/15 pt-6">
               <p className="eyebrow text-charcoal/60 mb-2">Subdivision</p>
               <p className="text-charcoal/85">{listing.subdivision}</p>
