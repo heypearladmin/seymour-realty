@@ -44,6 +44,140 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lake-travis-lakeway-living-guide",
+    title: "Lake Travis & Lakeway Living: A Buyer's Guide to Austin's Waterfront Communities",
+    excerpt:
+      "Gated communities, private lake access, and a slower pace 30 minutes from downtown — Lakeway and the Lake Travis corridor offer a genuinely different kind of Austin living. What buyers should know about HOAs, water levels, commute, and cost before making the move.",
+    quickAnswer:
+      "Lakeway and the broader Lake Travis corridor sit roughly 30-45 minutes west of downtown Austin, zoned to Lake Travis ISD, and offer gated communities with resort-style amenities — pools, tennis courts, and private or shared lake access. Condos in gated lakefront communities typically start in the low $200,000s with HOA fees commonly running $500 to $900+ per month, often covering grounds, amenities, and sometimes water/sewer. Single-family homes range from the $500,000s to several million for direct waterfront. Lake Travis's water level fluctuates seasonally with Highland Lakes management, which matters for anyone buying with lake access or a dock in mind.",
+    category: "Neighborhood Guide",
+    tags: ["Lake Travis", "Lakeway", "waterfront living", "condo buying", "Austin neighborhoods", "HOA"],
+    readTime: "8 min read",
+    publishedAt: "September 4, 2026",
+    image: "/images/listing6/32082b7dd5fdc03e2173e67550454d76-uncropped_scaled_within_1536_1152.webp",
+    imageAlt:
+      "Aerial view of a gated condo community and swimming pool along the shoreline of Lake Travis near Lakeway, Texas",
+    isNew: true,
+    content: [
+      "Ask ten Austin buyers what they picture when they hear \"lake life,\" and most will describe some version of the same thing: a gate, a pool overlooking the water, and a pace of life that has nothing to do with downtown traffic. For a specific kind of buyer, that picture is exactly right — and it exists, real and buildable, along the Lake Travis corridor in and around Lakeway.",
+      "It is also a genuinely different purchase than buying inside Austin proper. The commute is longer, the HOA structures are more involved, and the lake itself behaves differently than most buyers expect. None of that makes it the wrong choice — it makes it a choice worth understanding clearly before you're comparing floor plans.",
+      "This guide covers what buyers actually need to know about the Lake Travis and Lakeway market: location and commute, schools, what condo living in a gated lake community really costs, how Lake Travis's water level works, and who this market tends to fit best.",
+      "The Short Version",
+      "Lakeway sits roughly 25 miles west of downtown Austin along RR 620, in Lake Travis Independent School District. It offers gated condo and townhome communities with shared amenities — pools, tennis courts, clubhouses, and private lake access — alongside single-family neighborhoods and direct waterfront estates. Condos in gated lake communities commonly start in the low $200,000s with HOA fees of $500 to $900 or more per month; single-family homes range from the $500,000s into the multi-millions for true waterfront. The trade-off buyers are making is consistent: distance from downtown in exchange for water, privacy, and a resort-style daily environment.",
+      "Where Lakeway Sits, and Why the Commute Matters",
+      "Lakeway occupies the south shore of Lake Travis along RR 620, roughly 25 miles west of downtown Austin. Depending on the specific address and route — RR 620, Bee Cave Road, or Highway 71 — the drive downtown typically runs 30 to 45 minutes outside of peak congestion, and can stretch longer during rush hour, since much of the corridor funnels through Bee Cave and West Lake Hills before reaching MoPac or Loop 360.",
+      "This is the single biggest trade-off buyers make when choosing Lakeway. It is not a neighborhood for someone who needs a fast, predictable downtown commute five days a week. It is a strong fit for buyers who work remotely, work locally within the Lakeway/Bee Cave corridor, are retired or semi-retired, or are willing to trade commute time for the lake lifestyle and are only in the office a few days a week.",
+      "Lake Travis Independent School District",
+      "Lakeway and most of the surrounding communities fall within Lake Travis Independent School District, a district that consistently earns strong state accountability ratings and has built a reputation — similar to Eanes ISD closer to Austin — as a draw in its own right for families relocating specifically for schools. Lake Travis ISD includes multiple elementary campuses feeding into Hudson Bend Middle School or Lake Travis Middle School, and ultimately Lake Travis High School.",
+      "Families moving to the area for schools should confirm the exact elementary and middle school zoning for a specific address before writing an offer, since boundaries within the district can shift a given property from one campus to another even a short distance away.",
+      "Condo Living in a Gated Lake Community",
+      "A meaningful share of Lakeway's inventory is condominium and townhome product inside gated communities — a different ownership experience than a standalone single-family home, and one that deserves its own explanation for buyers new to it. These communities typically include a manned or coded entry gate, a community pool (often more than one), tennis or pickleball courts, walking trails, and either private lake access or a shared marina/dock area.",
+      "The appeal is straightforward: resort-style amenities, low exterior maintenance, and often genuine lake or hill country views, at a lower entry price than a comparable single-family lakefront home. The trade-off is equally straightforward: less privacy than a standalone home, HOA rules governing exterior changes and rentals, and a meaningfully higher monthly carrying cost than a typical Austin condo.",
+      "HOA Fees: What They Cover and Why They're Higher Here",
+      "Buyers coming from inside Austin proper are sometimes surprised by HOA fees in gated Lake Travis communities, which commonly run $500 to $900 or more per month — noticeably higher than a typical in-city condo HOA. That fee is not simply higher for no reason; in most of these communities it covers building and grounds maintenance, master insurance on shared structures, staffed or gated security, pool and amenity upkeep, and in some communities, water and sewer service bundled into the fee rather than billed separately.",
+      "Before making an offer on any condo in a gated Lake Travis community, request the HOA's most recent financial statements, reserve study, and rules governing rentals — some communities restrict short-term rentals or cap the number of units that can be leased at any given time, which matters directly if investment or rental income is part of your plan.",
+      "Understanding Lake Travis Water Levels",
+      "Lake Travis is a managed reservoir on the Colorado River, and its water level is not constant — it rises and falls seasonally and across multi-year drought and rainfall cycles, managed by the Lower Colorado River Authority for flood control, water supply, and downstream needs. In wetter years, the lake sits near or at its normal operating level; during sustained drought, levels can drop significantly, exposing shoreline that is normally underwater.",
+      "This matters directly for any purchase involving a private dock, boat slip, or direct waterfront access — a dock that reaches deep water at full pool may sit on dry ground during a low-water year. Buyers considering a property specifically for its water access should ask sellers and local advisors about the property's water access at both high and low lake levels, not just its condition on the day of the showing.",
+      "Single-Family Homes vs. Condos on the Lake",
+      "Single-family homes in and around Lakeway span a wide range — from established, more modest homes in the $500,000s to $700,000s away from the immediate shoreline, up to multi-million-dollar direct waterfront estates with private docks. Buyers choosing between a condo and a single-family home in this market are typically weighing the same factors as anywhere else — privacy, land, and exterior maintenance responsibility — but with lake access as an added variable that can sit on either side of that decision depending on the specific property.",
+      "A gated condo community can offer shared lake access and amenities at a fraction of the cost of a comparable single-family waterfront home, which makes it a genuinely efficient way to buy into the lake lifestyle for buyers who don't need a private dock of their own.",
+      "Who Lakeway Actually Fits",
+      "Lakeway tends to fit buyers prioritizing a resort-style, lower-maintenance lifestyle over downtown proximity — retirees and semi-retirees, remote workers, second-home buyers, and families who have decided that Lake Travis ISD and a slower daily pace outweigh a shorter commute. It also fits buyers specifically drawn to the amenities of gated condo living — pools, tennis, and a maintained community environment — who may not need a large single-family lot to be satisfied with the purchase.",
+      "It is a less natural fit for buyers whose daily schedule requires a short, predictable downtown commute, or for buyers unfamiliar with HOA-governed living who haven't yet reviewed what a $500-$900 monthly fee is actually buying them.",
+      "The Lake Travis corridor is not a smaller, cheaper version of central Austin — it's a different kind of daily life, built around water, privacy, and amenities rather than urban proximity. For the right buyer, that trade is an easy one to make once the commute, schools, HOA structure, and lake mechanics are genuinely understood rather than assumed.",
+    ],
+    faqs: [
+      {
+        question: "Is Lakeway a good place to live near Austin?",
+        answer: "Lakeway is a strong fit for buyers who prioritize lake access, gated-community amenities, and a slower pace of life over a short downtown commute. It offers Lake Travis ISD schools, resort-style condo communities with pools and tennis courts, and single-family homes ranging from the $500,000s to multi-million-dollar waterfront estates. It's a better fit for remote workers, retirees, and second-home buyers than for anyone needing a fast, predictable commute into downtown Austin.",
+      },
+      {
+        question: "How far is Lakeway from downtown Austin?",
+        answer: "Lakeway sits roughly 25 miles west of downtown Austin along RR 620. Depending on the exact route and time of day, the drive typically takes 30 to 45 minutes outside of peak traffic, and can run longer during rush hour since the corridor funnels through Bee Cave and West Lake Hills before reaching MoPac or Loop 360.",
+      },
+      {
+        question: "What school district is Lakeway in?",
+        answer: "Lakeway and most of the surrounding Lake Travis corridor fall within Lake Travis Independent School District, which consistently earns strong state accountability ratings. The district includes multiple elementary campuses feeding into Hudson Bend Middle School or Lake Travis Middle School and ultimately Lake Travis High School. Exact campus zoning should be confirmed for any specific address before making an offer.",
+      },
+      {
+        question: "Why are HOA fees so high in Lake Travis condo communities?",
+        answer: "HOA fees in gated Lake Travis condo communities commonly run $500 to $900 or more per month because they typically cover more than a standard in-city HOA — building and grounds maintenance, master insurance, gated or staffed security, pool and amenity upkeep, and in some communities, bundled water and sewer service. Buyers should request the HOA's financial statements and reserve study before purchasing to understand exactly what the fee funds.",
+      },
+      {
+        question: "Does Lake Travis water level affect property value?",
+        answer: "Lake Travis is a managed reservoir whose water level fluctuates seasonally and across multi-year drought cycles. This primarily affects properties with docks or direct water access — a dock usable at full pool may sit on dry shoreline during a low-water year. It's a factor to investigate for any waterfront purchase, but it does not change the fundamentals of gated-community or non-waterfront property values in the broader Lakeway market.",
+      },
+    ],
+  },
+  {
+    slug: "buying-vacant-land-austin-guide",
+    title: "Buying Vacant Land in Austin: What to Know Before You Build",
+    excerpt:
+      "A cleared lot looks simple. It rarely is. What buyers need to verify — zoning, utilities, floodplain, and survey — before purchasing raw or vacant land in and around Austin.",
+    quickAnswer:
+      "Buying vacant land in Austin requires verifying zoning and permitted use, utility availability (water, sewer, electric, and whether the lot is on city service or requires a well/septic), floodplain status, and a current survey before closing — none of which are guaranteed the way they are with an existing home. Austin-area lots run from roughly $100,000 for smaller in-city parcels to several hundred thousand dollars depending on location, size, and utility access. Land purchases typically close faster than home purchases but carry more due-diligence risk, since there's no structure to inspect and no seller's disclosure about the building itself.",
+    category: "Investment",
+    tags: ["vacant land", "buying land", "building in Austin", "zoning", "new construction"],
+    readTime: "8 min read",
+    publishedAt: "September 1, 2026",
+    image: "/images/listing5/14877c7570067aeb5555cd07a9137406-uncropped_scaled_within_1536_1152.webp",
+    imageAlt: "A cleared, level vacant lot on a residential street in East Austin, Texas, ready for new construction",
+    isNew: true,
+    content: [
+      "A vacant lot is the closest thing real estate offers to a blank page. No floor plan to work around, no prior owner's finishes to undo, no inspection report flagging a twenty-year-old roof. For buyers who want to build exactly the home they've pictured, that blank page is the entire appeal.",
+      "It's also the reason land purchases carry a different kind of risk than buying an existing home. There's no structure to inspect, which means the due diligence shifts entirely onto the ground itself — what's legally allowed to be built there, what utilities actually reach the property line, and whether the lot is what the listing says it is. Buyers who skip that work don't find out until they're already trying to pull a building permit.",
+      "This guide covers what to verify before buying vacant or raw land in and around Austin, and how the process differs from buying a home that already exists.",
+      "The Short Version",
+      "Before buying vacant land in Austin, confirm four things independently of the listing: zoning and permitted use, utility availability at the property line, floodplain and drainage status, and a current survey showing exact boundaries and easements. Austin-area lots range widely in price depending on location, size, and whether utilities are already in place — a cleared, utility-ready in-city lot commands a real premium over raw acreage requiring a well and septic system. Land typically closes faster than a home purchase, but the inspection period should be used for verification work, not skipped simply because there's no house to walk through.",
+      "Zoning: What You're Actually Allowed to Build",
+      "Zoning determines what can legally be built on a lot — single-family, duplex, multifamily, commercial, or a mix — and it is the single most important thing to confirm before buying land with a specific project in mind. A lot zoned for single-family use cannot simply be built out as a duplex because the buyer prefers that plan; zoning changes and variances are possible in some cases, but they take time, cost money, and are never guaranteed.",
+      "Within Austin's city limits, zoning can be verified directly through the City of Austin's zoning maps and the Development Services Department. For land in unincorporated Travis County or a neighboring county, the relevant county's planning department governs instead, and rules can differ meaningfully from city code — including whether zoning exists at all, since some unincorporated areas have limited or no zoning restrictions.",
+      "Deed restrictions and HOA covenants are a separate layer from zoning and can be more restrictive. A lot might be zoned for a use that its own subdivision's deed restrictions prohibit — minimum square footage requirements, architectural review, or restrictions on secondary structures are common in platted subdivisions. Always request and read the recorded deed restrictions, not just the zoning designation.",
+      "Utilities: What's at the Property Line vs. What's Actually Available",
+      "A listing that says \"utilities available\" is describing proximity, not a guarantee of easy, affordable connection. Buyers should verify, address by address: whether the lot is served by city water and sewer or will require a private well and septic system, the distance from the property line to the nearest water and sewer main if service isn't already stubbed to the lot, and whether electric and gas service require new utility easements or line extensions that the buyer, not a utility company, would pay for.",
+      "Septic systems require a percolation test to confirm the soil can support a septic field before a permit will be issued — a step worth completing during due diligence, not after closing. Well water availability and quality vary significantly by location even within the same general area, and a well permit and water quality test are reasonable contingencies to build into an offer on any lot without existing city water service.",
+      "Utility connection costs can be substantial on raw land far from existing infrastructure — sometimes tens of thousands of dollars to extend water or sewer service to a lot that looked simple on paper. This cost should be underwritten into the total project budget before the land purchase, not discovered afterward.",
+      "Floodplain and Drainage",
+      "Austin's terrain and its history of flash flooding make floodplain status a genuine due-diligence item, not a formality. FEMA flood maps, available through the City of Austin's floodplain mapping tools, show whether a specific lot sits within a mapped floodplain — and Austin also maintains its own, sometimes more conservative, local floodplain data that can differ from FEMA's maps in specific areas.",
+      "A lot in a mapped floodplain isn't automatically unbuildable, but it typically comes with additional requirements — elevated foundation requirements, floodplain development permits, and in some cases, buildable area restricted to only a portion of the lot. Buyers should confirm floodplain status early, since it materially affects both construction cost and design.",
+      "Drainage is a related but separate concern even outside a mapped floodplain: where does water go during heavy rain, and does the lot's grading direct it away from where a home would sit? A site visit during or shortly after a significant rain event tells a buyer more about a lot's real drainage behavior than a dry-day showing ever will.",
+      "The Survey: Verifying What You're Actually Buying",
+      "A current, professional survey is one of the most important documents in a land purchase, and it should never be assumed to match the listing's stated boundaries or acreage. A survey confirms the lot's exact boundaries, identifies any easements running through the property (utility, drainage, or access easements can significantly limit where a structure can actually be built), and flags any encroachments from neighboring structures or fences.",
+      "If the seller doesn't have a recent survey, budgeting for a new one during the due-diligence period is worth the cost — a survey is typically far less expensive than discovering after closing that a portion of the buildable area is encumbered by an easement the buyer didn't know existed.",
+      "How Land Purchases Differ From Buying an Existing Home",
+      "Land transactions typically close faster than home purchases, since there's no lender-required home inspection contingency and often a simpler loan process — many land purchases are financed with a land loan or paid in cash rather than a standard mortgage, since land loans carry different underwriting standards and typically require a larger down payment than a home loan.",
+      "But faster is not the same as simpler. Without a structure to inspect, the due-diligence period should be spent verifying the four items above — zoning, utilities, floodplain, and survey — rather than treated as a formality because there's no house to walk through. Buyers who use the full inspection period for this work protect themselves from the most common and costly land-purchase mistakes.",
+      "Pricing also works differently. Land value is driven primarily by location, size, zoning, and utility readiness rather than square footage or finishes — a smaller, utility-ready, cleared lot close to the urban core can command a higher price than a larger raw parcel farther out that requires well, septic, and a new electric line.",
+      "Land in Austin's Rapidly Appreciating Corridors",
+      "Vacant and cleared lots inside Austin's city limits — particularly in East Austin and other close-in neighborhoods that have seen significant redevelopment — represent a specific opportunity: the chance to build new construction in an established, appreciating area rather than compete for an existing home there. These lots tend to be smaller and command a real premium for location and utility access, but they remove the guesswork of renovating an older structure.",
+      "Buyers considering this path should compare the total cost of land plus construction against comparable existing homes in the same immediate area, since new construction costs in 2026 mean the math doesn't automatically favor building from scratch — it depends heavily on the specific lot, the scope of the build, and how much of a premium existing homes in that pocket already command.",
+      "A vacant lot rewards the buyer who does the verification work upfront and penalizes the one who doesn't. Zoning, utilities, floodplain, and survey aren't bureaucratic hurdles — they're the actual product being purchased, since there's no house to fall back on if any of the four turns out differently than assumed.",
+    ],
+    faqs: [
+      {
+        question: "What should I check before buying vacant land in Austin?",
+        answer: "Before buying vacant land in Austin, verify zoning and permitted use through the City of Austin or the relevant county's planning department, confirm utility availability (city water/sewer vs. well/septic) at the specific property line, check floodplain and drainage status through FEMA and City of Austin floodplain maps, and obtain a current survey confirming exact boundaries and any easements. Deed restrictions from the subdivision or HOA should also be reviewed separately from zoning.",
+      },
+      {
+        question: "How much does vacant land cost in Austin?",
+        answer: "Vacant land pricing in the Austin area varies significantly based on location, lot size, zoning, and utility readiness. A smaller, cleared, utility-ready lot inside Austin's city limits commands a real premium over larger raw acreage farther out that requires a well and septic system. Location and utility access — not size alone — are the primary price drivers for land.",
+      },
+      {
+        question: "Do I need a well and septic system on land in Austin?",
+        answer: "It depends on the specific lot. Properties within Austin's city limits and most established subdivisions are typically served by city water and sewer, while more rural or unincorporated land may require a private well and septic system. A percolation test is required to confirm septic eligibility, and well water availability and quality should be verified before purchasing land without existing city utility service.",
+      },
+      {
+        question: "Is buying land a good investment in Austin?",
+        answer: "Land in established, appreciating Austin neighborhoods — particularly close-in areas like East Austin — can be a strong opportunity to build new construction in a location where existing homes are competitive and expensive. Whether it's a good investment depends on comparing the total cost of land plus construction against comparable existing homes in the same area, since building from scratch doesn't automatically cost less than buying and doesn't always outperform it financially.",
+      },
+      {
+        question: "How is buying land different from buying a house?",
+        answer: "Land purchases typically close faster than home purchases and often involve a land loan or cash rather than a standard mortgage, since there's no home inspection contingency required. However, land carries more due-diligence risk because there's no existing structure to inspect — the inspection period should be used to verify zoning, utilities, floodplain status, and survey boundaries, which together function as the real product being purchased.",
+      },
+    ],
+  },
+  {
     slug: "tarrytown-vs-westlake-hills-comparison",
     title: "Tarrytown vs. Westlake Hills: Which Austin Neighborhood Fits Your Family?",
     excerpt:
@@ -57,7 +191,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-tarrytown-vs-westlake-hills-comparison.webp",
     imageAlt:
       "A split view of two distinct Austin residential streets — one shaded by mature oak trees near downtown, the other opening onto Hill Country terrain — representing the choice between Tarrytown and Westlake Hills",
-    isNew: true,
     leadMagnets: ["neighborhood-tarrytown", "neighborhood-westlake-rollingwood"],
     content: [
       "Every relocation buyer and every move-up family eventually asks some version of the same question: Tarrytown or Westlake? It's usually not a casual question — it's the fork in the road that determines the next decade of school pickups, commute times, and Saturday mornings.",
@@ -122,7 +255,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/website-blog-austin-closing-costs-explained-guide.webp",
     imageAlt:
       "A tidy closing table setup with a pen, a stack of paperwork, and a house key resting on a folder, suggesting the final stage of an Austin home purchase",
-    isNew: true,
     pillar: "buying",
     leadMagnet: "mortgage-rates-financing-austin",
     content: [
